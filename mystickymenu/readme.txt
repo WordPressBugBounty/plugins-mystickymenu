@@ -83,7 +83,7 @@ My Sticky Bar is tested and compatible with Elementor website builder, Divi, WPB
 * Open redirect link in a new tab
 * Show your notification bar just on mobile or desktop
 * Show your notification bar on a scroll or after a few seconds
-* Set an expiry date for your welcome bar, including settings a timezone
+* Set an expiry date for your welcome bar, including settings a time zone
 * Display your floating notification bar on specific pages
 * You can set a thank you screen which appears after the button is clicked (can be used for coupons or any other message you want to show your visitors after they click on the button)
 * Add a rel Attribute to your notification bar button
