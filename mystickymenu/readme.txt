@@ -3,7 +3,7 @@ Contributors: tomeraharon, galdub, premio
 Tags:notification bar, floating bar, sticky menu, sticky header, sticky bar
 Requires at least: 3.5.1
 Tested up to: 6.8
-Stable tag: 2.8.2
+Stable tag: 2.8.3
 License: GPLv3
 
 🔔 Create a welcome notification bar for your website. Also, My Sticky Bar plugin can make your menu or header sticky to the top when scrolled 📌
@@ -14,7 +14,7 @@ License: GPLv3
 
 <strong>Use My Sticky Bar to create a beautiful notification bar for your website. You can also use this notification bar & sticky menu plugin to make your menu or header sticky on top of page, after desired number of pixels when scrolled. You can use it also to create a Welcome bar for announcements, promotion and more. This lightweight plugin will help your visitors navigate easily and reach to the navigation menu without wasting time. Install My Sticky Bar and improve your website’s user experience! If you want to change the CSS style, disable on scroll down or disable on specific pages. check out the <a href="https://premio.io/downloads/mystickymenu/" target="_blank" title="My Sticky Bar pro plans">Pro version</a>.</strong>
 
-By default, My Sticky Bar should make your menu sticky right away if you turn the sticky menu feature on - which means your menu should become sticky right out of the box. Sticky menu is designed to use element class ".navbar" as "Sticky Class". That value should be modified in plugin settings for different themes to make it work. Sticky Class is actually nothing more than an element class (or id) of the element that should become sticky.
+By default, My Sticky Bar (formerly myStickymenu) should make your menu sticky right away if you turn the sticky menu feature on - which means your menu should become sticky right out of the box. Sticky menu is designed to use element class ".navbar" as "Sticky Class". That value should be modified in plugin settings for different themes to make it work. Sticky Class is actually nothing more than an element class (or id) of the element that should become sticky.
 
 [youtube  https://www.youtube.com/watch?v=l9aRnPVuCVY]
 
@@ -276,15 +276,8 @@ Twenty Thirteen (sticky header – add your own custom logo image and edit to su
 Webnus netStudio theme
 ** Sticky Class =>.nav-wrap2
 
-
-Weblizar
-** Sticky Class => .row
-
-
 Wrock Metro Theme (entire header)
 ** Sticky Class =>#navigation
-
-
 
 
 == Frequently Asked Questions ==
@@ -357,6 +350,9 @@ After installing the plugin, you’ll have the option to turn on the welcome bar
 
 
 == Changelog ==
+
+= 2.8.3 =
+WordPress Playground widget creation bug fixed
 
 = 2.8.2 =
 Improved support flow
