@@ -1,23 +1,29 @@
+# Copyright (C) 2025 Premio
+# This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: myStickymenu\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mystickymenu-free-"
-"uncompressed\n"
-"POT-Creation-Date: 2025-11-17 11:58:23+00:00\n"
-"PO-Revision-Date: 2017-09-15 08:39+0100\n"
-"Last-Translator: mrda <jahmirda@gmail.com>\n"
-"Language-Team: TFN <jahmirda@gmail.com>\n"
-"Language: English\n"
+"Project-Id-Version: My Sticky Bar 2.8.6\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/mystickymenu-free-uncompressed\n"
+"POT-Creation-Date: 2025-12-11 09:12:39+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
-"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
-"X-Poedit-Basepath: .\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: ..\n"
-"X-Poedit-SearchPath-1: .\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n 1.0.4\n"
 
 #: mystickymenu.php:1078
 msgid "404"
@@ -65,8 +71,8 @@ msgstr ""
 
 #: admin/bar-settings.php:190 welcome-bar.php:925
 msgid ""
-"Your Bar is currently turned off, would you like to save and show it on your "
-"site?"
+"Your Bar is currently turned off, would you like to save and show it on "
+"your site?"
 msgstr ""
 
 #: admin/bar-settings.php:193 welcome-bar.php:928
@@ -198,9 +204,8 @@ msgid "UPGRADE NOW"
 msgstr ""
 
 #: admin/customize-bar.php:178 welcome-bar.php:246
-#, fuzzy
 msgid "Transition styles"
-msgstr "  Tiempo de Transición de Sticky "
+msgstr ""
 
 #: admin/customize-bar.php:182 welcome-bar.php:250
 msgid "Right transition"
@@ -219,9 +224,8 @@ msgid "Down transition"
 msgstr ""
 
 #: admin/customize-bar.php:196 welcome-bar.php:265
-#, fuzzy
 msgid "Transition speed"
-msgstr "  Tiempo de Transición de Sticky "
+msgstr ""
 
 #: admin/customize-bar.php:200 welcome-bar.php:269
 msgid "Slow"
@@ -328,9 +332,8 @@ msgid ""
 msgstr ""
 
 #: admin/customize-bar.php:345 welcome-bar.php:416
-#, fuzzy
 msgid "Button Settings"
-msgstr "  Configuraciones de myStickymenu "
+msgstr ""
 
 #: admin/customize-bar.php:350 welcome-bar.php:419
 msgid "Show a Button On"
@@ -513,9 +516,9 @@ msgstr ""
 
 #: admin/customize-bar.php:540 welcome-bar.php:595
 msgid ""
-"Choose bar display settings after a visitor click on the button. The \"Don't "
-"show the Bar again for the user\" option is the preferable option if you "
-"don't want to annoy your visitors by showing the bar over and over"
+"Choose bar display settings after a visitor click on the button. The "
+"\"Don't show the Bar again for the user\" option is the preferable option "
+"if you don't want to annoy your visitors by showing the bar over and over"
 msgstr ""
 
 #: admin/customize-bar.php:545 welcome-bar.php:600
@@ -603,8 +606,8 @@ msgstr ""
 #: admin/display-rules.php:79 welcome-bar.php:684
 msgid ""
 "Set the date and time for when you want the widget to start showing and the "
-"time you would like it to stop showing. You can add up to 12 combinations of "
-"\"on and off\" triggers. This feature may be useful when you have an "
+"time you would like it to stop showing. You can add up to 12 combinations "
+"of \"on and off\" triggers. This feature may be useful when you have an "
 "upcoming limited-time offer."
 msgstr ""
 
@@ -652,8 +655,8 @@ msgstr ""
 
 #: admin/display-rules.php:137 welcome-bar.php:742
 msgid ""
-" Add page targeting to ensure the bar only appears or doesn't appear for the "
-"selected pages only"
+" Add page targeting to ensure the bar only appears or doesn't appear for "
+"the selected pages only"
 msgstr ""
 
 #: admin/display-rules.php:144 welcome-bar.php:749
@@ -859,8 +862,8 @@ msgstr ""
 msgid "Install Poptin"
 msgstr ""
 
-#. translators: %s: Plugin author.
 #: admin/poptin-plugin.php:88 recommended-plugins.php:140
+#. translators: %s: Plugin author.
 msgid "By %s"
 msgstr ""
 
@@ -880,8 +883,8 @@ msgstr ""
 msgid "Network Activate"
 msgstr ""
 
-#. translators: %s: Plugin name and version.
 #: admin/poptin-plugin.php:199 recommended-plugins.php:251
+#. translators: %s: Plugin name and version.
 msgid "More information about %s"
 msgstr ""
 
@@ -893,22 +896,22 @@ msgstr ""
 msgid "This plugin doesn&#8217;t work with your versions of WordPress and PHP."
 msgstr ""
 
-#. translators: 1: URL to WordPress Updates screen, 2: URL to Update PHP page.
 #: admin/poptin-plugin.php:235 recommended-plugins.php:287
+#. translators: 1: URL to WordPress Updates screen, 2: URL to Update PHP page.
 msgid ""
 "<a href=\"%1$s\">Please update WordPress</a>, and then <a "
 "href=\"%2$s\">learn more about updating PHP</a>."
 msgstr ""
 
-#. translators: %s: URL to WordPress Updates screen.
 #: admin/poptin-plugin.php:243 admin/poptin-plugin.php:259
 #: recommended-plugins.php:295 recommended-plugins.php:311
+#. translators: %s: URL to WordPress Updates screen.
 msgid "<a href=\"%s\">Please update WordPress</a>."
 msgstr ""
 
-#. translators: %s: URL to Update PHP page.
 #: admin/poptin-plugin.php:249 admin/poptin-plugin.php:268
 #: recommended-plugins.php:301 recommended-plugins.php:320
+#. translators: %s: URL to Update PHP page.
 msgid "<a href=\"%s\">Learn more about updating PHP</a>."
 msgstr ""
 
@@ -924,13 +927,13 @@ msgstr ""
 msgid "Last Updated:"
 msgstr ""
 
-#. translators: %s: Human-readable time difference.
 #: admin/poptin-plugin.php:315 recommended-plugins.php:367
+#. translators: %s: Human-readable time difference.
 msgid "%s ago"
 msgstr ""
 
-#. translators: %s: Number of installations.
 #: admin/poptin-plugin.php:333 recommended-plugins.php:385
+#. translators: %s: Number of installations.
 msgid "%s Active Installations"
 msgstr ""
 
@@ -1122,9 +1125,8 @@ msgstr ""
 
 #: admin/stickymenu-dashboard.php:215 mystickymenu.php:704
 #: stickymenu-dashboard.php:205
-#, fuzzy
 msgid "Sticky menu"
-msgstr " Opciones de myStickymenu "
+msgstr ""
 
 #: admin/stickymenu-dashboard.php:229 mystickymenu.php:802
 #: stickymenu-dashboard.php:219
@@ -1132,9 +1134,8 @@ msgid "Settings"
 msgstr ""
 
 #: admin/stickymenu-dashboard.php:230 stickymenu-dashboard.php:220
-#, fuzzy
 msgid "Disable"
-msgstr "Disable CSS style"
+msgstr ""
 
 #: admin/stickymenu-dashboard.php:232 stickymenu-dashboard.php:222
 msgid "Configure"
@@ -1162,8 +1163,8 @@ msgstr ""
 
 #: admin/stickymenu-dashboard.php:262
 msgid ""
-"Explore amazing products from the premio team and supercharge your wordpress "
-"website!"
+"Explore amazing products from the premio team and supercharge your "
+"wordpress website!"
 msgstr ""
 
 #: admin/stickymenu-dashboard.php:263
@@ -1175,14 +1176,12 @@ msgid "Follow Us"
 msgstr ""
 
 #: admin/stickymenu-dashboard.php:287 stickymenu-dashboard.php:254
-msgid ""
-"You’re about to turn off the sticky menu feature. Are you sure about that?"
+msgid "You’re about to turn off the sticky menu feature. Are you sure about that?"
 msgstr ""
 
 #: class-email-signup.php:60
-#, fuzzy
 msgid "My Sticky Elements"
-msgstr " Opciones de myStickymenu "
+msgstr ""
 
 #: class-email-signup.php:61
 msgid "Join the list 100,000+ users trust"
@@ -1282,8 +1281,8 @@ msgstr ""
 
 #: mystickymenu-admin-widgetanalytics.php:38
 msgid ""
-"<strong>Analyze</strong> the number of unique clicks and the <strong>click-"
-"through rate</strong>"
+"<strong>Analyze</strong> the number of unique clicks and the "
+"<strong>click-through rate</strong>"
 msgstr ""
 
 #: mystickymenu-admin-widgetanalytics.php:44
@@ -1391,24 +1390,18 @@ msgid "How To Make a Sticky Header"
 msgstr ""
 
 #: mystickymenu.php:716
-#, fuzzy
 msgid ""
-"Add sticky menu / header to any theme. <br />Simply change 'Sticky Class' to "
-"HTML element class desired to be sticky (div id can be used as well)."
+"Add sticky menu / header to any theme. <br />Simply change 'Sticky Class' "
+"to HTML element class desired to be sticky (div id can be used as well)."
 msgstr ""
-"Adiciona agradable menú o encabezado moderno a cualquier tema. Por defecto "
-"trabaja con el tema Twenty Thirteen. <br/> Para otros temas cambie  'Sticky "
-"Class' a la clase div que se quiere poner como sticky (el id del div puede "
-"ser usado también)."
 
 #: mystickymenu.php:722
 msgid "Sticky Class"
-msgstr " Clase de Sticky "
+msgstr ""
 
 #: mystickymenu.php:729
-#, fuzzy
 msgid "Select Sticky Menu"
-msgstr " Opciones de myStickymenu "
+msgstr ""
 
 #: mystickymenu.php:765
 msgid "Other Class Or ID"
@@ -1417,18 +1410,19 @@ msgstr ""
 #: mystickymenu.php:773
 msgid ""
 "Need help finding your ID/Class? Install <a href=\"%1$s\" "
-"target=\"_blank\">CSS Peeper</a> to quickly get your navigation menu ID/"
-"Class. Here's a quick <a href=\"%2$s\" target=\"_blank\">video <span "
-"class=\"dashicons dashicons-controls-play\"></span></a> of how you can do it."
+"target=\"_blank\">CSS Peeper</a> to quickly get your navigation menu "
+"ID/Class. Here's a quick <a href=\"%2$s\" target=\"_blank\">video <span "
+"class=\"dashicons dashicons-controls-play\"></span></a> of how you can do "
+"it."
 msgstr ""
 
 #: mystickymenu.php:806
 msgid "Sticky z-index"
-msgstr "   z-index de Sticky "
+msgstr ""
 
 #: mystickymenu.php:812
 msgid "Fade or slide effect"
-msgstr "  Atenuar o deslizar efecto"
+msgstr ""
 
 #: mystickymenu.php:817
 msgid "Slide"
@@ -1436,7 +1430,7 @@ msgstr ""
 
 #: mystickymenu.php:827
 msgid "Disable at Small Screen Sizes"
-msgstr "  Desabilitado en Tamaños Pequeños en la Pantalla"
+msgstr ""
 
 #: mystickymenu.php:828
 msgid "Less than chosen screen width, set 0 to disable"
@@ -1444,7 +1438,7 @@ msgstr ""
 
 #: mystickymenu.php:837
 msgid "Make visible on Scroll"
-msgstr " Hacer visible cuando se hace scroll"
+msgstr ""
 
 #: mystickymenu.php:838
 msgid "If set to 0 auto calculate will be used."
@@ -1452,7 +1446,7 @@ msgstr ""
 
 #: mystickymenu.php:849
 msgid "Make visible on Scroll at homepage"
-msgstr " Hacer visible cuando se hace scroll on homepage"
+msgstr ""
 
 #: mystickymenu.php:850
 msgid "If set to 0 it will use initial Make visible on Scroll value."
@@ -1460,45 +1454,39 @@ msgstr ""
 
 #: mystickymenu.php:859
 msgid "Sticky Background Color"
-msgstr "  Color de Fondo de Sticky "
+msgstr ""
 
 #: mystickymenu.php:868
 msgid "Sticky Transition Time"
-msgstr "  Tiempo de Transición de Sticky "
+msgstr ""
 
 #: mystickymenu.php:874
-#, fuzzy
 msgid "Sticky Text Color"
-msgstr "  Color de Fondo de Sticky "
+msgstr ""
 
 #: mystickymenu.php:883
 msgid "Sticky Opacity"
-msgstr "  Opacidad de Sticky "
+msgstr ""
 
 #: mystickymenu.php:884
 msgid "numbers 1-100."
-msgstr "     números 1-100."
+msgstr ""
 
 #: mystickymenu.php:900
-#, fuzzy
 msgid "Hide on Scroll Down"
-msgstr " Hacer visible cuando se hace scroll"
+msgstr ""
 
 #: mystickymenu.php:905
 msgid "Disable sticky menu at scroll down"
 msgstr ""
 
 #: mystickymenu.php:995 upgrade-to-pro.php:197
-#, fuzzy
 msgid "CSS style"
-msgstr "Disable CSS style"
+msgstr ""
 
 #: mystickymenu.php:996
-#, fuzzy
 msgid "Add/edit CSS style. Leave it blank for default style."
 msgstr ""
-"Agregar / Editar. Myfixed clase CSS para cambiar el estilo de menú pegajoso. "
-"Déjelo en blanco para el estilo predeterminado."
 
 #: mystickymenu.php:1000
 msgid "CSS ID's and Classes to use:"
@@ -1506,16 +1494,15 @@ msgstr ""
 
 #: mystickymenu.php:1012
 msgid "Disable CSS style"
-msgstr "Disable CSS style"
+msgstr ""
 
 #: mystickymenu.php:1016
 msgid "Use this option if you plan to include CSS Style manually"
-msgstr "Use this option if you plan to include CSS Style manually"
+msgstr ""
 
 #: mystickymenu.php:1023
-#, fuzzy
 msgid "Disable at"
-msgstr "Disable CSS style"
+msgstr ""
 
 #: mystickymenu.php:1030
 msgid "front page"
@@ -1550,8 +1537,7 @@ msgid "search"
 msgstr ""
 
 #: mystickymenu.php:1086
-msgid ""
-"<span class=\"description\"><strong>Except for this pages:</strong> </span>"
+msgid "<span class=\"description\"><strong>Except for this pages:</strong> </span>"
 msgstr ""
 
 #: mystickymenu.php:1093
@@ -1562,8 +1548,7 @@ msgid ""
 msgstr ""
 
 #: mystickymenu.php:1100
-msgid ""
-"<span class=\"description\"><strong>Except for this posts:</strong> </span>"
+msgid "<span class=\"description\"><strong>Except for this posts:</strong> </span>"
 msgstr ""
 
 #: mystickymenu.php:1107
@@ -1579,8 +1564,8 @@ msgstr ""
 
 #: mystickymenu.php:1125
 msgid ""
-"Sticky Menu is not turned on. Turn on Sticky Menu to activate sticky menu on "
-"your website."
+"Sticky Menu is not turned on. Turn on Sticky Menu to activate sticky menu "
+"on your website."
 msgstr ""
 
 #: mystickymenu.php:1128
@@ -1641,8 +1626,8 @@ msgstr ""
 
 #: mystickymenu.php:1781
 msgid ""
-"Contact's data is saved locally do make backup or export before uninstalling "
-"plugin"
+"Contact's data is saved locally do make backup or export before "
+"uninstalling plugin"
 msgstr ""
 
 #: mystickymenu.php:1786
@@ -1702,9 +1687,8 @@ msgid "Minutes"
 msgstr ""
 
 #: mystickymenu.php:2146
-#, fuzzy
 msgid "Seconds"
-msgstr "en cuestión de segundos."
+msgstr ""
 
 #: mystickymenu.php:2370
 msgid "This field is required"
@@ -1741,9 +1725,8 @@ msgid "/Year"
 msgstr ""
 
 #: upgrade-to-pro.php:39
-#, fuzzy
 msgid "Less than $4.1/mo"
-msgstr "menos que"
+msgstr ""
 
 #: upgrade-to-pro.php:41 upgrade-to-pro.php:79 upgrade-to-pro.php:117
 msgid "1 Website"
@@ -1754,9 +1737,8 @@ msgid "Save $136"
 msgstr ""
 
 #: upgrade-to-pro.php:45
-#, fuzzy
 msgid "Less than $9.1/mo"
-msgstr "menos que"
+msgstr ""
 
 #: upgrade-to-pro.php:47 upgrade-to-pro.php:85 upgrade-to-pro.php:123
 msgid "5 Websites"
@@ -1767,9 +1749,8 @@ msgid "Save $2,270"
 msgstr ""
 
 #: upgrade-to-pro.php:51
-#, fuzzy
 msgid "Less than $15/mo"
-msgstr "menos que"
+msgstr ""
 
 #: upgrade-to-pro.php:53 upgrade-to-pro.php:91 upgrade-to-pro.php:129
 msgid "50 Websites"
@@ -1789,9 +1770,8 @@ msgid "500 Websites"
 msgstr ""
 
 #: upgrade-to-pro.php:63
-#, fuzzy
 msgid "Less than $40/mo"
-msgstr "menos que"
+msgstr ""
 
 #: upgrade-to-pro.php:65 upgrade-to-pro.php:103 upgrade-to-pro.php:141
 msgid "1000 Websites"
@@ -1814,18 +1794,16 @@ msgid "Save $29"
 msgstr ""
 
 #: upgrade-to-pro.php:77
-#, fuzzy
 msgid "Less than $2.9/mo"
-msgstr "menos que"
+msgstr ""
 
 #: upgrade-to-pro.php:82
 msgid "Save $321"
 msgstr ""
 
 #: upgrade-to-pro.php:83
-#, fuzzy
 msgid "Less than $7.1/mo"
-msgstr "menos que"
+msgstr ""
 
 #: upgrade-to-pro.php:88
 msgid "Save $4,600+"
@@ -2000,8 +1978,7 @@ msgid "30 days money back guaranteed"
 msgstr ""
 
 #: upgrade-to-pro.php:388
-msgid ""
-"The plugin will always keep working even if you don't renew your license"
+msgid "The plugin will always keep working even if you don't renew your license"
 msgstr ""
 
 #: upgrade-to-pro.php:489
@@ -2025,9 +2002,8 @@ msgid " Upgrade Now"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#, fuzzy
 msgid "My Sticky Bar"
-msgstr " Clase de Sticky "
+msgstr ""
 
 #. Plugin URI of the plugin/theme
 msgid "https://premio.io/"
@@ -2044,8 +2020,8 @@ msgstr ""
 msgid "https://premio.io/downloads/mystickymenu/"
 msgstr ""
 
-#. translators: %s: Plugin name and version.
 #: admin/poptin-plugin.php:112 recommended-plugins.php:164
+#. translators: %s: Plugin name and version.
 msgctxt "plugin"
 msgid "Install %s now"
 msgstr ""
@@ -2055,8 +2031,8 @@ msgctxt "plugin"
 msgid "Cannot Install"
 msgstr ""
 
-#. translators: %s: Plugin name and version.
 #: admin/poptin-plugin.php:134 recommended-plugins.php:186
+#. translators: %s: Plugin name and version.
 msgctxt "plugin"
 msgid "Update %s now"
 msgstr ""
@@ -2071,14 +2047,14 @@ msgctxt "plugin"
 msgid "Active"
 msgstr ""
 
-#. translators: %s: Plugin name.
 #: admin/poptin-plugin.php:157 recommended-plugins.php:209
+#. translators: %s: Plugin name.
 msgctxt "plugin"
 msgid "Activate %s"
 msgstr ""
 
-#. translators: %s: Plugin name.
 #: admin/poptin-plugin.php:170 recommended-plugins.php:222
+#. translators: %s: Plugin name.
 msgctxt "plugin"
 msgid "Network Activate %s"
 msgstr ""
@@ -2088,8 +2064,8 @@ msgctxt "plugin"
 msgid "Installed"
 msgstr ""
 
-#. translators: %s: Number of millions.
 #: admin/poptin-plugin.php:324 recommended-plugins.php:376
+#. translators: %s: Number of millions.
 msgctxt "Active plugin installations"
 msgid "%s+ Million"
 msgid_plural "%s+ Million"
@@ -2097,50 +2073,6 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: admin/poptin-plugin.php:328 recommended-plugins.php:380
-#, fuzzy
 msgctxt "Active plugin installations"
 msgid "Less Than 10"
-msgstr "menos que"
-
-#, fuzzy
-#~ msgid "menu or header element class or id."
-#~ msgstr "clase o id del div del menú o encabezado."
-
-#~ msgid "px width, 0  to disable."
-#~ msgstr "ancho px, 0 para desactivarlo."
-
-#~ msgid "after"
-#~ msgstr "después"
-
-#~ msgid "Checked is slide, unchecked is fade."
-#~ msgstr "Checked es deslizar, sin control se desvanecen."
-
-#, fuzzy
-#~ msgid "If you want to change sticky hover color: "
-#~ msgstr ""
-#~ "Si desea cambiar el color libración pegajosa primero añadir estilo por "
-#~ "defecto y que:"
-
-#~ msgid ""
-#~ "More examples <a href='http://wordpress.transformnews.com/tutorials/"
-#~ "mystickymenu-extended-style-functionality-using-myfixed-sticky-"
-#~ "class-403'>here</a>."
-#~ msgstr ""
-#~ "Más ejemplos <unas href='http://wordpress.transformnews.com/tutorials/"
-#~ "mystickymenu-extended-style-functionality-using-myfixed-sticky-"
-#~ "class-403'>here</a>."
-
-#~ msgid ".myfixed css class"
-#~ msgstr ".myfixed css class"
-
-#~ msgid "px."
-#~ msgstr "px."
-
-#~ msgid "Default style: "
-#~ msgstr "Estilo por defecto:"
-
-#~ msgid "px. (scroll)"
-#~ msgstr "px. (scroll)"
-
-#~ msgid "mymessage2"
-#~ msgstr "Bye"
+msgstr ""

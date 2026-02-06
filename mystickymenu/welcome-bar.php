@@ -80,13 +80,13 @@ function mysticky_welcome_bar_backend() {
 	?>
 	<form class="mysticky-welcomebar-form" id="mysticky_welcomebar_form" method="post" action="<?php echo admin_url('admin.php?page=my-stickymenu-welcomebar&save=1&widget=0');?>">
 		<div class="mysticky-welcomebar-header-title">
-			<h3><?php esc_html_e('Bar Visibility', 'myStickymenu'); ?></h3>
+			<h3><?php esc_html_e('Bar Visibility', 'mystickymenu'); ?></h3>
 			<label for="mysticky-welcomebar-contact-form-enabled" class="mysticky-welcomebar-switch mysticky-custom-fields-tooltip">
 				<input type="checkbox" id="mysticky-welcomebar-contact-form-enabled" name="mysticky_option_welcomebar[mysticky_welcomebar_enable]" value="1" <?php checked( @$welcomebar['mysticky_welcomebar_enable'], '1' );?> />
 				<span class="slider"></span>
 				<p style="width: 100px;text-align: center; padding:5px;">
-					<span class="mystickybar-visible" <?php if(!isset($welcomebar['mysticky_welcomebar_enable'])):?>style="display:none;"<?php endif;?>><?php esc_html_e('Bar is visible', 'myStickymenu'); ?></span>
-					<span class="mystickybar-hidden" <?php if(isset($welcomebar['mysticky_welcomebar_enable']) && $welcomebar['mysticky_welcomebar_enable']== 1 ):?>style="display:none;"<?php endif;?>><?php esc_html_e('Bar is hidden', 'myStickymenu'); ?></span>
+					<span class="mystickybar-visible" <?php if(!isset($welcomebar['mysticky_welcomebar_enable'])):?>style="display:none;"<?php endif;?>><?php esc_html_e('Bar is visible', 'mystickymenu'); ?></span>
+					<span class="mystickybar-hidden" <?php if(isset($welcomebar['mysticky_welcomebar_enable']) && $welcomebar['mysticky_welcomebar_enable']== 1 ):?>style="display:none;"<?php endif;?>><?php esc_html_e('Bar is hidden', 'mystickymenu'); ?></span>
 				</p>
 			</label>
 		</div>
@@ -94,10 +94,10 @@ function mysticky_welcome_bar_backend() {
 			<div class="mysticky-welcomebar-setting-left">
 				<div class="mysticky-welcomebar-setting-block">
 					<div class="mysticky-welcomebar-subheader-title">
-						<h4><?php esc_html_e('Bar Settings', 'myStickymenu'); ?></h4>
+						<h4><?php esc_html_e('Bar Settings', 'mystickymenu'); ?></h4>
 					</div>
 					<div class="mysticky-welcomebar-setting-content mysticky-welcomebar-setting-position">
-						<label><?php esc_html_e('Position', 'myStickymenu'); ?><span class="mysticky-custom-fields-tooltip">
+						<label><?php esc_html_e('Position', 'mystickymenu'); ?><span class="mysticky-custom-fields-tooltip">
 									<a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;">Choose if you want to show the bar on top or at the bottom of your site</p></span></label>
 						<div class="mysticky-welcomebar-setting-content-right setting-content-relative">
 							<label>
@@ -112,7 +112,7 @@ function mysticky_welcome_bar_backend() {
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content height-setting" <?php if(isset($welcomebar['mysticky_welcomebar_enable_lead']) && $welcomebar['mysticky_welcomebar_enable_lead'] == 1):?> style="display:none;"<?php endif;?>>
-						<label><?php esc_html_e('Height', 'myStickymenu'); ?>
+						<label><?php esc_html_e('Height', 'mystickymenu'); ?>
 							<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;">Choose the size of your bar in pixels</p></span>
 						</label>
 						<div class="mysticky-welcomebar-setting-content-right setting-content-relative">
@@ -124,32 +124,32 @@ function mysticky_welcome_bar_backend() {
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
-						<label><?php esc_html_e('Bar Color', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Bar Color', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-colorpicker">
 							<input type="text" id="mysticky_welcomebar_bgcolor" name="mysticky_option_welcomebar[mysticky_welcomebar_bgcolor]" class="my-color-field" data-alpha="true" value="<?php echo esc_attr($welcomebar['mysticky_welcomebar_bgcolor']);?>" />
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
 						<label>
-							<?php _e('Bar background image', 'myStickymenu'); ?>
-							<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e('Choose a custom image as the background for your welcome bar', 'myStickymenu');?><br><img src="<?php echo MYSTICKYMENU_URL ?>/images/bar-background-image.png" style="width:100%;"/></p></span>
+							<?php _e('Bar background image', 'mystickymenu'); ?>
+							<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e('Choose a custom image as the background for your welcome bar', 'mystickymenu');?><br><img src="<?php echo MYSTICKYMENU_URL ?>/images/bar-background-image.png" style="width:100%;"/></p></span>
 						</label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-colorpicker setting-content-relative">
-							<a href="<?php echo esc_url($upgarde_url); ?>" class="welcomebar-background-image" id="welcomebar-background-image"><?php esc_html_e('Upload Background', 'myStickymenu');?></a>
+							<a href="<?php echo esc_url($upgarde_url); ?>" class="welcomebar-background-image" id="welcomebar-background-image"><?php esc_html_e('Upload Background', 'mystickymenu');?></a>
 							<span class="myStickymenu-upgrade"><a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php _e( 'Upgrade Now', 'mystickymenu' );?></a></span>
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
-						<label><?php esc_html_e('Bar Text Color', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Bar Text Color', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-colorpicker">
 							<input type="text" id="mysticky_welcomebar_bgtxtcolor" name="mysticky_option_welcomebar[mysticky_welcomebar_bgtxtcolor]" class="my-color-field" data-alpha="true" value="<?php echo esc_attr($welcomebar['mysticky_welcomebar_bgtxtcolor']);?>" />
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
-						<label><?php esc_html_e('Font', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Font', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right">
 							<select name="mysticky_option_welcomebar[mysticky_welcomebar_font]" class="form-fonts">
-								<option value=""><?php esc_html_e( 'Select font family', 'myStickymenu' );?></option>
+								<option value=""><?php esc_html_e( 'Select font family', 'mystickymenu' );?></option>
 								<?php $group= ''; foreach( myStickymenu_fonts() as $key=>$value):
 											if ($value != $group){
 												echo '<optgroup label="' . esc_attr($value) . '">';
@@ -162,7 +162,7 @@ function mysticky_welcome_bar_backend() {
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
-						<label><?php esc_html_e('Font Size', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Font Size', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right">
 							<div class="px-wrap">
 								<input type="number" class="" min="0" step="1" id="mysticky_welcomebar_fontsize" name="mysticky_option_welcomebar[mysticky_welcomebar_fontsize]" value="<?php echo (isset($welcomebar['mysticky_welcomebar_fontsize'])) ? esc_attr($welcomebar['mysticky_welcomebar_fontsize']) : '';?>" />
@@ -171,7 +171,7 @@ function mysticky_welcome_bar_backend() {
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content mysticky-collect-lead">
-						<label><?php esc_html_e('Bar Text', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Bar Text', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right welcomebar-text">
 							<label>
 								<input id="welcomebar_static_text" name="mysticky_option_welcomebar[mysticky_welcomebar_text_type]" value= "static_text" type="radio" <?php checked( @$welcomebar['mysticky_welcomebar_text_type'], 'static_text' );?> />
@@ -243,14 +243,14 @@ function mysticky_welcome_bar_backend() {
 						</div>
 					</div>
 					<div id="mysticky_welcomebar_sliding_text_transition_style" class="mysticky-welcomebar-setting-content" style="display:<?php echo (isset($welcomebar['mysticky_welcomebar_text_type']) && $welcomebar['mysticky_welcomebar_text_type'] == 'sliding_text') ? 'flex' : 'none'; ?>">
-						<label><?php esc_html_e('Transition styles', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Transition styles', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right">
 							<div class="welcomebar-slider-text-option">								
 								<select>
-									<option value="slideInRight" <?php selected( $welcomebar['mysticky_welcomebar_slider_transition'],'slideInRight')?>><?php esc_html_e('Right transition', 'myStickymenu');?></option>
-									<option value="slideInLeft" <?php selected( $welcomebar['mysticky_welcomebar_slider_transition'],'slideInLeft')?>><?php esc_html_e('Left transition', 'myStickymenu');?></option>
-									<option value="slideInUp" <?php selected( $welcomebar['mysticky_welcomebar_slider_transition'],'slideInUp')?>><?php esc_html_e('Up transition', 'myStickymenu');?></option>
-									<option value="slideInDown" <?php selected( $welcomebar['mysticky_welcomebar_slider_transition'],'slideInDown')?>><?php esc_html_e('Down transition', 'myStickymenu');?></option>
+									<option value="slideInRight" <?php selected( $welcomebar['mysticky_welcomebar_slider_transition'],'slideInRight')?>><?php esc_html_e('Right transition', 'mystickymenu');?></option>
+									<option value="slideInLeft" <?php selected( $welcomebar['mysticky_welcomebar_slider_transition'],'slideInLeft')?>><?php esc_html_e('Left transition', 'mystickymenu');?></option>
+									<option value="slideInUp" <?php selected( $welcomebar['mysticky_welcomebar_slider_transition'],'slideInUp')?>><?php esc_html_e('Up transition', 'mystickymenu');?></option>
+									<option value="slideInDown" <?php selected( $welcomebar['mysticky_welcomebar_slider_transition'],'slideInDown')?>><?php esc_html_e('Down transition', 'mystickymenu');?></option>
 								</select>
 								<span class="upgrade-mystickymenu myStickymenu-upgrade">
 									<a href="<?php echo esc_url($upgarde_url); ?>" target="_blank">
@@ -262,13 +262,13 @@ function mysticky_welcome_bar_backend() {
 					</div>
 					
 					<div id="mysticky_welcomebar_sliding_text_transition_speed" class="mysticky-welcomebar-setting-content" style="display:<?php echo (isset($welcomebar['mysticky_welcomebar_text_type']) && $welcomebar['mysticky_welcomebar_text_type'] == 'sliding_text') ? 'flex' : 'none'; ?>">
-						<label><?php esc_html_e('Transition speed', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Transition speed', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right">
 							<div class="welcomebar-slider-text-option">								
 								<select>
-									<option value="6000" data-speed="6000"><?php esc_html_e('Slow', 'myStickymenu');?></option>
-									<option value="4500" data-speed="4500"><?php esc_html_e('Medium', 'myStickymenu');?></option>
-									<option value="3000" data-speed="3000"><?php esc_html_e('Fast', 'myStickymenu');?></option>
+									<option value="6000" data-speed="6000"><?php esc_html_e('Slow', 'mystickymenu');?></option>
+									<option value="4500" data-speed="4500"><?php esc_html_e('Medium', 'mystickymenu');?></option>
+									<option value="3000" data-speed="3000"><?php esc_html_e('Fast', 'mystickymenu');?></option>
 								</select>
 								<span class="upgrade-mystickymenu myStickymenu-upgrade">
 									<a href="<?php echo esc_url($upgarde_url); ?>" target="_blank">
@@ -281,7 +281,7 @@ function mysticky_welcome_bar_backend() {
 					
 					
 					<div class="mysticky-welcomebar-setting-content">
-						<label><?php esc_html_e('Show an X Button', 'myStickymenu'); ?>
+						<label><?php esc_html_e('Show an X Button', 'mystickymenu'); ?>
 							<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e('Choose if you want to show an X button to close the bar or not or desktop and mobile devices', 'mystickymenu');?></p></span>	
 						</label>
 						<div class="mysticky-welcomebar-setting-content-right">
@@ -299,7 +299,7 @@ function mysticky_welcome_bar_backend() {
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">						
-						<label><?php esc_html_e('Countdown', 'myStickymenu'); ?> <span class="dashicons dashicons-clock" style="margin-left:5px;color:#a8aeaf;"></span> 
+						<label><?php esc_html_e('Countdown', 'mystickymenu'); ?> <span class="dashicons dashicons-clock" style="margin-left:5px;color:#a8aeaf;"></span> 
 						<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e("Add a countdown timer element to your Bar to increase conversion rate, announce flash sales, and more","mystickymenu");?><br><img src="<?php echo esc_url(MYSTICKYMENU_URL) ?>/images/countdown.gif" style="width:100%;"/></p></span>
 						</label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-close-automatically-sec">
@@ -313,7 +313,7 @@ function mysticky_welcome_bar_backend() {
 					</div>
 					<!-- Collect lead Section  -->
 					<div class="mysticky-welcomebar-setting-content">
-						<label style="position:relative;"><?php esc_html_e('Collect leads', 'myStickymenu'); ?>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16" style="fill: #a8aeaf;position: absolute;top: 3px"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path></svg> 
+						<label style="position:relative;"><?php esc_html_e('Collect leads', 'mystickymenu'); ?>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16" style="fill: #a8aeaf;position: absolute;top: 3px"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path></svg> 
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php echo sprintf(esc_html__(" Collect the visitor's details such as Name, email address or phone number from the bar. Collected visitor details can be viewed on the %1\$s page","mystickymenu"), '<a href="' . esc_url(admin_url("admin.php?page=my-sticky-menu-leads")). '" target="_blank">' . esc_html__( 'Contact Form Leads', 'mystickymenu') .'</a>');?></p></span>
 						</label>
@@ -326,7 +326,7 @@ function mysticky_welcome_bar_backend() {
 					</div>
 					<div class="mysticky-welcomebar-collect-lead mysticky-collect-lead" <?php if( isset($welcomebar['mysticky_welcomebar_enable_lead']) && $welcomebar['mysticky_welcomebar_enable_lead'] != 1 ):?> style="display:none;" <?php endif;?>>
 						<div class="mysticky-welcomebar-setting-content">
-							<label><?php esc_html_e('Select inputs', 'myStickymenu'); ?></label>
+							<label><?php esc_html_e('Select inputs', 'mystickymenu'); ?></label>
 							<div class="mysticky-welcomebar-setting-content-right lead_inputs">
 								<label>
 									<input id="mysticky_lead_input_email" name="mysticky_option_welcomebar[mysticky_welcomebar_lead_input]" value= "email_address" type="radio" <?php checked( @$welcomebar['mysticky_welcomebar_lead_input'], 'email_address' );?> />
@@ -340,21 +340,21 @@ function mysticky_welcome_bar_backend() {
 						</div>
 
 						<div class="mysticky-welcomebar-setting-content">
-							<label><?php esc_html_e('Placeholder for Name', 'myStickymenu'); ?></label>
+							<label><?php esc_html_e('Placeholder for Name', 'mystickymenu'); ?></label>
 							<div class="mysticky-welcomebar-setting-content-right">
 								<input type="text" class="mysticky_welcome_lead_name_placeholder" autocomplete="off"  value="<?php echo isset($welcomebar['lead_name_placeholder']) ? esc_attr($welcomebar['lead_name_placeholder']) : ''; ?>" name="mysticky_option_welcomebar[lead_name_placeholder]" id="lead-name-placeholder" />	
 							</div>
 						</div>
 
 						<div class="mysticky-welcomebar-setting-content" id="lead-email-content" style="display:<?php echo (isset($welcomebar['mysticky_welcomebar_lead_input']) && $welcomebar['mysticky_welcomebar_lead_input'] == 'email_address') ? 'flex' : 'none'; ?>">
-							<label><?php esc_html_e('Placeholder for Email', 'myStickymenu'); ?></label>
+							<label><?php esc_html_e('Placeholder for Email', 'mystickymenu'); ?></label>
 							<div class="mysticky-welcomebar-setting-content-right">
 								<input type="text" class="mysticky_welcome_lead_email_placeholder" autocomplete="off"  value="<?php echo isset($welcomebar['lead_email_placeholder']) ? esc_attr($welcomebar['lead_email_placeholder']) : ''; ?>" name="mysticky_option_welcomebar[lead_email_placeholder]" id="lead-email-placeholder" />	
 							</div>
 						</div>
 
 						<div class="mysticky-welcomebar-setting-content" id="lead-phone-content" style="display:<?php echo (isset($welcomebar['mysticky_welcomebar_lead_input']) && $welcomebar['mysticky_welcomebar_lead_input'] == 'phone') ? 'flex' : 'none'; ?>">
-							<label><?php esc_html_e('Placeholder for Phone', 'myStickymenu'); ?></label>
+							<label><?php esc_html_e('Placeholder for Phone', 'mystickymenu'); ?></label>
 							<div class="mysticky-welcomebar-setting-content-right">
 								<input type="text" class="mysticky_welcome_lead_phone_placeholder" autocomplete="off"  value="<?php echo isset($welcomebar['lead_phone_placeholder']) ? esc_attr($welcomebar['lead_phone_placeholder']) : ''; ?>" name="mysticky_option_welcomebar[lead_phone_placeholder]" id="lead-phone-placeholder" />	
 							</div>
@@ -372,7 +372,7 @@ function mysticky_welcome_bar_backend() {
 							</div>
 						</div>
 						<div id="mysticky-welcomebar-thankyou-wrap" class="mysticky-welcomebar-setting-content flex-top" <?php if ( !isset($welcomebar['mysticky_welcomebar_show_success_message']) ) : ?> style="display:none;" <?php endif;?>>
-							<label><?php esc_html_e('Thank You Text', 'myStickymenu'); ?></label>
+							<label><?php esc_html_e('Thank You Text', 'mystickymenu'); ?></label>
 							
 							<?php $mysticky_welcomebar_thankyou_screen_text = (isset($welcomebar['mysticky_welcomebar_thankyou_screen_text'])) ? stripslashes($welcomebar['mysticky_welcomebar_thankyou_screen_text']) : 'Thank you for submitting the form' ; ?>
 							<div class="mysticky-welcomebar-setting-content-right">
@@ -399,7 +399,7 @@ function mysticky_welcome_bar_backend() {
 					</div>			
 					<!-- Coupon Section Start  -->
 					<div class="mysticky-welcomebar-setting-content">
-						<label class="bagicon"><?php esc_html_e('Show Coupons', 'myStickymenu'); ?> &nbsp;<img src="<?php echo esc_url(MYSTICKYMENU_URL); ?>/images/shopyicon.svg" />
+						<label class="bagicon"><?php esc_html_e('Show Coupons', 'mystickymenu'); ?> &nbsp;<img src="<?php echo esc_url(MYSTICKYMENU_URL); ?>/images/shopyicon.svg" />
 						<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e("Add a coupon to your bar. Users can click on the coupon, copy it and use it on your website","mystickymenu");?><br><img src="<?php echo esc_url(esc_url(MYSTICKYMENU_URL)) ?>/images/show-coupon-ss.png" style="width:100%;"/></p></span>
 					</label>
 						<div class="mysticky-welcomebar-setting-content-right" style="margin-top: 8px;">
@@ -413,10 +413,10 @@ function mysticky_welcome_bar_backend() {
 				</div>
 				<div class="mysticky-welcomebar-setting-block">
 					<div class="mysticky-welcomebar-subheader-title">
-						<h4><?php esc_html_e('Button Settings', 'myStickymenu'); ?></h4>
+						<h4><?php esc_html_e('Button Settings', 'mystickymenu'); ?></h4>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
-						<label><?php esc_html_e('Show a Button On', 'myStickymenu'); ?>
+						<label><?php esc_html_e('Show a Button On', 'mystickymenu'); ?>
 							<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;">Choose whether you want to display a button on your bar or not on desktop and mobile devices</p></span>	
 						</label>
 						<div class="mysticky-welcomebar-setting-content-right">
@@ -431,19 +431,19 @@ function mysticky_welcome_bar_backend() {
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
-						<label><?php esc_html_e('Button Color', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Button Color', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-colorpicker mysticky_welcomebar_btn_color">
 							<input type="text" id="mysticky_welcomebar_btncolor" name="mysticky_option_welcomebar[mysticky_welcomebar_btncolor]" class="my-color-field" data-alpha="true" value="<?php echo esc_attr($welcomebar['mysticky_welcomebar_btncolor']);?>" />
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
-						<label><?php esc_html_e('Button Text Color', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Button Text Color', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-colorpicker mysticky_welcomebar_btn_color">
 							<input type="text" id="mysticky_welcomebar_btntxtcolor" name="mysticky_option_welcomebar[mysticky_welcomebar_btntxtcolor]" class="my-color-field" data-alpha="true" value="<?php echo esc_attr($welcomebar['mysticky_welcomebar_btntxtcolor']);?>" />
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
-						<label><?php esc_html_e('Button Text', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Button Text', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right welcomebar-text-button">
 							<input type="text" id="mysticky_welcomebar_btn_text" class="mystickyinput mysticky_welcomebar_disable" name="mysticky_option_welcomebar[mysticky_welcomebar_btn_text]" value="<?php echo stripslashes($welcomebar['mysticky_welcomebar_btn_text']);?>" />
 						</div>
@@ -451,88 +451,88 @@ function mysticky_welcome_bar_backend() {
 					<!-- -->
 
 					<div class="mysticky-welcomebar-setting-content">
-						<label><?php esc_html_e('Hover Effects', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Hover Effects', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right welcomebar-hover-effect">
 							<select name="mysticky_option_welcomebar[mysticky_welcomebar_hover_effect]" class="mysticky-welcomebar-hover-effect mysticky_welcomebar_disable">
-								<option value="none" <?php selected( @$welcomebar['mysticky_welcomebar_hover_effect'], 'none' ); ?>><?php esc_html_e( 'None', 'myStickymenu' );?></option>
-								<option value="fill_effect_button" <?php selected( @$welcomebar['mysticky_welcomebar_hover_effect'], 'fill_effect_button' ); ?>><?php esc_html_e( 'Fill on effects on hover', 'myStickymenu' );?></option>
-								<option value="border_effect_button" <?php selected( @$welcomebar['mysticky_welcomebar_hover_effect'], 'border_effect_button' ); ?>><?php esc_html_e( 'Border effects on hover', 'myStickymenu' );?></option>
+								<option value="none" <?php selected( @$welcomebar['mysticky_welcomebar_hover_effect'], 'none' ); ?>><?php esc_html_e( 'None', 'mystickymenu' );?></option>
+								<option value="fill_effect_button" <?php selected( @$welcomebar['mysticky_welcomebar_hover_effect'], 'fill_effect_button' ); ?>><?php esc_html_e( 'Fill on effects on hover', 'mystickymenu' );?></option>
+								<option value="border_effect_button" <?php selected( @$welcomebar['mysticky_welcomebar_hover_effect'], 'border_effect_button' ); ?>><?php esc_html_e( 'Border effects on hover', 'mystickymenu' );?></option>
 							</select>
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content welcomebar-hover-fill-effect"  <?php if ( $welcomebar['mysticky_welcomebar_hover_effect'] != 'fill_effect_button' ) : ?> style="display:none;" <?php endif;?>>
-						<label><?php esc_html_e('Button Hover Fill effects ', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Button Hover Fill effects ', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right">
 							<select name="mysticky_option_welcomebar[mysticky_welcomebar_hover_fill_effect]" class="mysticky-welcomebar-hover-effect mysticky_welcomebar_disable">
-								<option value="fill1" <?php selected( @$welcomebar['mysticky_welcomebar_hover_fill_effect'], 'fill1' ); ?>><?php esc_html_e( 'Fill Style 1', 'myStickymenu' );?></option>
-								<option value="fill2" <?php selected( @$welcomebar['mysticky_welcomebar_hover_fill_effect'], 'fill2' ); ?>><?php esc_html_e( 'Fill Style 2', 'myStickymenu' );?></option>
-								<option value="fill3" <?php selected( @$welcomebar['mysticky_welcomebar_hover_fill_effect'], 'fill3' ); ?>><?php esc_html_e( 'Fill Style 3', 'myStickymenu' );?></option>
-								<option value="fill4" <?php selected( @$welcomebar['mysticky_welcomebar_hover_fill_effect'], 'fill4' ); ?>><?php esc_html_e( 'Fill Style 4', 'myStickymenu' );?></option>
-								<option value="fill5" <?php selected( @$welcomebar['mysticky_welcomebar_hover_fill_effect'], 'fill5' ); ?>><?php esc_html_e( 'Fill Style 5', 'myStickymenu' );?></option>
+								<option value="fill1" <?php selected( @$welcomebar['mysticky_welcomebar_hover_fill_effect'], 'fill1' ); ?>><?php esc_html_e( 'Fill Style 1', 'mystickymenu' );?></option>
+								<option value="fill2" <?php selected( @$welcomebar['mysticky_welcomebar_hover_fill_effect'], 'fill2' ); ?>><?php esc_html_e( 'Fill Style 2', 'mystickymenu' );?></option>
+								<option value="fill3" <?php selected( @$welcomebar['mysticky_welcomebar_hover_fill_effect'], 'fill3' ); ?>><?php esc_html_e( 'Fill Style 3', 'mystickymenu' );?></option>
+								<option value="fill4" <?php selected( @$welcomebar['mysticky_welcomebar_hover_fill_effect'], 'fill4' ); ?>><?php esc_html_e( 'Fill Style 4', 'mystickymenu' );?></option>
+								<option value="fill5" <?php selected( @$welcomebar['mysticky_welcomebar_hover_fill_effect'], 'fill5' ); ?>><?php esc_html_e( 'Fill Style 5', 'mystickymenu' );?></option>
 							</select>
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content welcomebar-hover-border-effect"  <?php if ( $welcomebar['mysticky_welcomebar_hover_effect'] != 'border_effect_button' ) : ?> style="display:none;" <?php endif;?>>
-						<label><?php esc_html_e('Button Hover Border effects ', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Button Hover Border effects ', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right">
 							<select name="mysticky_option_welcomebar[mysticky_welcomebar_hover_border_effect]" class="mysticky-welcomebar-hover-effect mysticky_welcomebar_disable">
-								<option value="border1" <?php selected( @$welcomebar['mysticky_welcomebar_hover_border_effect'], 'border1' ); ?>><?php esc_html_e( 'Border Style 1', 'myStickymenu' );?></option>
-								<option value="border2" <?php selected( @$welcomebar['mysticky_welcomebar_hover_border_effect'], 'border2' ); ?>><?php esc_html_e( 'Border Style 2', 'myStickymenu' );?></option>
-								<option value="border3" <?php selected( @$welcomebar['mysticky_welcomebar_hover_border_effect'], 'border3' ); ?>><?php esc_html_e( 'Border Style 3', 'myStickymenu' );?></option>
-								<option value="border4" <?php selected( @$welcomebar['mysticky_welcomebar_hover_border_effect'], 'border4' ); ?>><?php esc_html_e( 'Border Style 4', 'myStickymenu' );?></option>
+								<option value="border1" <?php selected( @$welcomebar['mysticky_welcomebar_hover_border_effect'], 'border1' ); ?>><?php esc_html_e( 'Border Style 1', 'mystickymenu' );?></option>
+								<option value="border2" <?php selected( @$welcomebar['mysticky_welcomebar_hover_border_effect'], 'border2' ); ?>><?php esc_html_e( 'Border Style 2', 'mystickymenu' );?></option>
+								<option value="border3" <?php selected( @$welcomebar['mysticky_welcomebar_hover_border_effect'], 'border3' ); ?>><?php esc_html_e( 'Border Style 3', 'mystickymenu' );?></option>
+								<option value="border4" <?php selected( @$welcomebar['mysticky_welcomebar_hover_border_effect'], 'border4' ); ?>><?php esc_html_e( 'Border Style 4', 'mystickymenu' );?></option>
 							</select>
 						</div>
 					</div>
 
 					<div class="mysticky-welcomebar-setting-content mysticky-welcomebar-hover-txt-color" <?php if ( $welcomebar['mysticky_welcomebar_hover_effect'] == 'none' ) : ?> style="display:none;" <?php endif;?>>
-						<label><?php esc_html_e('Button Hover Text Color', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Button Hover Text Color', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-colorpicker mysticky_welcomebar_btn_color">
 							<input type="text" id="mysticky_welcomebar_btnhovertxtcolor" name="mysticky_option_welcomebar[mysticky_welcomebar_btnhovertxtcolor]" class="my-color-field" data-alpha="true" value="<?php echo esc_attr($welcomebar['mysticky_welcomebar_btnhovertxtcolor']);?>" />
 						</div>
 					</div>
 
 					<div class="mysticky-welcomebar-setting-content mysticky-welcomebar-hover-color" <?php if ( $welcomebar['mysticky_welcomebar_hover_effect'] == 'none' ) : ?> style="display:none;" <?php endif;?>>
-						<label><?php esc_html_e('Button Hover Color', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Button Hover Color', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-colorpicker mysticky_welcomebar_btn_color">
 							<input type="text" id="mysticky_welcomebar_btnhovercolor" name="mysticky_option_welcomebar[mysticky_welcomebar_btnhovercolor]" class="my-color-field" data-alpha="true" value="<?php echo esc_attr($welcomebar['mysticky_welcomebar_btnhovercolor']);?>" />
 						</div>
 					</div>
 
 					<div class="mysticky-welcomebar-setting-content mysticky-welcomebar-hover-border-color" <?php if ( $welcomebar['mysticky_welcomebar_hover_effect'] != 'border_effect_button' ) : ?> style="display:none;" <?php endif;?>>
-						<label><?php esc_html_e('Button Hover Border Color', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Button Hover Border Color', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-colorpicker mysticky_welcomebar_btn_color">
 							<input type="text" id="mysticky_welcomebar_btnhoverbordercolor" name="mysticky_option_welcomebar[mysticky_welcomebar_btnhoverbordercolor]" class="my-color-field" data-alpha="true" value="<?php echo esc_attr($welcomebar['mysticky_welcomebar_btnhoverbordercolor']);?>" />
 						</div>
 					</div>
 					<!-- -->
 					<div class="mysticky-welcomebar-setting-content">
-						<label><?php esc_html_e('Attention Effect', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Attention Effect', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right">
 							<div class="mysticky-welcomebar-setting-attention">
 								<select name="mysticky_option_welcomebar[mysticky_welcomebar_attentionselect]" class="mysticky-welcomebar-attention mysticky_welcomebar_disable">
-									<option value="default" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], '	' ); ?>><?php esc_html_e( 'None', 'myStickymenu' );?></option>
-									<option value="flash" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], 'flash' ); ?>><?php esc_html_e( 'Flash', 'myStickymenu' );?></option>
-									<option value="shake" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], 'shake' ); ?>><?php esc_html_e( 'Shake', 'myStickymenu' );?></option>
-									<option value="swing" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], 'swing' ); ?>><?php esc_html_e( 'Swing', 'myStickymenu' );?></option>
-									<option value="tada" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], 'tada' ); ?>><?php esc_html_e( 'Tada', 'myStickymenu' );?></option>
-									<option value="heartbeat" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], 'heartbeat' ); ?>><?php esc_html_e( 'Heartbeat', 'myStickymenu' );?></option>
-									<option value="wobble" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], 'wobble' ); ?>><?php esc_html_e( 'Wobble', 'myStickymenu' );?></option>
+									<option value="default" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], '	' ); ?>><?php esc_html_e( 'None', 'mystickymenu' );?></option>
+									<option value="flash" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], 'flash' ); ?>><?php esc_html_e( 'Flash', 'mystickymenu' );?></option>
+									<option value="shake" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], 'shake' ); ?>><?php esc_html_e( 'Shake', 'mystickymenu' );?></option>
+									<option value="swing" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], 'swing' ); ?>><?php esc_html_e( 'Swing', 'mystickymenu' );?></option>
+									<option value="tada" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], 'tada' ); ?>><?php esc_html_e( 'Tada', 'mystickymenu' );?></option>
+									<option value="heartbeat" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], 'heartbeat' ); ?>><?php esc_html_e( 'Heartbeat', 'mystickymenu' );?></option>
+									<option value="wobble" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], 'wobble' ); ?>><?php esc_html_e( 'Wobble', 'mystickymenu' );?></option>
 								</select>
 							</div>
 						</div>
 					</div>
 					<!-- -->
 					<div class="mysticky-welcomebar-setting-content">
-						<label><?php esc_html_e('Action On Button Click', 'myStickymenu'); ?>
+						<label><?php esc_html_e('Action On Button Click', 'mystickymenu'); ?>
 							<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;">Select what you'd like to happen when a visitor clicks on the button <br/>Redirect the visitor to another URL - your visitor will be redirected to another URL after they click on the button (for example, a specific product or latest collection) <br/>Close the Bar - after they user clicks on the button, the Bar will be closed <br/>Launch a Poptin pop-up - when the user clicks on the button, a Poptin pop-up will be launched. You need to first create a free Poptin account (link on "free Poptin account" to <a href='https://www.poptin.com/?utm_source=msm' target="_blank">https://www.poptin.com/?utm_source=msm</a>) and set up your pop-ups <br/>Show a thank-you screen - show a thank you screen after the user clicks on a button with different text from your Bar text</p></span>		
 						</label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-setting-redirect-wrap">
 							<div class="mysticky-welcomebar-setting-action">
 								<select name="mysticky_option_welcomebar[mysticky_welcomebar_actionselect]" class="mysticky-welcomebar-action mysticky_welcomebar_disable">
-									<option value="redirect_to_url" <?php selected( @$welcomebar['mysticky_welcomebar_actionselect'], 'redirect_to_url' ); ?>><?php esc_html_e( 'Redirect the visitor to another URL', 'myStickymenu' );?></option>
-									<option value="close_bar" <?php selected( @$welcomebar['mysticky_welcomebar_actionselect'], 'close_bar' ); ?>><?php esc_html_e( 'Close the Bar', 'myStickymenu' );?></option>
-									<option value="poptin_popup" <?php selected( @$welcomebar['mysticky_welcomebar_actionselect'], 'poptin_popup' ); ?> ><?php esc_html_e( 'Launch a Poptin pop-up', 'myStickymenu' );?></option>
-									<option value="thankyou_screen" data-href="<?php echo esc_url($upgarde_url); ?>"><?php esc_html_e( 'Show a thank-you screen (Pro Feature)', 'myStickymenu' );?></option>
+									<option value="redirect_to_url" <?php selected( @$welcomebar['mysticky_welcomebar_actionselect'], 'redirect_to_url' ); ?>><?php esc_html_e( 'Redirect the visitor to another URL', 'mystickymenu' );?></option>
+									<option value="close_bar" <?php selected( @$welcomebar['mysticky_welcomebar_actionselect'], 'close_bar' ); ?>><?php esc_html_e( 'Close the Bar', 'mystickymenu' );?></option>
+									<option value="poptin_popup" <?php selected( @$welcomebar['mysticky_welcomebar_actionselect'], 'poptin_popup' ); ?> ><?php esc_html_e( 'Launch a Poptin pop-up', 'mystickymenu' );?></option>
+									<option value="thankyou_screen" data-href="<?php echo esc_url($upgarde_url); ?>"><?php esc_html_e( 'Show a thank-you screen (Pro Feature)', 'mystickymenu' );?></option>
 								</select>
 							</div>
 							
@@ -545,7 +545,7 @@ function mysticky_welcome_bar_backend() {
 							</p>							
 						</div>
 						<div class="mysticky-welcomebar-setting-content">
-							<label><?php esc_html_e('Poptin pop-up direct link', 'myStickymenu'); ?></label>
+							<label><?php esc_html_e('Poptin pop-up direct link', 'mystickymenu'); ?></label>
 							<div class="mysticky-welcomebar-setting-content-right">
 								<input type="text" id="mysticky_welcomebar_poptin_popup_link" class="mystickyinput mysticky_welcomebar_disable" name="mysticky_option_welcomebar[mysticky_welcomebar_poptin_popup_link]" value="<?php echo (isset($welcomebar['mysticky_welcomebar_poptin_popup_link'])) ? esc_attr($welcomebar['mysticky_welcomebar_poptin_popup_link']) : '';?>" placeholder="<?php echo esc_url("https://app.popt.in/APIRequest/click/some_id_here"); ?>"  />
 								<input type="hidden" id="welcome_save_anyway"  value='' />
@@ -562,7 +562,7 @@ function mysticky_welcome_bar_backend() {
 						}
 					?>
 					<div class="mysticky-welcomebar-setting-content mysticky-welcomebar-redirect-container" <?php if ( $welcomebar['mysticky_welcomebar_actionselect'] != 'redirect_to_url' ) : ?> style="display:none;" <?php endif;?>>
-						<label><?php esc_html_e('Redirection link', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Redirection link', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-setting-action mysticky-welcomebar-redirect" <?php if ( $welcomebar['mysticky_welcomebar_actionselect'] == 'close_bar' ) : ?> style="display:none;" <?php endif;?> >
 							<input type="text" id="mysticky_welcomebar_redirect" class="mystickyinput mysticky_welcomebar_disable" name="mysticky_option_welcomebar[mysticky_welcomebar_redirect]" value="<?php echo ( isset($welcomebar['mysticky_welcomebar_redirect'])) ? esc_url($welcomebar['mysticky_welcomebar_redirect']) : esc_url($welcomebar['mysticky_welcomebar_redirect']);?>" placeholder="<?php echo esc_url("https://www.yourdomain.com"); ?>"  />
 						</div>
@@ -578,7 +578,7 @@ function mysticky_welcome_bar_backend() {
 						</div>
 					</div>
 					<div class="mysticky-welcomebar-setting-content mysticky-welcomebar-redirect-container" <?php if ( $welcomebar['mysticky_welcomebar_actionselect'] != 'redirect_to_url' ) : ?> style="display:none;" <?php endif;?>>
-						<label><?php esc_html_e('rel Attribute', 'myStickymenu'); ?>
+						<label><?php esc_html_e('rel Attribute', 'mystickymenu'); ?>
 							<span class="mysticky-custom-fields-tooltip">
 								<a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a>
 								<p><?php esc_html_e("Add a \"rel\" attribute to the button link. You can use it to add a rel=\"nofollow\", \"sponsored\", or any other \"rel\" attribute option","mystickymenu");?></p>
@@ -591,22 +591,22 @@ function mysticky_welcome_bar_backend() {
 					</div>
 					<!-- -->
 					<div class="mysticky-welcomebar-setting-content">
-						<label><?php esc_html_e('Bar Appearance After Button Click', 'myStickymenu'); ?>
+						<label><?php esc_html_e('Bar Appearance After Button Click', 'mystickymenu'); ?>
 							<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e("Choose bar display settings after a visitor click on the button. The \"Don't show the Bar again for the user\" option is the preferable option if you don't want to annoy your visitors by showing the bar over and over","mystickymenu");?></p></span>
 						</label>
 						<div class="mysticky-welcomebar-setting-content-right">
 							<div class="mysticky-welcomebar-setting-action">
 								<select name="mysticky_option_welcomebar[mysticky_welcomebar_aftersubmission]" class="mysticky-welcomebar-aftersubmission mysticky_welcomebar_disable">
-									<option value="dont_show_welcomebar" <?php selected( @$welcomebar['mysticky_welcomebar_aftersubmission'], 'dont_show_welcomebar' ); ?>><?php esc_html_e( "Don't show the Bar again for the user", 'myStickymenu' );?></option>
-									<option value="show_welcomebar_next_visit" <?php selected( @$welcomebar['mysticky_welcomebar_aftersubmission'], 'show_welcomebar_next_visit' ); ?>><?php esc_html_e( 'Show the Bar again when the user visits the website next time', 'myStickymenu' );?></option>
-									<option value="show_welcomebar_every_page" <?php selected( @$welcomebar['mysticky_welcomebar_aftersubmission'], 'show_welcomebar_every_page' ); ?> ><?php esc_html_e( 'Show the Bar when the user refreshes/goes to another page', 'myStickymenu' );?></option>
+									<option value="dont_show_welcomebar" <?php selected( @$welcomebar['mysticky_welcomebar_aftersubmission'], 'dont_show_welcomebar' ); ?>><?php esc_html_e( "Don't show the Bar again for the user", 'mystickymenu' );?></option>
+									<option value="show_welcomebar_next_visit" <?php selected( @$welcomebar['mysticky_welcomebar_aftersubmission'], 'show_welcomebar_next_visit' ); ?>><?php esc_html_e( 'Show the Bar again when the user visits the website next time', 'mystickymenu' );?></option>
+									<option value="show_welcomebar_every_page" <?php selected( @$welcomebar['mysticky_welcomebar_aftersubmission'], 'show_welcomebar_every_page' ); ?> ><?php esc_html_e( 'Show the Bar when the user refreshes/goes to another page', 'mystickymenu' );?></option>
 								</select>
 							</div>
 						</div>
 					</div>
 					<!-- -->
 					<div class="mysticky-welcomebar-setting-content">
-						<label><?php esc_html_e('Close Bar Automatically After Click', 'myStickymenu'); ?>
+						<label><?php esc_html_e('Close Bar Automatically After Click', 'mystickymenu'); ?>
 							<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e("Choose if you'd like the bar to be closed automatically after button submission",'mystickymenu');?></p></span>
 						</label>
 						<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-close-automatically-sec">
@@ -617,9 +617,9 @@ function mysticky_welcome_bar_backend() {
 							<span class="myStickymenu-upgrade"><a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php esc_html_e( 'Upgrade Now', 'mystickymenu' );?></a></span>
 							<div class="mysticky-welcomebar-setting-action" style="display:none;">
 								<div class="px-wrap">
-									<span><?php esc_html_e('Close bar after ', 'myStickymenu'); ?></span>
+									<span><?php esc_html_e('Close bar after ', 'mystickymenu'); ?></span>
 									<input type="number" class="" min="0" step="1" id="mysticky_welcomebar_triggersec_automatically" name="mysticky_option_welcomebar[mysticky_welcomebar_triggersec_automatically]" value="0">
-									<span class="input-px"><?php esc_html_e('Sec', 'myStickymenu'); ?></span>
+									<span class="input-px"><?php esc_html_e('Sec', 'mystickymenu'); ?></span>
 								</div>
 							</div>
 						</div>
@@ -627,17 +627,17 @@ function mysticky_welcome_bar_backend() {
 				</div>
 				<div class="mysticky-welcomebar-setting-block">
 					<div class="mysticky-welcomebar-subheader-title" style="display:flex;">
-						<h4><?php esc_html_e('Display Rules', 'myStickymenu'); ?></h4>
+						<h4><?php esc_html_e('Display Rules', 'mystickymenu'); ?></h4>
 						<span class="mysticky-custom-fields-tooltip" style="margin-top:5px;"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;">Choose if you want to show the bar on desktop or mobile only, or on both</p></span>
 					</div>
 					<div class="mysticky-welcomebar-setting-content">
-						<label><?php esc_html_e('Entry effect', 'myStickymenu'); ?></label>
+						<label><?php esc_html_e('Entry effect', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right">
 							<?php $welcomebar['mysticky_welcomebar_entry_effect'] = (isset($welcomebar['mysticky_welcomebar_entry_effect']) && $welcomebar['mysticky_welcomebar_entry_effect']!= '') ? esc_attr($welcomebar['mysticky_welcomebar_entry_effect']) : 'slide-in'; ?>
 							<select id="myStickymenu-entry-effect" name="mysticky_option_welcomebar[mysticky_welcomebar_entry_effect]" >
-								<option value="none" <?php selected( @$welcomebar['mysticky_welcomebar_entry_effect'], 'none' ); ?>><?php esc_html_e( 'No effect', 'myStickymenu' );?></option>
-								<option value="slide-in" <?php selected( @$welcomebar['mysticky_welcomebar_entry_effect'], 'slide-in' ); ?>><?php esc_html_e( 'Slide in', 'myStickymenu' );?></option>
-								<option value="fade" <?php selected( @$welcomebar['mysticky_welcomebar_entry_effect'], 'fade' ); ?>><?php esc_html_e( 'Fade', 'myStickymenu' );?></option>
+								<option value="none" <?php selected( @$welcomebar['mysticky_welcomebar_entry_effect'], 'none' ); ?>><?php esc_html_e( 'No effect', 'mystickymenu' );?></option>
+								<option value="slide-in" <?php selected( @$welcomebar['mysticky_welcomebar_entry_effect'], 'slide-in' ); ?>><?php esc_html_e( 'Slide in', 'mystickymenu' );?></option>
+								<option value="fade" <?php selected( @$welcomebar['mysticky_welcomebar_entry_effect'], 'fade' ); ?>><?php esc_html_e( 'Fade', 'mystickymenu' );?></option>
 							</select>
 						</div>
 					</div>
@@ -646,7 +646,7 @@ function mysticky_welcome_bar_backend() {
 							<a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php esc_html_e( ' Upgrade Now', 'mystickymenu' );?></a>
 						</span>
 						<div class="mysticky-welcomebar-setting-content">
-							<label><?php esc_html_e('Devices', 'myStickymenu'); ?></label>
+							<label><?php esc_html_e('Devices', 'mystickymenu'); ?></label>
 							<div class="mysticky-welcomebar-setting-content-right">
 								<label>
 									<input name="mysticky_option_welcomebar[mysticky_welcomebar_device_desktop]" value= "desktop" type="checkbox" checked disabled />
@@ -659,16 +659,16 @@ function mysticky_welcome_bar_backend() {
 							</div>
 						</div>
 						<div class="mysticky-welcomebar-setting-content">
-							<label><?php esc_html_e('Trigger', 'myStickymenu'); ?>
+							<label><?php esc_html_e('Trigger', 'mystickymenu'); ?>
 								<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;">Choose when you'd like the bar to appear on your site</p></span>
 							</label>
 							<div class="mysticky-welcomebar-setting-content-right">
 								<div class="mysticky-welcomebar-setting-action mysticky-welcomebar-trigger-wrap">
 									<label>
-										<input type="radio" name="mysticky_option_welcomebar[mysticky_welcomebar_trigger]" value="after_a_few_seconds" checked disabled />&nbsp;<?php esc_html_e( 'After a few seconds', 'myStickymenu' );?>
+										<input type="radio" name="mysticky_option_welcomebar[mysticky_welcomebar_trigger]" value="after_a_few_seconds" checked disabled />&nbsp;<?php esc_html_e( 'After a few seconds', 'mystickymenu' );?>
 									</label>
 									<label>
-										<input type="radio" name="mysticky_option_welcomebar[mysticky_welcomebar_trigger]" value="after_scroll" disabled />&nbsp;<?php esc_html_e( 'After Scroll', 'myStickymenu' );?>
+										<input type="radio" name="mysticky_option_welcomebar[mysticky_welcomebar_trigger]" value="after_scroll" disabled />&nbsp;<?php esc_html_e( 'After Scroll', 'mystickymenu' );?>
 									</label>
 								</div>
 								<div class="mysticky-welcomebar-setting-action mysticky-welcomebar-triggersec">
@@ -680,7 +680,7 @@ function mysticky_welcome_bar_backend() {
 							</div>
 						</div>
 						<div class="mysticky-welcomebar-setting-content show-on-apper">
-							<label><?php _e('Date Scheduling', 'myStickymenu'); ?>
+							<label><?php _e('Date Scheduling', 'mystickymenu'); ?>
 								<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e('Set the date and time for when you want the widget to start showing and the time you would like it to stop showing. You can add up to 12 combinations of "on and off" triggers. This feature may be useful when you have an upcoming limited-time offer.',"mystickymenu");?></p></span>
 							</label>
 							<div class="mysticky-welcomebar-setting-content-right">
@@ -737,12 +737,12 @@ function mysticky_welcome_bar_backend() {
 							</div>
 						</div>
 						<div class="mysticky-welcomebar-setting-content show-on-apper">
-							<label><?php esc_html_e('Page targeting', 'myStickymenu'); ?>
+							<label><?php esc_html_e('Page targeting', 'mystickymenu'); ?>
 								<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;">
 									<?php esc_html_e(" Add page targeting to ensure the bar only appears or doesn't appear for the selected pages only","mystickymenu");?></p></span>
 							</label>
 							<div class="mysticky-welcomebar-setting-content-right">
-								<a href="#" class="create-rule" id="create-rule"><?php esc_html_e( "Add Rule", "mystickyelements" );?></a>
+								<a href="#" class="create-rule" id="create-rule"><?php esc_html_e( "Add Rule", "mystickymenu" );?></a>
 							</div>
 							<?php 
 							$url_options = array(
@@ -765,13 +765,13 @@ function mysticky_welcome_bar_backend() {
 									<div class="url-content">
 										<div class="mysticky-welcomebar-url-select">
 											<select name="" id="url_shown_on___count___option">
-												<option value="show_on"><?php esc_html_e("Show on", "mysticky" );?></option>
-												<option value="not_show_on"><?php esc_html_e("Don't show on", "mysticky" );?></option>
+												<option value="show_on"><?php esc_html_e("Show on", "mystickymenu" );?></option>
+												<option value="not_show_on"><?php esc_html_e("Don't show on", "mystickymenu" );?></option>
 											</select>
 										</div>
 										<div class="mysticky-welcomebar-url-option">
 											<select class="mysticky-welcomebar-url-options" name="" id="url_rules___count___option">
-												<option selected="selected" value=""><?php esc_html_e("Select Rule", "mysticky" );?></option>
+												<option selected="selected" value=""><?php esc_html_e("Select Rule", "mystickymenu" );?></option>
 												<?php foreach($url_options as $key=>$value) {
 													echo '<option value="'. esc_attr($key).'">'. esc_html($value).'</option>';
 												} ?>
@@ -791,7 +791,7 @@ function mysticky_welcome_bar_backend() {
 							<div class="mysticky-welcomebar-page-options mysticky-welcomebar-setting-content-right" id="mysticky-welcomebar-page-options" style="display:none"></div>
 						</div>
 						<div class="mysticky-welcomebar-setting-content show-on-apper">
-							<label><?php _e('User targeting', 'myStickymenu'); ?>
+							<label><?php _e('User targeting', 'mystickymenu'); ?>
 								<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e("Add a rule if you want to show the welcome bar for logged in or logged out users of your WordPress website selectively","mystickymenu");?></p></span>
 							</label>
 							<div class="mysticky-welcomebar-setting-content-right">
@@ -811,7 +811,7 @@ function mysticky_welcome_bar_backend() {
 							</div>
 						</div>
 						<div class="mysticky-welcomebar-setting-content">
-							<label><?php esc_html_e('Country targeting', 'myStickymenu'); ?>
+							<label><?php esc_html_e('Country targeting', 'mystickymenu'); ?>
 								<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;">
 									<?php esc_html_e("Add country targeting to ensure the bar only appears for the selected countries only","mystickymenu");?></p></span>
 							</label>	
@@ -842,7 +842,7 @@ function mysticky_welcome_bar_backend() {
 					<a href="<?php echo esc_url(admin_url("admin.php?page=my-stickymenu-welcomebar"));?>"><span class="dashicons dashicons-arrow-left-alt2 back-dashboard" style="color: unset;font-size: 17px;"></span> Back to Dashboard</a>
 				</div>
 				<div class="mysticky-welcomebar-header-title">
-					<h3><?php esc_html_e('Preview', 'mystickyelements'); ?></h3>
+					<h3><?php esc_html_e('Preview', 'mystickymenu'); ?></h3>
 				</div>
 				<div class="mysticky-welcomebar-preview-screen">
 					<?php if(isset($welcomebar['mysticky_welcomebar_font']) && $welcomebar['mysticky_welcomebar_font'] != '' ):?>

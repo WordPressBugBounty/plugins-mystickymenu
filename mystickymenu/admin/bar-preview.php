@@ -22,7 +22,7 @@ if ( $button_postion_relative_text == 1 ) {
 			<a href="<?php echo esc_url(admin_url("admin.php?page=my-stickymenu-welcomebar"));?>"><span class="dashicons dashicons-arrow-left-alt2 back-dashboard" style="color: unset;font-size: 17px;"></span> Back to Dashboard</a>
 		</div>
 		<div class="mysticky-welcomebar-header-title">
-			<h3><?php esc_html_e('Preview', 'mystickyelements'); ?></h3>
+			<h3><?php esc_html_e('Preview', 'mystickymenu'); ?></h3>
 		</div>
 		<div class="mysticky-welcomebar-preview-screen">
 			<?php if(isset($welcomebar['mysticky_welcomebar_font']) && $welcomebar['mysticky_welcomebar_font'] != '' ):?>

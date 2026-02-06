@@ -17,12 +17,7 @@ if (defined('ABSPATH') === false) {
     <div class="bg-white flex rounded-lg border border-solid border-[#EAEFF2] mystickymenu-widgetanalytic-body">
         <div class="px-7 py-8 flex-1">
             <h2 class="mystickymenu-widgetanalytic-heading"><?php _e("Unlock My Sticky Bar <span>Analytics</span> 🚀", "mystickymenu") ?></h2>
-			
-			<div class="flex items-center content-center mt-5 space-x-3">
-                <a class="btn rounded-lg drop-shadow-3xl font-normal" href="<?php echo esc_url(admin_url("admin.php?page=my-stickymenu-upgrade")) ?>" title="Upgrade to Pro">
-                    <?php esc_html_e('Upgrade to Pro 🚀', 'Mystickymenu'); ?>
-                </a>                
-            </div>
+ 
 			
 			<div class="mystickymenu-licenseimage">
 				<img class="h-full w-auto" src="<?php echo esc_url(plugins_url('/images/analytics-image.png', __FILE__)); ?>" alt="Stickymenu analytics" />
@@ -46,7 +41,7 @@ if (defined('ABSPATH') === false) {
 
             <div class="flex items-center mt-5 space-x-3 content-center">
                 <a class="btn rounded-lg drop-shadow-3xl font-normal" href="<?php echo esc_url(admin_url("admin.php?page=my-stickymenu-upgrade")) ?>" title="Upgrade to Pro">
-                    <?php esc_html_e('Upgrade to Pro 🚀', 'Mystickymenu'); ?>
+                    <?php esc_html_e('Upgrade to Pro 🚀', 'mystickymenu'); ?>
                 </a>                
             </div>
         </div>

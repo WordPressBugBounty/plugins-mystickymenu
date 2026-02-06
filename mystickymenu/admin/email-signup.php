@@ -360,21 +360,21 @@ $popup_data = MYSTICKYMENU_UPDATE_POPUP_CONTENT; // get Data from update class,
                 <span><?php echo esc_html($popup_data['trust_user']) ?><span>
             </div>
 
-            <h1><?php esc_html_e("We Only Email When It's Worth It", 'mystickyelements') ?></h1>
+            <h1><?php esc_html_e("We Only Email When It's Worth It", 'mystickymenu') ?></h1>
 
             <div class="premio-content-list">
                 <div class="premio-content-list-items"> 
                     <img src="<?php echo esc_url($popup_data['check_circle']);?>" alt="check circle">
-                    <span><?php esc_html_e('Plugin updates and features for improved performance', 'mystickyelements') ?> </span>
+                    <span><?php esc_html_e('Plugin updates and features for improved performance', 'mystickymenu') ?> </span>
                 </div>
                 <div class="premio-content-list-items">
                     <img src="<?php echo esc_url($popup_data['check_circle']);?>" alt="check circle">
-                    <span><?php esc_html_e('Important security updates for site safety', 'mystickyelements') ?></span>
+                    <span><?php esc_html_e('Important security updates for site safety', 'mystickymenu') ?></span>
                      
                 </div>
                 <div class="premio-content-list-items">
                     <img src="<?php echo esc_url($popup_data['check_circle']);?>" alt="check circle">
-                    <span><?php esc_html_e('Limited-time offers for WordPress users seeking growth', 'mystickyelements') ?> </span>
+                    <span><?php esc_html_e('Limited-time offers for WordPress users seeking growth', 'mystickymenu') ?> </span>
                 </div>
             </div>
 
@@ -382,12 +382,12 @@ $popup_data = MYSTICKYMENU_UPDATE_POPUP_CONTENT; // get Data from update class,
                 <span class="mail-icon">
                     <img src="<?php echo esc_url($popup_data['mail_icon']) ?>" alt="Mail icon">
                 </span>
-                <input type="email" value="<?php echo esc_attr($email) ?>" name="myStickymenu_update_email" id="myStickymenu_update_email" autocomplete="off" placeholder="<?php esc_html_e('Your Email Address', 'mystickyelements') ?>" required>  
+                <input type="email" value="<?php echo esc_attr($email) ?>" name="myStickymenu_update_email" id="myStickymenu_update_email" autocomplete="off" placeholder="<?php esc_html_e('Your Email Address', 'mystickymenu') ?>" required>  
                 
             </div>
             <p id="suggestion"></p>
             <div class="popup-update-btn-wrap">
-                <button href="#" class="update-popup-btn submit-popup yes"> <?php esc_html_e('Count Me In', 'mystickyelements')?>
+                <button href="#" class="update-popup-btn submit-popup yes"> <?php esc_html_e('Count Me In', 'mystickymenu')?>
                     <span class="icon">
                         <img class="arrow-right" src="<?php echo esc_url($popup_data['arrow_right']) ?>" alt="arrow right">
                         <img id="pre-loader" style="display: none;" src="<?php echo esc_url($popup_data['pre_loader']) ?>" alt="pre loader">
@@ -395,7 +395,7 @@ $popup_data = MYSTICKYMENU_UPDATE_POPUP_CONTENT; // get Data from update class,
                     </span>
                      
                 </button>
-                <button href="#" class="update-popup-btn close-popup no"> <?php esc_html_e('Maybe Later', 'mystickyelements')?> </button>
+                <button href="#" class="update-popup-btn close-popup no"> <?php esc_html_e('Maybe Later', 'mystickymenu')?> </button>
             </div>
           
        </div>
@@ -409,7 +409,7 @@ $popup_data = MYSTICKYMENU_UPDATE_POPUP_CONTENT; // get Data from update class,
                 </div>
                 <div class="content">
                     <h4><?php echo esc_html($popup_data['website_owners']) ?></h4>
-                    <span><?php esc_html_e('Website Owners', 'mystickyelements') ?></span>
+                    <span><?php esc_html_e('Website Owners', 'mystickymenu') ?></span>
                 </div>
             </div>
             <!-- Icon Box -->
@@ -421,8 +421,8 @@ $popup_data = MYSTICKYMENU_UPDATE_POPUP_CONTENT; // get Data from update class,
                     <img src="<?php echo esc_url($popup_data['slash_icon']) ?>" alt="slash icon">
                 </div>
                 <div class="content">
-                    <h4><?php esc_html_e('No Spam Ever', 'mystickyelements') ?></h4>
-                    <span><?php esc_html_e('Unsubscribe Anytime', 'mystickyelements') ?></span>
+                    <h4><?php esc_html_e('No Spam Ever', 'mystickymenu') ?></h4>
+                    <span><?php esc_html_e('Unsubscribe Anytime', 'mystickymenu') ?></span>
                 </div>
             </div>
             <!-- Icon Box -->

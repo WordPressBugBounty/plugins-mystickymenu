@@ -82,8 +82,9 @@ class MSB_HELP {
 
     // enqueue scripts
     public function admin_enqueue_scripts(){ 
+        $suffix     = MSM_DEV_MODE ? '' : '.min';
         // enqueue css
-        wp_enqueue_style('mystickymenu-help-css', MYSTICKYMENU_URL . 'css/help.css', array(), MYSTICKY_VERSION);   
+        wp_enqueue_style('mystickymenu-help-css', MYSTICKYMENU_URL . 'css/help'.$suffix.'.css', array(), MYSTICKY_VERSION);   
 
     } 
 

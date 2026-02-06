@@ -13,26 +13,26 @@ if (defined('ABSPATH') === false) {
 ?>
 
 <div id="mystickybar-tab-display-rules" class="mystickybar-tab-content">
-	<h2 class="section-title"><strong><?php esc_html_e('Step 2', 'myStickymenu'); ?>:</strong> <?php esc_html_e('Display rules', 'myStickymenu'); ?></h2>
+	<h2 class="section-title"><strong><?php esc_html_e('Step 2', 'mystickymenu'); ?>:</strong> <?php esc_html_e('Display rules', 'mystickymenu'); ?></h2>
 	<div class="mystickybar-content-section">
 		<div class="mysticky-welcomebar-setting-wrap">
 			<div class="mysticky-welcomebar-subheader-title">
-				<h4><?php esc_html_e('Triggers', 'myStickymenu'); ?></h4>
+				<h4><?php esc_html_e('Triggers', 'mystickymenu'); ?></h4>
 			</div>
 			<div class="mysticky-welcomebar-setting-block">
 				<div class="mysticky-welcomebar-setting-content">
-					<label><?php esc_html_e('Entry effect', 'myStickymenu'); ?></label>
+					<label><?php esc_html_e('Entry effect', 'mystickymenu'); ?></label>
 					<div class="mysticky-welcomebar-setting-content-right">
 						<?php $welcomebar['mysticky_welcomebar_entry_effect'] = (isset($welcomebar['mysticky_welcomebar_entry_effect']) && $welcomebar['mysticky_welcomebar_entry_effect']!= '') ? esc_attr($welcomebar['mysticky_welcomebar_entry_effect']) : 'slide-in'; ?>
 						<select id="myStickymenu-entry-effect" name="mysticky_option_welcomebar[mysticky_welcomebar_entry_effect]" >
-							<option value="none" <?php selected( @$welcomebar['mysticky_welcomebar_entry_effect'], 'none' ); ?>><?php esc_html_e( 'No effect', 'myStickymenu' );?></option>
-							<option value="slide-in" <?php selected( @$welcomebar['mysticky_welcomebar_entry_effect'], 'slide-in' ); ?>><?php esc_html_e( 'Slide in', 'myStickymenu' );?></option>
-							<option value="fade" <?php selected( @$welcomebar['mysticky_welcomebar_entry_effect'], 'fade' ); ?>><?php esc_html_e( 'Fade', 'myStickymenu' );?></option>
+							<option value="none" <?php selected( @$welcomebar['mysticky_welcomebar_entry_effect'], 'none' ); ?>><?php esc_html_e( 'No effect', 'mystickymenu' );?></option>
+							<option value="slide-in" <?php selected( @$welcomebar['mysticky_welcomebar_entry_effect'], 'slide-in' ); ?>><?php esc_html_e( 'Slide in', 'mystickymenu' );?></option>
+							<option value="fade" <?php selected( @$welcomebar['mysticky_welcomebar_entry_effect'], 'fade' ); ?>><?php esc_html_e( 'Fade', 'mystickymenu' );?></option>
 						</select>
 					</div>
 				</div>
 				<div class="mysticky-welcomebar-setting-content">
-					<label><?php esc_html_e('Devices', 'myStickymenu'); ?></label>
+					<label><?php esc_html_e('Devices', 'mystickymenu'); ?></label>
 					<div class="mysticky-welcomebar-setting-content-right">
 						<div class="flex-1">
 							<label>
@@ -49,14 +49,14 @@ if (defined('ABSPATH') === false) {
 				</div>
 
 				<div class="mysticky-welcomebar-setting-content align-top">
-					<label><?php esc_html_e('Trigger', 'myStickymenu'); ?>
+					<label><?php esc_html_e('Trigger', 'mystickymenu'); ?>
 						<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;">Choose when you'd like the bar to appear on your site</p></span>
 					</label>
 					<div class="mysticky-welcomebar-setting-content-right trigger-wrap gap-x-px flex-inline">
 						<div class="mysticky-welcomebar-setting-action flex-1">
 							<select class="mysticky-welcomebar-trigger">
-								<option value="after_a_few_seconds" <?php selected( @$welcomebar['mysticky_welcomebar_trigger'], 'after_a_few_seconds' ); ?>><?php esc_html_e( 'After a few seconds', 'myStickymenu' );?></option>
-								<option value="after_scroll" <?php selected( @$welcomebar['mysticky_welcomebar_trigger'], 'after_scroll' ); ?>><?php esc_html_e( 'After Scroll', 'myStickymenu' );?></option>
+								<option value="after_a_few_seconds" <?php selected( @$welcomebar['mysticky_welcomebar_trigger'], 'after_a_few_seconds' ); ?>><?php esc_html_e( 'After a few seconds', 'mystickymenu' );?></option>
+								<option value="after_scroll" <?php selected( @$welcomebar['mysticky_welcomebar_trigger'], 'after_scroll' ); ?>><?php esc_html_e( 'After Scroll', 'mystickymenu' );?></option>
 							</select>
 						</div>
 						<div class="mysticky-welcomebar-setting-action mysticky-welcomebar-triggersec">
@@ -71,11 +71,11 @@ if (defined('ABSPATH') === false) {
 			</div>
 
 			<div class="mysticky-welcomebar-subheader-title">
-				<h4><?php esc_html_e('Targeting', 'myStickymenu'); ?></h4>
+				<h4><?php esc_html_e('Targeting', 'mystickymenu'); ?></h4>
 			</div>
 			<div class="mysticky-welcomebar-setting-block">
 				<div class="mysticky-welcomebar-setting-content align-top">
-					<label><?php _e('Date Scheduling', 'myStickymenu'); ?>
+					<label><?php _e('Date Scheduling', 'mystickymenu'); ?>
 						<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e('Set the date and time for when you want the widget to start showing and the time you would like it to stop showing. You can add up to 12 combinations of "on and off" triggers. This feature may be useful when you have an upcoming limited-time offer.',"mystickymenu");?></p></span>
 					</label>
 					<div class="mysticky-welcomebar-setting-content-right">
@@ -132,12 +132,12 @@ if (defined('ABSPATH') === false) {
 					</div>
 				</div>
 				<div class="mysticky-welcomebar-setting-content show-on-apper flex-column gap-x-px">
-					<label><?php esc_html_e('Page targeting', 'myStickymenu'); ?>
+					<label><?php esc_html_e('Page targeting', 'mystickymenu'); ?>
 						<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;">
 							<?php esc_html_e(" Add page targeting to ensure the bar only appears or doesn't appear for the selected pages only","mystickymenu");?></p></span>
 					</label>
 					<div class="mysticky-welcomebar-setting-content-right absolute">
-						<a href="#" class="create-rule" id="create-rule"><?php esc_html_e( "Add Rule", "mystickyelements" );?></a>
+						<a href="#" class="create-rule" id="create-rule"><?php esc_html_e( "Add Rule", "mystickymenu" );?></a>
 					</div>
 					<?php
 					$url_options = array(
@@ -160,13 +160,13 @@ if (defined('ABSPATH') === false) {
 							<div class="url-content">
 								<div class="mysticky-welcomebar-url-select">
 									<select name="" id="url_shown_on___count___option">
-										<option value="show_on"><?php esc_html_e("Show on", "mysticky" );?></option>
-										<option value="not_show_on"><?php esc_html_e("Don't show on", "mysticky" );?></option>
+										<option value="show_on"><?php esc_html_e("Show on", "mystickymenu" );?></option>
+										<option value="not_show_on"><?php esc_html_e("Don't show on", "mystickymenu" );?></option>
 									</select>
 								</div>
 								<div class="mysticky-welcomebar-url-option">
 									<select class="mysticky-welcomebar-url-options" name="" id="url_rules___count___option">
-										<option selected="selected" value=""><?php esc_html_e("Select Rule", "mysticky" );?></option>
+										<option selected="selected" value=""><?php esc_html_e("Select Rule", "mystickymenu" );?></option>
 										<?php foreach($url_options as $key=>$value) {
 											echo '<option value="'. esc_attr($key).'">'. esc_html($value).'</option>';
 										} ?>
@@ -186,7 +186,7 @@ if (defined('ABSPATH') === false) {
 					<div class="mysticky-welcomebar-page-options mysticky-welcomebar-setting-content-right mx-w-100" id="mysticky-welcomebar-page-options" style="display:none"></div>
 				</div>
 				<div class="mysticky-welcomebar-setting-content show-on-apper">
-					<label><?php _e('User targeting', 'myStickymenu'); ?>
+					<label><?php _e('User targeting', 'mystickymenu'); ?>
 						<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e("Add a rule if you want to show the welcome bar for logged in or logged out users of your WordPress website selectively","mystickymenu");?></p></span>
 					</label>
 					<div class="mysticky-welcomebar-setting-content-right">
@@ -206,7 +206,7 @@ if (defined('ABSPATH') === false) {
 					</div>
 				</div>
 				<div class="mysticky-welcomebar-setting-content">
-					<label><?php esc_html_e('Country targeting', 'myStickymenu'); ?>
+					<label><?php esc_html_e('Country targeting', 'mystickymenu'); ?>
 						<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;">
 							<?php esc_html_e("Add country targeting to ensure the bar only appears for the selected countries only","mystickymenu");?></p></span>
 					</label>

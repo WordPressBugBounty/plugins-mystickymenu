@@ -57,11 +57,11 @@ class myStickyMenu_SIGNUP_CLASS {
         }
 
         define('MYSTICKYMENU_UPDATE_POPUP_CONTENT', array(
-            'plugin_name'           => esc_html__('My Sticky Elements', 'mystickyelements'),
-            'trust_user'            => esc_html__('Join the list 100,000+ users trust', 'mystickyelements'),
-            'website_owners'        => esc_html__('100,000+', 'mystickyelements'),
-            'rating'                => esc_html__('4.9/5 Rating', 'mystickyelements'),
-            'review'                => esc_html__('Based on 1,000+ Reviews', 'mystickyelements'),
+            'plugin_name'           => esc_html__('My Sticky Elements', 'mystickymenu'),
+            'trust_user'            => esc_html__('Join the list 100,000+ users trust', 'mystickymenu'),
+            'website_owners'        => esc_html__('100,000+', 'mystickymenu'),
+            'rating'                => esc_html__('4.9/5 Rating', 'mystickymenu'),
+            'review'                => esc_html__('Based on 1,000+ Reviews', 'mystickymenu'),
             'plugin_logo'        => MYSTICKYMENU_URL . "images/signup/my-sticky-bar.png",
             'trust_user_img'        => MYSTICKYMENU_URL . "images/signup/user-trust.svg",
             'font_url'              => MYSTICKYMENU_URL . "fonts/Lato-Regular.woff",

@@ -472,7 +472,7 @@ class myStickyMenu_Pro_review_box
                 </div>
 
                 <div class="please-rate-us">
-                    <div class="rate-us-title"><?php esc_html_e("Please rate us:"); ?></div>
+                    <div class="rate-us-title"><?php esc_html_e("Please rate us:", 'mystickymenu'); ?></div>
                     <div class="<?php echo esc_attr($this->pluginSlug) ?>-premio-review-box__default__rating"></div>
                 </div>
             </div> <!--end .premio-review-box__default-->
