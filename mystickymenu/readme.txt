@@ -3,7 +3,7 @@ Contributors: tomeraharon, galdub, premio
 Tags:notification bar, floating bar, sticky menu, sticky header, sticky bar
 Requires at least: 3.5.1
 Tested up to: 6.9
-Stable tag: 2.8.6
+Stable tag: 2.8.7
 License: GPLv3
 
 Create a welcome notification bar for your website. Also, My Sticky Bar plugin can make your menu or header sticky to the top when scrolled 📌
@@ -31,7 +31,7 @@ The sticky header function is localized (multi-language support) and responsive 
 
 My Sticky Bar plugin is originally designed for Twenty Thirteen template but should work on any theme, like OceanWP, Nirvana Template, Twenty Sixteen, Twenty Ten, Twenty Eleven, Twenty Twenty-Five, Twenty Twenty-Four, Twenty Twenty-Three, Max Magazine, Graduate, Lawyer theme, Spacious, Suits, and more.
 
-My Sticky Bar is tested and compatible with Elementor website builder, Divi, WPBakery, Gutenberg, Visual composer, Beaver, and other WordPress website builders.
+My Sticky Bar is compatible with Elementor website builder, Divi, WPBakery, Gutenberg, Visual composer, Beaver, and other WordPress website builders.
 
 = 🚀 WITH WELCOME BAR FEATURES YOU CAN: =
 * Display your floating bar at the top position
@@ -104,7 +104,7 @@ We don’t store any local data about your visitors. Any time your menu or notif
 = 📧 Grow your email list using the notification bar contact form =
 Collect valuable visitor information from your website, by giving them access to a contact form at any time, anywhere. The notification bar contact form helps you get leads into your local database. Create effective marketing campaigns and to contact your website visitors. Using the contact form in combination with features like a countdown, coupons, and other powerful notification bar options gives you a powerful way to convince users to share their lead information with you. 
 
-When a visitor fills in their details (email, phone, name etc) on the welcome bar, if you’re using the Pro version you can get the lead sent to your email.
+When a visitor fills in their details (email, phone, name, etc.) on the welcome bar, if you’re using the Pro version you can get the lead sent to your email.
 
 This helps you get notified as soon as a visitor shows interest in your website. It is an extremely useful tool in your arsenal to convert leads quickly as soon as they enquire about your services or products.
 
@@ -342,6 +342,9 @@ After installing the plugin, you’ll have the option to turn on the welcome bar
 
 
 == Changelog ==
+
+= 2.8.7 =
+Contact form bug fixed
 
 = 2.8.6 =
 Plugin activation bug fixed

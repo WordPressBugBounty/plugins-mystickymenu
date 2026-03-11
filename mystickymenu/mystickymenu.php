@@ -3,7 +3,7 @@
 Plugin Name: My Sticky Bar
 Plugin URI: https://premio.io/
 Description: Create a notification bar for your website with My Sticky Bar. You can customize the design, collect leads, and enjoy other advanced features. You can also make your menu sticky using My Sticky Bar.
-Version: 2.8.6
+Version: 2.8.7
 Author: Premio
 Author URI: https://premio.io/downloads/mystickymenu/
 Text Domain: mystickymenu
@@ -12,7 +12,7 @@ License: GPLv3
 */
 
 defined('ABSPATH') or die("Cannot access pages directly.");
-define('MYSTICKY_VERSION', '2.8.6');
+define('MYSTICKY_VERSION', '2.8.7');
 define('MYSTICKYMENU_URL', plugins_url('/', __FILE__));  // Define Plugin URL
 define('MYSTICKYMENU_PATH', plugin_dir_path(__FILE__));  // Define Plugin Directory Path
 define('MYSTICKYMENU_BASE', plugin_basename(__FILE__));
@@ -2379,25 +2379,23 @@ class MyStickyMenuFrontend
 					$element_widget_no = '';
 				}
 
-				$welcomebar = get_option( 'mysticky_option_welcomebar' . $element_widget_no ); 
-				
-				foreach( $postArr as $key => $val ){
-					if( $key != 'action' && $key != 'widget_id' && $key != 'save_form_lead' && $key != 'wpnonce'){
-						$params[$key] = (isset($val) && $val != '') ? esc_sql( sanitize_text_field($val) ) : '';
-					}
-				}
+                $allowed_keys = ['contact_name', 'contact_email', 'contact_phone', 'page_link'];
+                $params = [];
+                foreach ($allowed_keys as $key) {
+                    if (isset($_POST[$key]) && $_POST[$key] !== '') {
+                        $params[$key] = sanitize_text_field($_POST[$key]);
+                    }
+                }
 
-				$params["widget_id"]  = esc_sql( sanitize_text_field($element_widget_no));
-				$params["widget_name"]  = esc_sql( sanitize_text_field($element_widget_name));
-				$params["message_date"] = date('Y-m-d H:i:s');
-				$params["contact_email"] = (isset($params["contact_email"]) && $params["contact_email"] != '' ) ? sanitize_email($params["contact_email"]) : '';
-				
-				if( isset($params) && !empty($params) ){
-					$wpdb->insert($contact_lists_table, $params);
-					die;
-				}
-				
-				
+                if(!empty($params)) {
+                    $params["widget_id"] = esc_sql(sanitize_text_field($element_widget_no));
+                    $params["widget_name"] = esc_sql(sanitize_text_field($element_widget_name));
+                    $params["message_date"] = date('Y-m-d H:i:s');
+                    $params["contact_email"] = (isset($params["contact_email"]) && $params["contact_email"] != '') ? sanitize_email($params["contact_email"]) : '';
+
+                    $wpdb->insert($contact_lists_table, $params);
+                    die;
+                }
 			}
 		}
 
@@ -2408,10 +2406,6 @@ class MyStickyMenuFrontend
 	}
 
 }
-
-if( is_admin() ) {
-	require_once 'mystickymenu-affiliate.php';
-} 
 
 new MyStickyMenuBackend();
 new MyStickyMenuFrontend();

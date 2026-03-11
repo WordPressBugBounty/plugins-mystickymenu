@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: myStickymenu\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mystickymenu-free-"
 "uncompressed\n"
-"POT-Creation-Date: 2025-11-17 11:58:23+00:00\n"
+"POT-Creation-Date: 2026-03-11 06:47:13+00:00\n"
 "PO-Revision-Date: 2017-09-15 08:38+0100\n"
 "Last-Translator: mrda <jahmirda@gmail.com>\n"
 "Language-Team: TFN <jahmirda@gmail.com>\n"
@@ -1631,7 +1631,7 @@ msgstr ""
 msgid "⏱️ Add a countdown timer to increase the conversion rate"
 msgstr ""
 
-#: mystickymenu.php:1331 mystickymenu.php:2501
+#: mystickymenu.php:1331 mystickymenu.php:2495
 msgid "Upgrade to Pro"
 msgstr ""
 
