@@ -41,7 +41,7 @@ class MSB_HELP {
             'footer_menu' => array( 
                 'support' => array(
                     'title' => esc_html("Get Support", "mystickymenu"),
-                    'link' =>  esc_url("https://wordpress.org/support/plugin/mystickymenu/"),
+                    'link' =>  esc_url("https://premio.io/help/mystickymenu/"),
                     'status' => true,
                 ),
                 'upgrade_to_pro' => array(
@@ -68,7 +68,7 @@ class MSB_HELP {
                 ),
                 'get_support' => array(
                     'title' => esc_html("Get Support", "mystickymenu"),
-                    'link' =>   esc_url("https://wordpress.org/support/plugin/mystickymenu/"),
+                    'link' =>   esc_url("https://premio.io/help/mystickymenu/"),
                     'icon' => esc_url(MYSTICKYMENU_URL."images/help/help-circle.svg"),
                 ),
                 'contact' => array(

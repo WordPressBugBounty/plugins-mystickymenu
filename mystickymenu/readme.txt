@@ -3,7 +3,7 @@ Contributors: tomeraharon, galdub, premio
 Tags:notification bar, floating bar, sticky menu, sticky header, sticky bar
 Requires at least: 3.5.1
 Tested up to: 6.9
-Stable tag: 2.8.7
+Stable tag: 2.8.8
 License: GPLv3
 
 Create a welcome notification bar for your website. Also, My Sticky Bar plugin can make your menu or header sticky to the top when scrolled 📌
@@ -29,11 +29,11 @@ By default, My Sticky Bar (formerly myStickymenu) should make your menu sticky r
 
 The sticky header function is localized (multi-language support) and responsive (as far as your theme is). Also, there is the possibility to add custom CSS code which makes this plugin very flexible, customizable, and user-friendly. You can also use the notification bar in any language.
 
-My Sticky Bar plugin is originally designed for Twenty Thirteen template but should work on any theme, like OceanWP, Nirvana Template, Twenty Sixteen, Twenty Ten, Twenty Eleven, Twenty Twenty-Five, Twenty Twenty-Four, Twenty Twenty-Three, Max Magazine, Graduate, Lawyer theme, Spacious, Suits, and more.
+My Sticky Bar plugin will work on any WordPress theme, like OceanWP, Nirvana Template, Twenty Sixteen, Twenty Ten, Twenty Eleven, Twenty Twenty-Five, Twenty Twenty-Four, Twenty Twenty-Three, Max Magazine, Graduate, Lawyer theme, Spacious, Suits, and more.
 
 My Sticky Bar is compatible with Elementor website builder, Divi, WPBakery, Gutenberg, Visual composer, Beaver, and other WordPress website builders.
 
-= 🚀 WITH WELCOME BAR FEATURES YOU CAN: =
+= 🚀 With the Welcome Bar You Can: =
 * Display your floating bar at the top position
 * When the user clicks on the welcome bar button you can close the bar, redirect to another URL, or launch a <a href="https://www.poptin.com/?utm_source=msm" target="_blank" title="Poptin pop up">Poptin pop up</a>
 * New! Contact Form 📝 - Include a contact form in your notification bar to collect either name and email or name and phone number. This feature can improve lead generation on your website. You’ll be able to gather your users' details using a contact form and reach them directly.
@@ -47,7 +47,7 @@ My Sticky Bar is compatible with Elementor website builder, Divi, WPBakery, Gute
 * Show the call-to-action button in your top notification bar on desktop/mobile
 * Redirect your visitors to another URL on-click
 
-= 📌 WITH MY STICKY BAR YOU CAN: =
+= 📌 Free Sticky Bar Features: =
 * Show sticky header when scrolling the page
 * Fade or slide effect
 * Disable at a small screen
@@ -128,11 +128,10 @@ One of the key elements that I consider when choosing a theme is the sticky menu
 This plugin does exactly what it should. It is simple but powerful. I would suggest to anyone who wants to make their navigation menu sticky! I especially love the hide header on scroll down, show on scroll up feature that is built it. Great work!<br>
 
 == Installation ==
-After you activate the plugin, you should be able to create your first notification bar with ease, just customize the appearance and save it. If you want to create a sticky menu, in most cases the plugin should be able to find the class/ID for the menu, if not then change sticky class/id to .your_navbar_class or #your_navbar_id - you might need to purge the cache after saving.
+After you activate the plugin, you should be able to create your first notification bar with ease, just customize the appearance and save it. If you want to create a sticky menu, in most cases the plugin should be able to find the class/ID for the menu, if not then change sticky class/id to .your_navbar_class or #your_navbar_id - you might need to delete cache after saving your settings.
 
 
-For example:
-
+Examples:
 
 Celestial-Lite (sticky header)
 ** Sticky Class => #branding
@@ -342,6 +341,9 @@ After installing the plugin, you’ll have the option to turn on the welcome bar
 
 
 == Changelog ==
+
+= 2.8.8 =
+Improved support method
 
 = 2.8.7 =
 Contact form bug fixed

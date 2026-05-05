@@ -3,7 +3,7 @@
 Plugin Name: My Sticky Bar
 Plugin URI: https://premio.io/
 Description: Create a notification bar for your website with My Sticky Bar. You can customize the design, collect leads, and enjoy other advanced features. You can also make your menu sticky using My Sticky Bar.
-Version: 2.8.7
+Version: 2.8.8
 Author: Premio
 Author URI: https://premio.io/downloads/mystickymenu/
 Text Domain: mystickymenu
@@ -12,7 +12,7 @@ License: GPLv3
 */
 
 defined('ABSPATH') or die("Cannot access pages directly.");
-define('MYSTICKY_VERSION', '2.8.7');
+define('MYSTICKY_VERSION', '2.8.8');
 define('MYSTICKYMENU_URL', plugins_url('/', __FILE__));  // Define Plugin URL
 define('MYSTICKYMENU_PATH', plugin_dir_path(__FILE__));  // Define Plugin Directory Path
 define('MYSTICKYMENU_BASE', plugin_basename(__FILE__));
@@ -285,7 +285,7 @@ class MyStickyMenuBackend
 	public function mystickymenu_settings_link($links){
 		$settings_link = '<a href="admin.php?page=my-stickymenu-welcomebar">Settings</a>';
 		
-		$links['need_help'] = '<a href="https://wordpress.org/support/plugin/mystickymenu/" target="_blank">'.__( 'Need help?', 'mystickymenu' ).'</a>';
+		$links['need_help'] = '<a href="https://premio.io/help/mystickymenu/" target="_blank">'.__( 'Need help?', 'mystickymenu' ).'</a>';
 			
 		$links['go_pro'] = '<a href="'. admin_url("admin.php?page=my-stickymenu-upgrade&type=upgrade").'" style="color: #FF5983; font-weight: bold; display: inline-block; border: solid 1px #FF5983; border-radius: 4px; padding: 0 5px;">'.__( 'Upgrade', 'mystickymenu' ).'</a>';
 		array_unshift($links, $settings_link);
