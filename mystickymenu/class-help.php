@@ -40,39 +40,39 @@ class MSB_HELP {
             'help_center_link' => esc_url('https://premio.io/help/mystickymenu/?utm_source=pluginspage'),
             'footer_menu' => array( 
                 'support' => array(
-                    'title' => esc_html("Get Support", "mystickymenu"),
+                    'title' => esc_html__("Get Support", "mystickymenu"),
                     'link' =>  esc_url("https://premio.io/help/mystickymenu/"),
                     'status' => true,
                 ),
                 'upgrade_to_pro' => array(
-                    'title' => esc_html("Upgrade to Pro", "mystickymenu"),
+                    'title' => esc_html__("Upgrade to Pro", "mystickymenu"),
                     'link' =>  esc_url(admin_url("admin.php?page=my-stickymenu-upgrade")),
                     'status' => true,
                 ),
                 'recommended_plugins' => array(
-                    'title' => esc_html("Recommended Plugins", "mystickymenu"),
+                    'title' => esc_html__("Recommended Plugins", "mystickymenu"),
                     'link' =>  esc_url(admin_url("admin.php?page=msm-recommended-plugins")),
                     'status' => get_option("hide_msmrecommended_plugin") ? false : true,
                 ), 
                 'live_link' => array(
-                    'title' => esc_html("Add Poptin Popups", "mystickymenu"),
+                    'title' => esc_html__("Add Poptin Popups", "mystickymenu"),
                     'link' =>  esc_url(admin_url("admin.php?page=install-poptin-plugin")),
                     'status' => class_exists( 'POPTIN_Plugin_Base' ) ? false : true,
                 ), 
             ),
             'support_widget' => array(
                 'upgrade_to_pro' => array(
-                    'title' => esc_html("Upgrade to Pro", "mystickymenu"),
+                    'title' => esc_html__("Upgrade to Pro", "mystickymenu"),
                     'link' =>  esc_url(admin_url("admin.php?page=my-stickymenu-upgrade")),
                     'icon' => esc_url(MYSTICKYMENU_URL."images/help/pro.svg"),
                 ),
                 'get_support' => array(
-                    'title' => esc_html("Get Support", "mystickymenu"),
+                    'title' => esc_html__("Get Support", "mystickymenu"),
                     'link' =>   esc_url("https://premio.io/help/mystickymenu/"),
                     'icon' => esc_url(MYSTICKYMENU_URL."images/help/help-circle.svg"),
                 ),
                 'contact' => array(
-                    'title' => esc_html("Contact Us", "mystickymenu"),
+                    'title' => esc_html__("Contact Us", "mystickymenu"),
                     'link' =>  false,
                     'icon' => esc_url(MYSTICKYMENU_URL."images/help/headphones.svg"),
                 ),
@@ -82,9 +82,8 @@ class MSB_HELP {
 
     // enqueue scripts
     public function admin_enqueue_scripts(){ 
-        $suffix     = MSM_DEV_MODE ? '' : '.min';
         // enqueue css
-        wp_enqueue_style('mystickymenu-help-css', MYSTICKYMENU_URL . 'css/help'.$suffix.'.css', array(), MYSTICKY_VERSION);   
+        wp_enqueue_style('mystickymenu-help-css', MYSTICKYMENU_URL . '/dist/css/help.css', array(), MYSTICKY_VERSION);
 
     } 
 

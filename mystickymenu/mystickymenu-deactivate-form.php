@@ -134,10 +134,10 @@
                 <label class="mystickymenu--anonymous">
                     <input type="checkbox"/><?php esc_html_e('Anonymous feedback', "mystickymenu"); ?>
                 </label>
-                <input type="button" class="button button-secondary button-skip mystickymenu--popup-skip-feedback" value="Skip &amp; Deactivate">
+                <input type="button" class="button button-secondary button-skip mystickymenu--popup-skip-feedback" value=<?php esc_attr_e('Skip & Deactivate', 'mystickymenu'); ?>>
                 <div class="action-btns">
                     <span class="mystickymenu--spinner"><img src="<?php echo esc_url(admin_url('/images/spinner.gif')); ?>" alt=""></span>
-                    <input type="submit" class="button button-secondary button-deactivate mystickymenu--popup-allow-deactivate" value="Submit &amp; Deactivate" disabled="disabled">
+                    <input type="submit" class="button button-secondary button-deactivate mystickymenu--popup-allow-deactivate" value="<?php esc_attr_e('Submit & Deactivate', 'mystickymenu'); ?>" disabled="disabled">
                     <a href="#" class="button button-primary mystickymenu--popup-button-close"><?php esc_html_e('Cancel', "mystickymenu"); ?></a>
                 </div>
             </div>
@@ -191,7 +191,7 @@
                 event.preventDefault();
                 _reason = "";
                 if(jQuery.trim(jQuery("#mystickymenu-deactivation-comment").val()) == "") {
-                    jQuery("#alt_plugin").after("<span class='mystickymenu--error-message'>Please provide your feedback</span>");
+                    jQuery("#alt_plugin").after("<span class='mystickymenu--error-message'><?php esc_html_e('Please provide your feedback', 'mystickymenu'); ?></span>");
                     return false;
                 } else {
                     _reason = jQuery.trim(jQuery("#mystickymenu-deactivation-comment").val());

@@ -6,15 +6,13 @@ class Sticky_menu_upgrade_box {
     public $plugin_slug = "my-sticky-menu";
 
     public function __construct() {
-
         add_action("wp_ajax_".$this->plugin_slug."_upgrade_box", array($this, "mystickymenu_upgradetopro"));
 		add_action('admin_notices', array($this, 'admin_notices'));
-		
     }
 
     public function mystickymenu_upgradetopro() {
-        $nonce = filter_input(INPUT_POST, 'nonce', FILTER_SANITIZE_STRING);
-        $days = filter_input(INPUT_POST, 'days', FILTER_SANITIZE_STRING);
+        $nonce = isset($_POST['nonce']) ? sanitize_text_field($_POST['nonce']) : '';
+        $days = isset($_POST['days']) ? sanitize_text_field($_POST['days']) : '';
         if(!empty($nonce) && wp_verify_nonce($nonce, $this->plugin_slug."_upgrade_box")) {
             if($days == -1) {
                 add_option($this->plugin_slug."_hide_upgrade_box", "1");
@@ -251,9 +249,9 @@ class Sticky_menu_upgrade_box {
         <div class="notice notice-info premio-notice <?php echo esc_attr($this->plugin_slug); ?>-premio-upgrade-box <?php echo esc_attr($this->plugin_slug); ?>-premio-upgrade-box">
             <div class="upgrade-box-default" id="default-upgrade-box-<?php echo esc_attr($this->plugin_slug); ?>">
                 <p>
-                    <strong>Upgrade to My Sticky Bar Pro to</strong> experience more awesome features 
+                    <?php printf(esc_html__('%1$sUpgrade to My Sticky Bar Pro to%2$s experience more awesome features', 'mystickymenu'), '<strong>', '</strong>') ?>
                     <span class="mystickymenu-tab-integration-action">
-                        <a href="<?php echo esc_url(admin_url("admin.php?page=my-stickymenu-upgrade")); ?>" target="_blank" class="btn upgradenow-box-btn" data-days="-1">Upgrade now</a>
+                        <a href="<?php echo esc_url(admin_url("admin.php?page=my-stickymenu-upgrade")); ?>" target="_blank" class="btn upgradenow-box-btn" data-days="-1"><?php esc_html_e('Upgrade now', 'mystickymenu'); ?></a>
                     </span>                 
                     <a href="#" class="dismiss-btn <?php echo esc_attr($this->plugin_slug); ?>-premio-upgrade-dismiss-btn"><span class="dashicons dashicons-no-alt"></span></a>
                 </p>
@@ -265,9 +263,9 @@ class Sticky_menu_upgrade_box {
                 <button class="<?php echo esc_attr($this->plugin_slug); ?>-close-upgrade-box-popup"><span class="dashicons dashicons-no-alt"></span></button>
                 <div class="<?php echo esc_attr($this->plugin_slug); ?>-upgrade-box-title">Would you like us to remind you about this later?</div>
                 <div class="<?php echo esc_attr($this->plugin_slug); ?>-upgrade-box-options">
-                    <a href="#" data-days="7">Remind me in 7 days</a>
-                    <a href="#" data-days="30">Remind me in 30 days</a>
-                    <a href="#" data-days="-1" class="dismiss">Don't remind me about this</a>
+                    <a href="#" data-days="7"><?php esc_html_e('Remind me in 7 days', 'mystickymenu'); ?></a>
+                    <a href="#" data-days="30"><?php esc_html_e('Remind me in 30 days', 'mystickymenu'); ?></a>
+                    <a href="#" data-days="-1" class="dismiss"><?php esc_html_e('Don\'t remind me about this', 'mystickymenu'); ?></a>
                 </div>
             </div>
         </div>

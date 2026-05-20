@@ -57,7 +57,7 @@ $data = MSB_FOOTER_HELP_DATA;
                     <input type="text" name="user_email" id="user_email" placeholder="<?php esc_html_e("Email", 'mystickymenu'); ?>">
                 </div>
                 <div class="premio-form-field">
-                    <textarea type="text" name="textarea_text" id="textarea_text" placeholder="<?php esc_html_e("How can I help you?", 'mystickymenu'); ?>"></textarea>
+                    <textarea type="text" name="textarea_text" id="textarea_text" placeholder="<?php esc_html_e("How can we help you?", 'mystickymenu'); ?>"></textarea>
                 </div>
                 <div class="form-button">
                     <button type="submit" class="premio-help-button-submit" ><?php esc_html_e("Chat", 'mystickymenu') ?></button>

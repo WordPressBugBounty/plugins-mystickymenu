@@ -211,12 +211,12 @@ $features = [
     <div class="price-container pricing-top-container">
         <div class="plan-details">
             <div class="unlock-features text-center">
-                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="mx-auto w-7 h-auto mb-2" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.2733 13.1124C1.89311 10.6411 1.51292 8.16992 1.13273 5.69867C1.04842 5.15086 1.67173 4.77723 2.11511 5.1098C3.29961 5.99817 4.48405 6.88648 5.66855 7.77486C6.05855 8.06736 6.61417 7.97217 6.88455 7.56655L9.84286 3.12905C10.1555 2.66011 10.8445 2.66011 11.1571 3.12905L14.1154 7.56655C14.3858 7.97217 14.9414 8.0673 15.3314 7.77486C16.5159 6.88648 17.7004 5.99817 18.8849 5.1098C19.3282 4.77723 19.9515 5.15086 19.8673 5.69867C19.4871 8.16992 19.1069 10.6411 18.7267 13.1124H2.2733Z" fill="#FFB743"/>
                     <path d="M17.869 17.2266H3.13125C2.6575 17.2266 2.27344 16.8425 2.27344 16.3687V14.4844H18.7269V16.3687C18.7268 16.8425 18.3428 17.2266 17.869 17.2266Z" fill="#FFB743"/>
                 </svg>
-                <div class="unlock-features-title">Unlock all features</div>
-                <div class="unlock-features-desc">(enjoy 30-day money back guarantee on all plans)</div>
+                <div class="unlock-features-title"><?php esc_html_e('Unlock all features', 'mystickymenu'); ?></div>
+                <div class="unlock-features-desc">(<?php esc_html_e('Enjoy 30-day money back guarantee on all plans' ,'mystickymenu')?>)</div>
             </div>
         </div>
     </div>
@@ -231,7 +231,7 @@ $features = [
                         <div class="plan-row total-col-<?php echo esc_attr(count($options)) ?>">
                             <div class="plan-col first-col plan-data">
                                 <div class="plan-plugin-name">
-                                    <div class="plugin-title">My Sticky Bar</div>
+                                    <div class="plugin-title"><?php esc_html_e('My Sticky Bar', 'mystickymenu'); ?></div>
                                     <div class="chaty-powered-by">
                                         Powered by
                                         <a href="https://premio.io" target="_blank">
@@ -388,7 +388,7 @@ $features = [
                 <?php esc_html_e("The plugin will always keep working even if you don't renew your license", 'mystickymenu'); ?>
             </p>
             <div class="payments">
-                <img src="<?php echo esc_url(plugins_url('/images/payment.png', __FILE__)); ?>" alt="Payment" class="payment-img" />
+                <img src="<?php echo esc_url(plugins_url('/images/payment.png', __FILE__)); ?>" alt="Payment" class="payment-img mx-auto inline-flex" />
             </div>
         </div>
     </div>
@@ -497,24 +497,24 @@ The service is professional and helpful – you are taken step by step until the
             <?php
             $faqs = [
                 [
-                    'question' => "How long is my paid My Sticky Bar plugin license valid for?",
-                    'answer' => "Once you purchase any paid plan of My Sticky Bar, you can use it forever. Support and updates are available for 1 year. You can renew your license each year to get another year of support and updates."
+                    'question' => esc_html__("How long is my paid My Sticky Bar plugin license valid for?", 'mystickymenu'),
+                    'answer' => esc_html__("Once you purchase any paid plan of My Sticky Bar, you can use it forever. Support and updates are available for 1 year. You can renew your license each year to get another year of support and updates.", 'mystickymenu')
                 ],
                 [
-                    'question' => "Can I use My Sticky Bar plugin on more than 1 domain?",
-                    'answer' => "There are 2 ways to do it:
-                        <ul>
-                        <li>You can install the free My Sticky Bar plugin on any website you want</li>
-                        <li>You can buy the Pro plan that includes licenses for 5 domains, or the Agency plan that includes licenses for 50 domains (bigger plans are also available).</li>
+                    'question' =>  esc_html__("Can I use My Sticky Bar plugin on more than 1 domain?", 'mystickymenu'),
+                    'answer' => esc_html__("There are 2 ways to do it:", 'mystickymenu').
+                        "<ul>
+                        <li>".esc_html__('You can install the free My Sticky Bar plugin on any website you want', 'mystickymenu')."</li>
+                        <li>".esc_html__('You can buy the Pro plan that includes licenses for 5 domains, or the Agency plan that includes licenses for 50 domains (bigger plans are also available).', 'mystickymenu')."</li>
                         </ul>"
                 ],
                 [
-                    'question' => "Is there a time limit for the free plan?",
-                    'answer' => "No. you can use the free plan as long as you want."
+                    'question' =>  esc_html__("Is there a time limit for the free plan?", 'mystickymenu'),
+                    'answer' =>  esc_html__("No. you can use the free plan as long as you want.", 'mystickymenu')
                 ],
                 [
-                    'question' => "Will My Sticky Bar stop working if I don’t renew my license?",
-                    'answer' => "Of course NOT!<br/>My Sticky Bar plugin and all your settings will continue to work as before; however, you will no longer receive plugin updates including feature additions, improvements, and support."
+                    'question' =>  esc_html__("Will My Sticky Bar stop working if I don’t renew my license?", 'mystickymenu'),
+                    'answer' => sprintf(esc_html__('Of course NOT!%1$sMy Sticky Bar plugin and all your settings will continue to work as before; however, you will no longer receive plugin updates including feature additions, improvements, and support.', 'mystickymenu'), '<br/>')
                 ],
             ];
             foreach($faqs as $key => $faq) { ?>

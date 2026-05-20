@@ -20,7 +20,7 @@
 ?>
 <h1></h1>
 <!-- Updated design -->
-<div class="wrap mystickymenu-wrap">
+<div class="wrap mystickymenu-wrap m-0! p-0!">
 	<div class="mystickymenu-dashboard">
 		<h2></h2>
 		<?php if(isset($stickymenus_widgets) && !empty($stickymenus_widgets)) :  ?>
@@ -164,8 +164,8 @@
 						</div>
 					<?php
 					}else{?>
-						<div class="stickymenu-no-lead">
-							<?php echo '<img src="'. esc_url(MYSTICKYMENU_URL) .'images/empty_lead.png" />'; ?>
+						<div class="stickymenu-no-lead text-center">
+							<?php echo '<img src="'. esc_url(MYSTICKYMENU_URL) .'images/empty_lead.png" class="mx-auto" />'; ?>
 							<p><?php  esc_html_e("Once you get a new lead, it’ll appear here","mystickymenu");?></p>
 						</div>
 						<?php	
@@ -176,12 +176,12 @@
 				<!-- 2 -->
 				<div class="contactus-tab-option msm-bgbox">
 					<div class="contactus-title">
-						<h3>Create Popups That Convert</h3>
+						<h3><?php esc_html_e('Create Popups That Convert', 'mystickymenu'); ?></h3>
 					</div>					
 					<div class="premio-footer-option">
 						<h3><img src="<?php echo esc_url(MYSTICKYMENU_URL . "images/poptin-popups.png"); ?>" /></h3>
 						<div class="premio-content-list">
-							<span>Engaging popups and forms for your website. Build in minutes.</span>
+							<span><?php esc_html_e('Engaging popups and forms for your website. Build in minutes.', 'mystickymenu'); ?></span>
 						</div>
 						<?php 
 						if( class_exists( 'POPTIN_Plugin_Base' ) ) { 
@@ -217,9 +217,9 @@
 						<div class="settings-content">
 							<?php 
 								if(isset($mysticky_options['stickymenu_enable']) && $mysticky_options['stickymenu_enable'] == 1){
-									echo '<p>Sticky menu is currently turned on.</p>';
+									echo '<p>'.esc_html__('Sticky menu is currently turned on.', 'mystickymenu').'</p>';
 								}else{
-									echo '<p>Sticky menu is not currently configured. Configure to enable.</p>';	
+									echo '<p>'.esc_html__('Sticky menu is not currently configured. Configure to enable.', 'mystickymenu').'</p>';
 								}
 							?>
 						</div>
@@ -236,7 +236,7 @@
 				</div>
 				<!-- 2 -->
 				<div class="mystickymenu-tab-documentation msm-bgbox">
-					<h3>Documentation</h3>
+					<h3><?php esc_html_e('Documentation', 'mystickymenu'); ?></h3>
 					<div class="stickymenu-box-container flex-col"> 
 						<ul class="documents-wrap-list">
 							<li><a href="https://premio.io/help/mystickymenu/how-to-use-my-sticky-menu/" target="_blank"><?php esc_html_e('How to use My Sticky Bar?','mystickymenu');?></a></li>
@@ -245,14 +245,11 @@
 						</ul>
 
 						<span class="flex align-middle gap-x-px">
-							<span><?php esc_html_e("Need more help? Visit our ","mystickymenu");?></span>
-							<a class="btn btn-primary-outline" href="https://premio.io/help/mystickymenu/?utm_source=msmhelp" target="_blank"><?php esc_html_e("Help Center","mystickymenu"); ?></a>
+							<span><?php printf(esc_html__('Need more help? Visit our %1$sHelp Center%2$s',"mystickymenu"), '<a class="btn btn-primary-outline" href="https://premio.io/help/mystickymenu/?utm_source=msmhelp" target="_blank">', '</a>');?></span>
 						</span>
 					</div>
 				</div>
-			
 			</div>
-			
 		</div>
 		<div class="mystickymenu-tab-boxs-wrap msmenu-flexbox">
 			<div class="mystickymenu-tab-stickymenu contactus-tab-option-wrap msmenu-blockbox">

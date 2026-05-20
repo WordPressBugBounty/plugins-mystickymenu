@@ -19,15 +19,12 @@ if ( $button_postion_relative_text == 1 ) {
 <div class="mysticky-welcomebar-preview-wrap">
 	<div class="mysticky-welcomebar-setting-right mysticky-welcomebar-preview">
 		<div class="mysticky-welcomebar-backword-page">
-			<a href="<?php echo esc_url(admin_url("admin.php?page=my-stickymenu-welcomebar"));?>"><span class="dashicons dashicons-arrow-left-alt2 back-dashboard" style="color: unset;font-size: 17px;"></span> Back to Dashboard</a>
+			<a href="<?php echo esc_url(admin_url("admin.php?page=my-stickymenu-welcomebar"));?>"><span class="dashicons dashicons-arrow-left-alt2 back-dashboard" style="color: unset;font-size: 17px;"></span> <?php esc_html_e('Back to Dashboard', 'mystickymenu'); ?></a>
 		</div>
 		<div class="mysticky-welcomebar-header-title">
 			<h3><?php esc_html_e('Preview', 'mystickymenu'); ?></h3>
 		</div>
 		<div class="mysticky-welcomebar-preview-screen">
-			<?php if(isset($welcomebar['mysticky_welcomebar_font']) && $welcomebar['mysticky_welcomebar_font'] != '' ):?>
-			<link href="https://fonts.googleapis.com/css?family=<?php echo esc_attr($welcomebar['mysticky_welcomebar_font']) ?>:400,600,700|Lato:400,500,600,700" rel="stylesheet" type="text/css" class="sfba-google-font">
-			<?php endif; ?>
 			<div class="mysticky-welcomebar-fixed mysticky-welcomebar-display-desktop <?php echo esc_attr($display_main_class); ?>" >
 				<div class="mysticky-welcomebar-fixed-wrap <?php echo esc_attr($button_text_postion_clss);?>">
 					<?php 
@@ -40,29 +37,42 @@ if ( $button_postion_relative_text == 1 ) {
 					</div>
 
 					<div class="mysticky-welcomebar-lead-content" <?php if((isset($welcomebar['mysticky_welcomebar_enable_lead']) && $welcomebar['mysticky_welcomebar_enable_lead'] != 1)) :?> style="display:none;" <?php endif; ?>>
-
 						<input type="text" class="preview-lead-name" placeholder="<?php echo esc_attr($welcomebar['lead_name_placeholder']);?>"/>
 						<input type="text" class="preview-lead-email" placeholder="<?php echo esc_attr($welcomebar['lead_email_placeholder']);?>" style="display:<?php echo (isset($welcomebar['mysticky_welcomebar_lead_input']) && $welcomebar['mysticky_welcomebar_lead_input'] == 'email_address') ? 'flex' : 'none';?>"/>
 						<input type="text" class="preview-lead-phone" placeholder="<?php echo esc_attr($welcomebar['lead_phone_placeholder']);?>" style="display:<?php echo (isset($welcomebar['mysticky_welcomebar_lead_input']) && $welcomebar['mysticky_welcomebar_lead_input'] == 'phone') ? 'flex' : 'none';?>"/>
-
 					</div>
 
-					<div class="mysticky-welcomebar-btn  mysticky-welcomebar-hover-effect-<?php  if ($welcomebar['mysticky_welcomebar_hover_effect'] == 'fill_effect_button'){echo esc_attr($welcomebar['mysticky_welcomebar_hover_fill_effect']); }elseif($welcomebar['mysticky_welcomebar_hover_effect'] == 'border_effect_button'){echo esc_attr($welcomebar['mysticky_welcomebar_hover_border_effect']);}else{echo "none";}?>">
+					<div class="mysticky-welcomebar-btn">
 						<?php 
-							$mysticky_welcomebar_btn_text =  isset($welcomebar['mysticky_welcomebar_btn_text']) ? stripslashes($welcomebar['mysticky_welcomebar_btn_text']) : "Got it!";
+                        $mysticky_welcomebar_btn_text =  isset($welcomebar['mysticky_welcomebar_btn_text']) ? stripslashes($welcomebar['mysticky_welcomebar_btn_text']) : "Got it!";
+                        $allowedTags = [
+                            'p' => array(
+                                    'style' => array(),
+                            ),
+                            'br' => array(),
+                            'em' => array(),
+                            'span' => array(
+                                    'style' => array(),
+                            ),
+                            'u' => array(),
+                            'strong' => array(),
+                            'underline' => array(),
+                        ];
 						?>
-								
-						<a href="#"><?php echo stripslashes($mysticky_welcomebar_btn_text);?></a>
-					</div>
-					<?php 
-						$x_color = (isset($welcomebar['mysticky_welcomebar_x_color'])) ? esc_attr($welcomebar['mysticky_welcomebar_x_color']) : '#000000';
-					?>
-					<span class="mysticky-welcomebar-close" style="color:<?php echo esc_attr($x_color);?>" tabindex="0" role="button" aria-label="close">X</span>
-				</div>
+                        <a class="msb-welcomebar-btn" href="#" >
+                            <span class="button-text">
+                                <?php echo wp_kses($mysticky_welcomebar_btn_text, $allowedTags);?>
+                            </span>
+                        </a>
+				    </div>
+                    <?php
+                    $x_color = (isset($welcomebar['mysticky_welcomebar_x_color'])) ? esc_attr($welcomebar['mysticky_welcomebar_x_color']) : '#000000';
+                    ?>
+                    <span class="mysticky-welcomebar-close" style="color:<?php echo esc_attr($x_color);?>" tabindex="0" role="button" aria-label="close">X</span>
 			</div>
 		</div>
 		<div class="timer-message" <?php if(isset($welcomebar['mysticky_welcomebar_enable_lead']) && $welcomebar['mysticky_welcomebar_enable_lead'] != 1):?> style="display:none;"<?php endif;?>>
-			<p><span class="dashicons dashicons-info"></span> The elements will be displayed in 1-line on your actual website. <a class="save_change" href="#">Save changes</a> and <a href="<?php echo esc_url(site_url());?>" target="_blank" class="visit_site_link"><span class="dashicons dashicons-migrate" style="color: #2271b1 !important;"></span> visit your website</a> to check how it’d look like</p>
+			<p><span class="dashicons dashicons-info"></span> The elements will be displayed in 1-line on your actual website. <a class="save_change" href="#"><?php esc_html_e('Save changes', 'mystickymenu'); ?></a> and <a href="<?php echo esc_url(site_url());?>" target="_blank" class="visit_site_link"><span class="dashicons dashicons-migrate" style="color: #2271b1 !important;"></span> visit your website</a> to check how it’d look like</p>
 		</div>
 		<div class="mysticky-welcomebar-full-screen">
 			<button type="button" class="welcomebar-full-screen-btn">
@@ -76,20 +86,6 @@ if ( $button_postion_relative_text == 1 ) {
 			</button>
 		</div>
 	</div>
-	<script>
-	jQuery(".mysticky-welcomebar-fixed").on(
-		"animationend MSAnimationEnd webkitAnimationEnd oAnimationEnd",
-		function() {
-			jQuery(this).removeClass("animation-start");
-		}
-	);
-	jQuery(document).ready(function() { 
-		var container = jQuery(".mysticky-welcomebar-fixed");
-        var refreshId = setInterval(function() {
-            container.addClass("animation-start");
-        }, 3500);
-    });
-	</script>
 	<style id="button-hover-color">
 		<?php if ( $welcomebar['mysticky_welcomebar_hover_effect'] != 'none' ) {?>  
 		.mysticky-welcomebar-fixed .mysticky-welcomebar-btn a:hover {
@@ -221,350 +217,11 @@ if ( $button_postion_relative_text == 1 ) {
 			white-space: nowrap;
 			text-align: center;
 		}
-	
 
 		@media only screen and (max-width: 1024px) {
 			.mysticky-welcomebar-fixed {
 				padding: 0 10px 0 10px;
 			}
-		}
-		
-		/* Animated Buttons */
-		.mysticky-welcomebar-btn a {
-			-webkit-animation-duration: 1s;
-			animation-duration: 1s;
-		}
-		@-webkit-keyframes flash {
-			from,
-			50%,
-			to {
-				opacity: 1;
-			}
-
-			25%,
-			75% {
-				opacity: 0;
-			}
-		}
-		@keyframes flash {
-			from,
-			50%,
-			to {
-				opacity: 1;
-			}
-
-			25%,
-			75% {
-				opacity: 0;
-			}
-		}
-		.mysticky-welcomebar-attention-flash.animation-start .mysticky-welcomebar-btn a {
-			-webkit-animation-name: flash;
-			animation-name: flash;
-		}
-		
-		@keyframes shake {
-			from,
-			to {
-				-webkit-transform: translate3d(0, 0, 0);
-				transform: translate3d(0, 0, 0);
-			}
-
-			10%,
-			30%,
-			50%,
-			70%,
-			90% {
-				-webkit-transform: translate3d(-10px, 0, 0);
-				transform: translate3d(-10px, 0, 0);
-			}
-
-			20%,
-			40%,
-			60%,
-			80% {
-				-webkit-transform: translate3d(10px, 0, 0);
-				transform: translate3d(10px, 0, 0);
-			}
-		}
-
-		.mysticky-welcomebar-attention-shake.animation-start .mysticky-welcomebar-btn a {
-			-webkit-animation-name: shake;
-			animation-name: shake;
-		}
-		
-		@-webkit-keyframes swing {
-			20% {
-				-webkit-transform: rotate3d(0, 0, 1, 15deg);
-				transform: rotate3d(0, 0, 1, 15deg);
-			}
-
-			40% {
-				-webkit-transform: rotate3d(0, 0, 1, -10deg);
-				transform: rotate3d(0, 0, 1, -10deg);
-			}
-
-			60% {
-				-webkit-transform: rotate3d(0, 0, 1, 5deg);
-				transform: rotate3d(0, 0, 1, 5deg);
-			}
-
-			80% {
-				-webkit-transform: rotate3d(0, 0, 1, -5deg);
-				transform: rotate3d(0, 0, 1, -5deg);
-			}
-	
-			to {
-				-webkit-transform: rotate3d(0, 0, 1, 0deg);
-				transform: rotate3d(0, 0, 1, 0deg);
-			}
-		}
-
-		@keyframes swing {
-			20% {
-				-webkit-transform: rotate3d(0, 0, 1, 15deg);
-				transform: rotate3d(0, 0, 1, 15deg);
-			}
-
-			40% {
-				-webkit-transform: rotate3d(0, 0, 1, -10deg);
-				transform: rotate3d(0, 0, 1, -10deg);
-			}
-
-			60% {
-				-webkit-transform: rotate3d(0, 0, 1, 5deg);
-				transform: rotate3d(0, 0, 1, 5deg);
-			}
-
-			80% {
-				-webkit-transform: rotate3d(0, 0, 1, -5deg);
-				transform: rotate3d(0, 0, 1, -5deg);
-			}
-
-			to {
-				-webkit-transform: rotate3d(0, 0, 1, 0deg);
-				transform: rotate3d(0, 0, 1, 0deg);
-			}
-		}
-
-		.mysticky-welcomebar-attention-swing.animation-start .mysticky-welcomebar-btn a {
-			-webkit-transform-origin: top center;
-			transform-origin: top center;
-			-webkit-animation-name: swing;
-			animation-name: swing;
-		}
-		
-		@-webkit-keyframes tada {
-			from {
-				-webkit-transform: scale3d(1, 1, 1);
-				transform: scale3d(1, 1, 1);
-			}
-
-			10%,
-			20% {
-				-webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-				transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-			}
-
-			30%,
-			50%,
-			70%,
-			90% {
-				-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-				transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-			}
-
-			40%,
-			60%,
-			80% {
-				-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-				transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-			}
-
-			to {
-				-webkit-transform: scale3d(1, 1, 1);
-				transform: scale3d(1, 1, 1);
-			}
-		}
-
-		@keyframes tada {
-			from {
-				-webkit-transform: scale3d(1, 1, 1);
-				transform: scale3d(1, 1, 1);
-			}
-
-			10%,
-			20% {
-				-webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-				transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-			}
-
-			30%,
-			50%,
-			70%,
-			90% {
-				-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-				transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-			}
-
-			40%,
-			60%,
-			80% {
-				-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-				transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-			}
-
-			to {
-				-webkit-transform: scale3d(1, 1, 1);
-				transform: scale3d(1, 1, 1);
-			}
-		}
-
-		.mysticky-welcomebar-attention-tada.animation-start .mysticky-welcomebar-btn a {
-			-webkit-animation-name: tada;
-			animation-name: tada;
-		}
-		
-		@-webkit-keyframes heartBeat {
-			0% {
-				-webkit-transform: scale(1);
-				transform: scale(1);
-			}
-
-			14% {
-				-webkit-transform: scale(1.3);
-				transform: scale(1.3);
-			}
-
-			28% {
-				-webkit-transform: scale(1);
-				transform: scale(1);
-			}
-
-			42% {
-				-webkit-transform: scale(1.3);
-				transform: scale(1.3);
-			}
-
-			70% {
-				-webkit-transform: scale(1);
-				transform: scale(1);
-			}
-		}
-
-		@keyframes heartBeat {
-			0% {
-				-webkit-transform: scale(1);
-				transform: scale(1);
-			}
-
-			14% {
-				-webkit-transform: scale(1.3);
-				transform: scale(1.3);
-			}
-
-			28% {
-				-webkit-transform: scale(1);
-				transform: scale(1);
-			}
-
-			42% {
-				-webkit-transform: scale(1.3);
-				transform: scale(1.3);
-			}
-
-			70% {
-				-webkit-transform: scale(1);
-				transform: scale(1);
-			}
-		}
-
-		.mysticky-welcomebar-attention-heartbeat.animation-start .mysticky-welcomebar-btn a {
-		  -webkit-animation-name: heartBeat;
-		  animation-name: heartBeat;
-		  -webkit-animation-duration: 1.3s;
-		  animation-duration: 1.3s;
-		  -webkit-animation-timing-function: ease-in-out;
-		  animation-timing-function: ease-in-out;
-		}
-		
-		@-webkit-keyframes wobble {
-			from {
-				-webkit-transform: translate3d(0, 0, 0);
-				transform: translate3d(0, 0, 0);
-			}
-
-			15% {
-				-webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-				transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-			}
-
-			30% {
-				-webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-				transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-			}
-
-			45% {
-				-webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-				transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-			}
-
-			60% {
-				-webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-				transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-			}
-
-			75% {
-				-webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-				transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-			}
-
-			to {
-				-webkit-transform: translate3d(0, 0, 0);
-				transform: translate3d(0, 0, 0);
-			}
-		}
-
-		@keyframes wobble {
-			from {
-				-webkit-transform: translate3d(0, 0, 0);
-				transform: translate3d(0, 0, 0);
-			}
-
-			15% {
-				-webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-				transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-			}
-
-			30% {
-				-webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-				transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-			}
-
-			45% {
-				-webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-				transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-			}
-
-			60% {
-				-webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-				transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-			}
-
-			75% {
-				-webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-				transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-			}
-
-			to {
-				-webkit-transform: translate3d(0, 0, 0);
-				transform: translate3d(0, 0, 0);
-			}
-		}
-		
-		.mysticky-welcomebar-attention-wobble.animation-start .mysticky-welcomebar-btn a {
-			-webkit-animation-name: wobble;
-			animation-name: wobble;
 		}
 	</style>
 </div>

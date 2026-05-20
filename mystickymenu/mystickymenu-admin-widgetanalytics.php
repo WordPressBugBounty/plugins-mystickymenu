@@ -27,20 +27,20 @@ if (defined('ABSPATH') === false) {
             <ul class="mt-7 flex flex-col space-y-2 content-center">
                 <li class="flex items-center py-6 px-7 bg-[#F9FAFB] rounded-md space-x-6 text-cht-gray-150 text-lg font-primary">
                     <img width="42" height="59" src="<?php echo esc_url(MYSTICKYMENU_URL) ?>/images/channel-discover.svg" alt="Channel Discover">
-                    <span class="max-w-[305px]"><?php _e("<strong>Discover</strong> the most frequently used channels", "mystickymenu") ?></span>
+                    <span class="max-w-[305px]"><?php printf(esc_html__('%1$sDiscover%2$s the most frequently used channels', "mystickymenu"), '<strong>', '</strong>') ?></span>
                 </li>
                 <li class="flex items-center py-6 px-7 bg-[#F9FAFB] rounded-md space-x-6 text-cht-gray-150 text-lg font-primary">
                     <img width="42" height="59" src="<?php echo esc_url(MYSTICKYMENU_URL) ?>/images/channel-tracking.svg" alt="Channel Tracking">
-                    <span><?php _e("Keep <strong>track</strong> of how each widget performs", "mystickymenu") ?></span>
+                    <span class="max-w-[305px]"><?php printf(esc_html__('Keep %1$strack%2$s of how each widget performs', "mystickymenu"), '<strong>', '</strong>') ?></span>
                 </li>
                 <li class="flex items-center py-6 px-7 bg-[#F9FAFB] rounded-md space-x-6 text-cht-gray-150 text-lg font-primary">
                     <img width="42" height="59" src="<?php echo esc_url(MYSTICKYMENU_URL); ?>/images/channel-analyze.svg" alt="Channel Analyze">
-                    <span><?php _e("<strong>Analyze</strong> the number of unique clicks and the <strong>click-through rate</strong>", "mystickymenu") ?></span>
+                    <span class="max-w-[305px]"><?php printf(esc_html__('%1$sAnalyze%2$s the number of unique clicks and the %3$sclick-through rate%4$s', "mystickymenu"), '<strong>', '</strong>', '<strong>', '</strong>') ?></span>
                 </li>
             </ul>
 
             <div class="flex items-center mt-5 space-x-3 content-center">
-                <a class="btn rounded-lg drop-shadow-3xl font-normal" href="<?php echo esc_url(admin_url("admin.php?page=my-stickymenu-upgrade")) ?>" title="Upgrade to Pro">
+                <a class="btn rounded-lg drop-shadow-3xl font-normal" href="<?php echo esc_url(admin_url("admin.php?page=my-stickymenu-upgrade")) ?>" >
                     <?php esc_html_e('Upgrade to Pro 🚀', 'mystickymenu'); ?>
                 </a>                
             </div>

@@ -50,7 +50,7 @@ if (defined('ABSPATH') === false) {
 
 				<div class="mysticky-welcomebar-setting-content align-top">
 					<label><?php esc_html_e('Trigger', 'mystickymenu'); ?>
-						<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;">Choose when you'd like the bar to appear on your site</p></span>
+						<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e('Choose when you\'d like the bar to appear on your site', 'mystickymenu'); ?></p></span>
 					</label>
 					<div class="mysticky-welcomebar-setting-content-right trigger-wrap gap-x-px flex-inline">
 						<div class="mysticky-welcomebar-setting-action flex-1">
@@ -83,7 +83,7 @@ if (defined('ABSPATH') === false) {
 							<div class="welcomebar-date-schedule-time-zone">
 								<label><?php esc_html_e( 'Timezone', 'mystickymenu');?></label>
 								<select class=" gmt-data welcomebar-gmt-timezone gmt-timezone" name="mysticky_option_welcomebar[date_schedule_timezone]" >
-									<option selected="selected" value="">Select a city or country</option>
+									<option selected="selected" value=""><?php esc_html_e('Select a city or country', 'mystickymenu'); ?></option>
 								</select>
 							</div>
 							<div class="welcomebar-date-schedule-box-html" >

@@ -99,13 +99,23 @@ if($count == 1) {
 	$countries_message = $count." countries selected";
 }
 
+$welcomebar['load_fonts_from_google'] = (isset($welcomebar['load_fonts_from_google'])) ? esc_attr($welcomebar['load_fonts_from_google']) : 0;
+$welcomebar['advanced_button_customization'] = (isset($welcomebar['advanced_button_customization'])) ? esc_attr($welcomebar['advanced_button_customization']) : 0;
+$welcomebar['button_has_border'] = (isset($welcomebar['button_has_border'])) ? esc_attr($welcomebar['button_has_border']) : 0;
+$welcomebar['button_border_color'] = (isset($welcomebar['button_border_color'])) ? esc_attr($welcomebar['button_border_color']) : '#7761DF';
+$welcomebar['button_has_shadow'] = (isset($welcomebar['button_has_shadow'])) ? esc_attr($welcomebar['button_has_shadow']) : 0;
+$welcomebar['button_has_3d_effect'] = (isset($welcomebar['button_has_3d_effect'])) ? esc_attr($welcomebar['button_has_3d_effect']) : 0;
+$welcomebar['3d_effect_shadow_color'] = (isset($welcomebar['3d_effect_shadow_color'])) ? esc_attr($welcomebar['3d_effect_shadow_color']) : '#7761DF';
+$welcomebar['button_border_radius'] = (isset($welcomebar['button_border_radius'])) ? esc_attr($welcomebar['button_border_radius']) : 4;
+
+
 ?>
 
 <div id="loader" class="center" style="display:none;"><svg  version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve" style="width:150px;height:150px;"><path fill="#fff" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite"></animateTransform></path></svg></div>
 
 <div id="mystickybar-container" class="mystickybar-container">	
 	<form class="mysticky-welcomebar-form" id="mysticky_welcomebar_form" method="post" action="<?php echo admin_url('admin.php?page=my-stickymenu-welcomebar&save=1&widget=0');?>">
-		<div class="mystickybar-header mystickybar-logo z-50 flex gap-3 items-center justify-between bg-white p-1.5 fixed top-0 left-0 w-full" id="mystickybar-header-tab-label">
+		<div class="mystickybar-header mystickybar-logo z-50 flex gap-3 items-center justify-between bg-white p-1.5 fixed top-0 left-0" id="mystickybar-header-tab-label">
 			<a href="<?php echo esc_url( admin_url( 'admin.php?page=my-stickymenu-welcomebar' ) ) ?>">
 				<img class="max-w-[100px]" src="<?php echo esc_url(MYSTICKYMENU_URL.'images/logo-color.svg'); ?>" alt="mystickymenu" class="logo">				
 			</a>

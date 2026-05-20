@@ -93,8 +93,8 @@ class myStickyMenu_Pro_review_box
 
 	public function enqueue_scripts() {
 		if (current_user_can('manage_options')) {
-			wp_enqueue_style($this->pluginSlug."-star-rating-svg", plugins_url('css/star-rating-svg.css', __FILE__), [], MYSTICKY_VERSION);
-			wp_enqueue_script($this->pluginSlug."-star-rating-svg", plugins_url('js/jquery.star-rating-svg.min.js', __FILE__), ['jquery'], MYSTICKY_VERSION, true);
+			wp_enqueue_style($this->pluginSlug."-star-rating-svg", plugins_url('/dist/css/star-rating-svg.css', __FILE__), [], MYSTICKY_VERSION);
+			wp_enqueue_script($this->pluginSlug."-star-rating-svg", plugins_url('/dist/js/star-rating-svg.js', __FILE__), ['jquery'], MYSTICKY_VERSION, true);
 		}
 	}
 
@@ -518,7 +518,7 @@ class myStickyMenu_Pro_review_box
                         <span class="dashicons dashicons-no-alt"></span>
                     </button>
                     <form class="<?php echo esc_attr($this->pluginSlug) ?>-feedback-popup__form">
-                        <textarea name="message" id="message" cols="30" rows="5" placeholder="What's your feedback?"></textarea>
+                        <textarea name="message" id="message" cols="30" rows="5" placeholder="<?php esc_html_e('What\'s your feedback?', 'mystickymenu'); ?>"></textarea>
                         <button id="submit-btn" type="submit"><?php esc_html_e('Submit', 'mystickymenu') ?></button>
                     </form>
                 </div>

@@ -1,16 +1,16 @@
 <div class="mystickymenu-popup" id="mystickymenu-intro-popup">
     <div class="mystickymenu-popup-box">
         <div class="mystickymenu-popup-header">
-            Welcome to myStickymenu &#127881;
+            <?php esc_html_e('Welcome to myStickymenu 🎉', 'mystickymenu'); ?>
             <button class="close-mystickymenu-popup"><span class="dashicons dashicons-no-alt"></span></button>
             <div class="clear"></div>
         </div>
         <div class="mystickymenu-popup-content">
-            With myStickymenu you can make your website's menu sticky. You can also use it to create a welcome notification bar. Need help? Visit our <a target="_blank" href="https://premio.io/help/mystickymenu/?utm_source=pluginonboarding">Help Center</a>.
-            <iframe width="420" height="240" src="https://www.youtube.com/embed/5sebFgUMpDA"></iframe>
+            <?php printf(esc_html__('With myStickymenu you can make your website\'s menu sticky. You can also use it to create a welcome notification bar. Need help? Visit our %1$sHelp Center%2$s', 'mystickymenu'), '<a target="_blank" href="https://premio.io/help/mystickymenu/?utm_source=pluginonboarding">', '</a>') ?>
+            <iframe class="w-full" width="420" height="240" src="https://www.youtube.com/embed/5sebFgUMpDA"></iframe>
         </div>
         <div class="mystickymenu-popup-footer">
-            <button type="button">Go to myStickymenu</button>
+            <button type="button"><?php esc_html_e('Go to myStickymenu', 'mystickymenu'); ?></button>
         </div>
     </div>
 </div>

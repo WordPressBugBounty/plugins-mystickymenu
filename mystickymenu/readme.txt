@@ -2,8 +2,8 @@
 Contributors: tomeraharon, galdub, premio
 Tags:notification bar, floating bar, sticky menu, sticky header, sticky bar
 Requires at least: 3.5.1
-Tested up to: 6.9
-Stable tag: 2.8.9
+Tested up to: 7.0
+Stable tag: 2.9.0
 License: GPLv3
 
 Create a welcome notification bar for your website. Also, My Sticky Bar plugin can make your menu or header sticky to the top when scrolled 📌
@@ -341,6 +341,11 @@ After installing the plugin, you’ll have the option to turn on the welcome bar
 
 
 == Changelog ==
+
+= 2.9.0 =
+Internationalization fixes - Fixed translation issues for admin strings in My Sticky Bar.
+Better button customization - Added new button styling options, including text formatting, border, shadow, 3D effect, and radius.
+Google Fonts loading control - Added an option to stop loading Google Fonts and use the site font instead.
 
 = 2.8.9 =
 Improve chat form interface

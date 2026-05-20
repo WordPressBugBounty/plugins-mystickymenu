@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: myStickymenu\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mystickymenu-free-"
 "uncompressed\n"
-"POT-Creation-Date: 2026-05-12 10:16:37+00:00\n"
+"POT-Creation-Date: 2026-05-20 07:19:57+00:00\n"
 "PO-Revision-Date: 2017-09-15 08:38+0100\n"
 "Last-Translator: mrda <jahmirda@gmail.com>\n"
 "Language-Team: TFN <jahmirda@gmail.com>\n"
@@ -19,65 +19,73 @@ msgstr ""
 "X-Poedit-SearchPath-0: ..\n"
 "X-Poedit-SearchPath-1: .\n"
 
-#: mystickymenu.php:1078
+#: mystickymenu.php:1077
 msgid "404"
 msgstr ""
 
-#: admin/bar-preview.php:25 welcome-bar.php:845
+#: admin/bar-preview.php:22 mystickymenu.php:709 welcome-bar.php:852
+msgid "Back to Dashboard"
+msgstr ""
+
+#: admin/bar-preview.php:25 welcome-bar.php:855
 msgid "Preview"
 msgstr ""
 
-#: admin/bar-preview.php:69 welcome-bar.php:889
+#: admin/bar-preview.php:75 welcome-bar.php:895
+msgid "Save changes"
+msgstr ""
+
+#: admin/bar-preview.php:79 welcome-bar.php:899
 msgid "Show Fullscreen Preview"
 msgstr ""
 
-#: admin/bar-preview.php:74 welcome-bar.php:894
+#: admin/bar-preview.php:84 welcome-bar.php:904
 msgid "Minimise Preview"
 msgstr ""
 
-#: admin/bar-settings.php:117
+#: admin/bar-settings.php:127
 msgid "1. Customize Bar"
 msgstr ""
 
-#: admin/bar-settings.php:123
+#: admin/bar-settings.php:133
 msgid "2. Display rules"
 msgstr ""
 
-#: admin/bar-settings.php:130
+#: admin/bar-settings.php:140
 msgid "3. Poptin Popups"
 msgstr ""
 
-#: admin/bar-settings.php:141
+#: admin/bar-settings.php:151
 msgid "Back"
 msgstr ""
 
-#: admin/bar-settings.php:145
+#: admin/bar-settings.php:155
 msgid "Next"
 msgstr ""
 
-#: admin/bar-settings.php:158
+#: admin/bar-settings.php:168
 msgid "Save & View Dashboard"
 msgstr ""
 
-#: admin/bar-settings.php:186 welcome-bar.php:921
+#: admin/bar-settings.php:196 welcome-bar.php:931
 msgid "Bar is currently off"
 msgstr ""
 
-#: admin/bar-settings.php:190 welcome-bar.php:925
+#: admin/bar-settings.php:200 welcome-bar.php:935
 msgid ""
 "Your Bar is currently turned off, would you like to save and show it on your "
 "site?"
 msgstr ""
 
-#: admin/bar-settings.php:193 welcome-bar.php:928
+#: admin/bar-settings.php:203 welcome-bar.php:938
 msgid "Just save and keep it off"
 msgstr ""
 
-#: admin/bar-settings.php:194 welcome-bar.php:929
+#: admin/bar-settings.php:204 welcome-bar.php:939
 msgid "Save & Turn on Bar"
 msgstr ""
 
-#: admin/bar-settings.php:199 welcome-bar.php:934
+#: admin/bar-settings.php:209 welcome-bar.php:944
 msgid "Poptin pop-up is not configured properly"
 msgstr ""
 
@@ -93,458 +101,570 @@ msgstr ""
 msgid "Bar visibility"
 msgstr ""
 
-#: admin/customize-bar.php:30 welcome-bar.php:88
+#: admin/customize-bar.php:22
+msgid "When the toggle is on, the notification will appear on your website"
+msgstr ""
+
+#: admin/customize-bar.php:30 welcome-bar.php:87
 msgid "Bar is visible"
 msgstr ""
 
-#: admin/customize-bar.php:31 welcome-bar.php:89
+#: admin/customize-bar.php:31 welcome-bar.php:88
 msgid "Bar is hidden"
 msgstr ""
 
-#: admin/customize-bar.php:39 welcome-bar.php:97
+#: admin/customize-bar.php:39 welcome-bar.php:96
 msgid "Bar Settings"
 msgstr ""
 
-#: admin/customize-bar.php:43 admin/customize-bar.php:377 welcome-bar.php:100
+#: admin/customize-bar.php:43 admin/customize-bar.php:457 welcome-bar.php:99
 msgid "Position"
 msgstr ""
 
-#: admin/customize-bar.php:48 welcome-bar.php:105
+#: admin/customize-bar.php:44 welcome-bar.php:100
+msgid "Choose if you want to show the bar on top or at the bottom of your site"
+msgstr ""
+
+#: admin/customize-bar.php:48 welcome-bar.php:104
 msgid "Top"
 msgstr ""
 
-#: admin/customize-bar.php:52 welcome-bar.php:109
+#: admin/customize-bar.php:52 welcome-bar.php:108
 msgid "Bottom"
 msgstr ""
 
 #: admin/customize-bar.php:54 admin/customize-bar.php:66
-#: admin/customize-bar.php:82 admin/customize-bar.php:240
-#: admin/customize-bar.php:325 admin/customize-bar.php:339
-#: admin/customize-bar.php:523 admin/customize-bar.php:535
-#: admin/customize-bar.php:561 admin/display-rules.php:47
-#: admin/display-rules.php:68 admin/display-rules.php:183 mystickymenu.php:780
-#: mystickymenu.php:901 mystickymenu.php:989 mystickymenu.php:1024
-#: welcome-bar.php:111 welcome-bar.php:123 welcome-bar.php:139
-#: welcome-bar.php:311 welcome-bar.php:396 welcome-bar.php:410
-#: welcome-bar.php:577 welcome-bar.php:589 welcome-bar.php:617
-#: welcome-bar.php:788
+#: admin/customize-bar.php:82 admin/customize-bar.php:250
+#: admin/customize-bar.php:335 admin/customize-bar.php:349
+#: admin/customize-bar.php:638 admin/customize-bar.php:650
+#: admin/customize-bar.php:676 admin/display-rules.php:47
+#: admin/display-rules.php:68 admin/display-rules.php:183 mystickymenu.php:779
+#: mystickymenu.php:900 mystickymenu.php:988 mystickymenu.php:1023
+#: welcome-bar.php:110 welcome-bar.php:122 welcome-bar.php:138
+#: welcome-bar.php:310 welcome-bar.php:395 welcome-bar.php:409
+#: welcome-bar.php:587 welcome-bar.php:599 welcome-bar.php:627
+#: welcome-bar.php:798
 msgid "Upgrade Now"
 msgstr ""
 
-#: admin/customize-bar.php:58 welcome-bar.php:115
+#: admin/customize-bar.php:58 welcome-bar.php:114
 msgid "Height"
 msgstr ""
 
-#: admin/customize-bar.php:70 welcome-bar.php:127
+#: admin/customize-bar.php:59 welcome-bar.php:115
+msgid "Choose the size of your bar in pixels"
+msgstr ""
+
+#: admin/customize-bar.php:64 admin/customize-bar.php:125 mystickymenu.php:832
+#: mystickymenu.php:842 mystickymenu.php:854 welcome-bar.php:120
+#: welcome-bar.php:168
+msgid "PX"
+msgstr ""
+
+#: admin/customize-bar.php:70 welcome-bar.php:126
 msgid "Bar Color"
 msgstr ""
 
-#: admin/customize-bar.php:77 welcome-bar.php:134
+#: admin/customize-bar.php:77 welcome-bar.php:133
 msgid "Bar background image"
 msgstr ""
 
-#: admin/customize-bar.php:78 welcome-bar.php:135
+#: admin/customize-bar.php:78 welcome-bar.php:134
 msgid "Choose a custom image as the background for your welcome bar"
 msgstr ""
 
-#: admin/customize-bar.php:81 welcome-bar.php:138
+#: admin/customize-bar.php:81 welcome-bar.php:137
 msgid "Upload Background"
 msgstr ""
 
-#: admin/customize-bar.php:86 welcome-bar.php:143
+#: admin/customize-bar.php:86 welcome-bar.php:142
 msgid "Bar Text Color"
 msgstr ""
 
-#: admin/customize-bar.php:92 welcome-bar.php:149
-msgid "Font"
+#: admin/customize-bar.php:92 welcome-bar.php:148
+msgid "Font Family"
 msgstr ""
 
-#: admin/customize-bar.php:95 welcome-bar.php:152
+#: admin/customize-bar.php:95 welcome-bar.php:151
 msgid "Select font family"
 msgstr ""
 
-#: admin/customize-bar.php:108 welcome-bar.php:165
+#: admin/customize-bar.php:108
+msgid "Load Google fonts from Google"
+msgstr ""
+
+#: admin/customize-bar.php:109
+msgid ""
+"Disabling the feature will stop loading the fonts from Google's server and "
+"you have to manually load the font to make it work"
+msgstr ""
+
+#: admin/customize-bar.php:121 welcome-bar.php:164
 msgid "Font Size"
 msgstr ""
 
-#: admin/customize-bar.php:117 welcome-bar.php:174
+#: admin/customize-bar.php:130 welcome-bar.php:173
 msgid "Bar Text"
 msgstr ""
 
-#: admin/customize-bar.php:121 welcome-bar.php:178
+#: admin/customize-bar.php:134 welcome-bar.php:177
 msgid "Static Text"
 msgstr ""
 
-#: admin/customize-bar.php:126 welcome-bar.php:183
+#: admin/customize-bar.php:139 welcome-bar.php:182
 msgid "Sliding Texts"
 msgstr ""
 
-#: admin/customize-bar.php:127 upgrade-to-pro.php:158 welcome-bar.php:184
+#: admin/customize-bar.php:140 upgrade-to-pro.php:158 welcome-bar.php:183
 msgid ""
 "Enhance Your Sticky Menu with Sliding Text. Display multiple lines of "
 "content that can scroll automatically in your desired direction."
 msgstr ""
 
-#: admin/customize-bar.php:167 welcome-bar.php:235
+#: admin/customize-bar.php:177 welcome-bar.php:234
 msgid "Add"
 msgstr ""
 
-#: admin/customize-bar.php:171 admin/customize-bar.php:189
-#: admin/customize-bar.php:206 admin/display-rules.php:123
-#: admin/display-rules.php:201 admin/display-rules.php:225 welcome-bar.php:239
-#: welcome-bar.php:257 welcome-bar.php:275 welcome-bar.php:728
-#: welcome-bar.php:806 welcome-bar.php:830
+#: admin/customize-bar.php:181 admin/customize-bar.php:199
+#: admin/customize-bar.php:216 admin/display-rules.php:123
+#: admin/display-rules.php:201 admin/display-rules.php:225 welcome-bar.php:238
+#: welcome-bar.php:256 welcome-bar.php:274 welcome-bar.php:738
+#: welcome-bar.php:816 welcome-bar.php:840
 msgid "UPGRADE NOW"
 msgstr ""
 
-#: admin/customize-bar.php:178 welcome-bar.php:246
+#: admin/customize-bar.php:188 welcome-bar.php:245
 #, fuzzy
 msgid "Transition styles"
 msgstr "Sticky vrijeme tranzicije"
 
-#: admin/customize-bar.php:182 welcome-bar.php:250
+#: admin/customize-bar.php:192 welcome-bar.php:249
 msgid "Right transition"
 msgstr ""
 
-#: admin/customize-bar.php:183 welcome-bar.php:251
+#: admin/customize-bar.php:193 welcome-bar.php:250
 msgid "Left transition"
 msgstr ""
 
-#: admin/customize-bar.php:184 welcome-bar.php:252
+#: admin/customize-bar.php:194 welcome-bar.php:251
 msgid "Up transition"
 msgstr ""
 
-#: admin/customize-bar.php:185 welcome-bar.php:253
+#: admin/customize-bar.php:195 welcome-bar.php:252
 msgid "Down transition"
 msgstr ""
 
-#: admin/customize-bar.php:196 welcome-bar.php:265
+#: admin/customize-bar.php:206 welcome-bar.php:264
 #, fuzzy
 msgid "Transition speed"
 msgstr "Sticky vrijeme tranzicije"
 
-#: admin/customize-bar.php:200 welcome-bar.php:269
+#: admin/customize-bar.php:210 welcome-bar.php:268
 msgid "Slow"
 msgstr ""
 
-#: admin/customize-bar.php:201 welcome-bar.php:270
+#: admin/customize-bar.php:211 welcome-bar.php:269
 msgid "Medium"
 msgstr ""
 
-#: admin/customize-bar.php:202 welcome-bar.php:271
+#: admin/customize-bar.php:212 welcome-bar.php:270
 msgid "Fast"
 msgstr ""
 
-#: admin/customize-bar.php:213 welcome-bar.php:284
+#: admin/customize-bar.php:223 welcome-bar.php:283
 msgid "Show an X Button"
 msgstr ""
 
-#: admin/customize-bar.php:214 welcome-bar.php:285
+#: admin/customize-bar.php:224 welcome-bar.php:284
 msgid ""
 "Choose if you want to show an X button to close the bar or not or desktop "
 "and mobile devices"
 msgstr ""
 
-#: admin/customize-bar.php:219 admin/customize-bar.php:356
-#: admin/display-rules.php:40 mystickymenu.php:786 welcome-bar.php:290
-#: welcome-bar.php:425 welcome-bar.php:653
+#: admin/customize-bar.php:229 admin/customize-bar.php:366
+#: admin/display-rules.php:40 mystickymenu.php:785 welcome-bar.php:289
+#: welcome-bar.php:424 welcome-bar.php:663
 msgid "Desktop"
 msgstr ""
 
-#: admin/customize-bar.php:223 admin/customize-bar.php:360
-#: admin/display-rules.php:44 mystickymenu.php:792 welcome-bar.php:294
-#: welcome-bar.php:429 welcome-bar.php:657
+#: admin/customize-bar.php:233 admin/customize-bar.php:370
+#: admin/display-rules.php:44 mystickymenu.php:791 welcome-bar.php:293
+#: welcome-bar.php:428 welcome-bar.php:667
 msgid "Mobile"
 msgstr ""
 
-#: admin/customize-bar.php:231 welcome-bar.php:302
+#: admin/customize-bar.php:235 welcome-bar.php:295
+msgid "X Color"
+msgstr ""
+
+#: admin/customize-bar.php:241 welcome-bar.php:301
 msgid "Countdown"
 msgstr ""
 
-#: admin/customize-bar.php:232 welcome-bar.php:303
+#: admin/customize-bar.php:242 welcome-bar.php:302
 msgid ""
 "Add a countdown timer element to your Bar to increase conversion rate, "
 "announce flash sales, and more"
 msgstr ""
 
-#: admin/customize-bar.php:245 welcome-bar.php:316
+#: admin/customize-bar.php:255 welcome-bar.php:315
 msgid "Collect leads"
 msgstr ""
 
-#: admin/customize-bar.php:247 welcome-bar.php:318
+#: admin/customize-bar.php:257 welcome-bar.php:317
 msgid ""
-" Collect the visitor's details such as Name, email address or phone number "
+"Collect the visitor's details such as Name, email address or phone number "
 "from the bar. Collected visitor details can be viewed on the %1$s page"
 msgstr ""
 
-#: admin/customize-bar.php:247 mystickymenu.php:1779 welcome-bar.php:318
+#: admin/customize-bar.php:257 mystickymenu.php:496 mystickymenu.php:1786
+#: welcome-bar.php:317
 msgid "Contact Form Leads"
 msgstr ""
 
-#: admin/customize-bar.php:258 welcome-bar.php:329
+#: admin/customize-bar.php:268 welcome-bar.php:328
 msgid "Select inputs"
 msgstr ""
 
-#: admin/customize-bar.php:262 welcome-bar.php:333
+#: admin/customize-bar.php:272 welcome-bar.php:332
 msgid "Name & email address"
 msgstr ""
 
-#: admin/customize-bar.php:266 welcome-bar.php:337
+#: admin/customize-bar.php:276 welcome-bar.php:336
 msgid "Name & phone number"
 msgstr ""
 
-#: admin/customize-bar.php:272 welcome-bar.php:343
+#: admin/customize-bar.php:282 welcome-bar.php:342
 msgid "Placeholder for Name"
 msgstr ""
 
-#: admin/customize-bar.php:279 welcome-bar.php:350
+#: admin/customize-bar.php:289 welcome-bar.php:349
 msgid "Placeholder for Email"
 msgstr ""
 
-#: admin/customize-bar.php:286 welcome-bar.php:357
+#: admin/customize-bar.php:296 welcome-bar.php:356
 msgid "Placeholder for Phone"
 msgstr ""
 
-#: admin/customize-bar.php:294 welcome-bar.php:365
+#: admin/customize-bar.php:304 welcome-bar.php:364
 msgid "Show success message"
 msgstr ""
 
-#: admin/customize-bar.php:304 welcome-bar.php:375
+#: admin/customize-bar.php:314 welcome-bar.php:374
 msgid "Thank You Text"
 msgstr ""
 
-#: admin/customize-bar.php:324 welcome-bar.php:395
+#: admin/customize-bar.php:334 welcome-bar.php:394
 msgid "Send leads to email"
 msgstr ""
 
-#: admin/customize-bar.php:331 welcome-bar.php:402
+#: admin/customize-bar.php:341 welcome-bar.php:401
 msgid "Show Coupons"
 msgstr ""
 
-#: admin/customize-bar.php:332 welcome-bar.php:403
+#: admin/customize-bar.php:342 welcome-bar.php:402
 msgid ""
 "Add a coupon to your bar. Users can click on the coupon, copy it and use it "
 "on your website"
 msgstr ""
 
-#: admin/customize-bar.php:345 welcome-bar.php:416
+#: admin/customize-bar.php:355 welcome-bar.php:415
 #, fuzzy
 msgid "Button Settings"
 msgstr "myStickymenu Postavke"
 
-#: admin/customize-bar.php:350 welcome-bar.php:419
+#: admin/customize-bar.php:360 welcome-bar.php:418
 msgid "Show a Button On"
 msgstr ""
 
-#: admin/customize-bar.php:365
+#: admin/customize-bar.php:361 welcome-bar.php:419
+msgid ""
+"Choose whether you want to display a button on your bar or not on desktop "
+"and mobile devices"
+msgstr ""
+
+#: admin/customize-bar.php:375
 msgid "Set the button's position relative to the text"
 msgstr ""
 
-#: admin/customize-bar.php:383
-msgid "Left"
+#: admin/customize-bar.php:376
+msgid ""
+"Customize the position of the button and the text to match your design "
+"preference."
 msgstr ""
 
 #: admin/customize-bar.php:387
+msgid "Advanced Button Customization"
+msgstr ""
+
+#: admin/customize-bar.php:400
+msgid "Add border"
+msgstr ""
+
+#: admin/customize-bar.php:410
+msgid "Border Color"
+msgstr ""
+
+#: admin/customize-bar.php:418
+msgid "Add Shadow"
+msgstr ""
+
+#: admin/customize-bar.php:428
+msgid "3D effect"
+msgstr ""
+
+#: admin/customize-bar.php:438
+#, fuzzy
+msgid "Select Color"
+msgstr "Sticky pozadinska boja"
+
+#: admin/customize-bar.php:446
+msgid "Border Radius"
+msgstr ""
+
+#: admin/customize-bar.php:458
+msgid "Position the button and text to the right, left, or center of the bar."
+msgstr ""
+
+#: admin/customize-bar.php:463
+msgid "Left"
+msgstr ""
+
+#: admin/customize-bar.php:467
 msgid "Center"
 msgstr ""
 
-#: admin/customize-bar.php:391
+#: admin/customize-bar.php:471
 msgid "Right"
 msgstr ""
 
-#: admin/customize-bar.php:396 welcome-bar.php:434
+#: admin/customize-bar.php:476 welcome-bar.php:433
 msgid "Button Color"
 msgstr ""
 
-#: admin/customize-bar.php:402 welcome-bar.php:440
+#: admin/customize-bar.php:482 welcome-bar.php:439
 msgid "Button Text Color"
 msgstr ""
 
-#: admin/customize-bar.php:408 welcome-bar.php:446
+#: admin/customize-bar.php:488 welcome-bar.php:445
 msgid "Button Text"
 msgstr ""
 
-#: admin/customize-bar.php:414 welcome-bar.php:454
+#: admin/customize-bar.php:516 welcome-bar.php:453
 msgid "Hover Effects"
 msgstr ""
 
-#: admin/customize-bar.php:417 admin/customize-bar.php:469 welcome-bar.php:457
-#: welcome-bar.php:513
+#: admin/customize-bar.php:519 admin/customize-bar.php:571 welcome-bar.php:456
+#: welcome-bar.php:512
 msgid "None"
 msgstr ""
 
-#: admin/customize-bar.php:418 welcome-bar.php:458
+#: admin/customize-bar.php:520 welcome-bar.php:457
 msgid "Fill on effects on hover"
 msgstr ""
 
-#: admin/customize-bar.php:419 welcome-bar.php:459
+#: admin/customize-bar.php:521 welcome-bar.php:458
 msgid "Border effects on hover"
 msgstr ""
 
-#: admin/customize-bar.php:424 welcome-bar.php:464
+#: admin/customize-bar.php:526 welcome-bar.php:463
 msgid "Button Hover Fill effects "
 msgstr ""
 
-#: admin/customize-bar.php:427 welcome-bar.php:467
+#: admin/customize-bar.php:529 welcome-bar.php:466
 msgid "Fill Style 1"
 msgstr ""
 
-#: admin/customize-bar.php:428 welcome-bar.php:468
+#: admin/customize-bar.php:530 welcome-bar.php:467
 msgid "Fill Style 2"
 msgstr ""
 
-#: admin/customize-bar.php:429 welcome-bar.php:469
+#: admin/customize-bar.php:531 welcome-bar.php:468
 msgid "Fill Style 3"
 msgstr ""
 
-#: admin/customize-bar.php:430 welcome-bar.php:470
+#: admin/customize-bar.php:532 welcome-bar.php:469
 msgid "Fill Style 4"
 msgstr ""
 
-#: admin/customize-bar.php:431 welcome-bar.php:471
+#: admin/customize-bar.php:533 welcome-bar.php:470
 msgid "Fill Style 5"
 msgstr ""
 
-#: admin/customize-bar.php:436 welcome-bar.php:476
+#: admin/customize-bar.php:538 welcome-bar.php:475
 msgid "Button Hover Border effects "
 msgstr ""
 
-#: admin/customize-bar.php:439 welcome-bar.php:479
+#: admin/customize-bar.php:541 welcome-bar.php:478
 msgid "Border Style 1"
 msgstr ""
 
-#: admin/customize-bar.php:440 welcome-bar.php:480
+#: admin/customize-bar.php:542 welcome-bar.php:479
 msgid "Border Style 2"
 msgstr ""
 
-#: admin/customize-bar.php:441 welcome-bar.php:481
+#: admin/customize-bar.php:543 welcome-bar.php:480
 msgid "Border Style 3"
 msgstr ""
 
-#: admin/customize-bar.php:442 welcome-bar.php:482
+#: admin/customize-bar.php:544 welcome-bar.php:481
 msgid "Border Style 4"
 msgstr ""
 
-#: admin/customize-bar.php:447 welcome-bar.php:488
+#: admin/customize-bar.php:549 welcome-bar.php:487
 msgid "Button Hover Text Color"
 msgstr ""
 
-#: admin/customize-bar.php:453 welcome-bar.php:495
+#: admin/customize-bar.php:555 welcome-bar.php:494
 msgid "Button Hover Color"
 msgstr ""
 
-#: admin/customize-bar.php:459 welcome-bar.php:502
+#: admin/customize-bar.php:561 welcome-bar.php:501
 msgid "Button Hover Border Color"
 msgstr ""
 
-#: admin/customize-bar.php:465 welcome-bar.php:509
+#: admin/customize-bar.php:567 welcome-bar.php:508
 msgid "Attention Effect"
 msgstr ""
 
-#: admin/customize-bar.php:470 welcome-bar.php:514
+#: admin/customize-bar.php:572 welcome-bar.php:513
 msgid "Flash"
 msgstr ""
 
-#: admin/customize-bar.php:471 welcome-bar.php:515
+#: admin/customize-bar.php:573 welcome-bar.php:514
 msgid "Shake"
 msgstr ""
 
-#: admin/customize-bar.php:472 welcome-bar.php:516
+#: admin/customize-bar.php:574 welcome-bar.php:515
 msgid "Swing"
 msgstr ""
 
-#: admin/customize-bar.php:473 welcome-bar.php:517
+#: admin/customize-bar.php:575 welcome-bar.php:516
 msgid "Tada"
 msgstr ""
 
-#: admin/customize-bar.php:474 welcome-bar.php:518
+#: admin/customize-bar.php:576 welcome-bar.php:517
 msgid "Heartbeat"
 msgstr ""
 
-#: admin/customize-bar.php:475 welcome-bar.php:519
+#: admin/customize-bar.php:577 welcome-bar.php:518
 msgid "Wobble"
 msgstr ""
 
-#: admin/customize-bar.php:481 welcome-bar.php:526
+#: admin/customize-bar.php:583 welcome-bar.php:525
 msgid "Action On Button Click"
 msgstr ""
 
-#: admin/customize-bar.php:487 welcome-bar.php:532
+#: admin/customize-bar.php:587 welcome-bar.php:528
+msgid "Select what you'd like to happen when a visitor clicks on the button"
+msgstr ""
+
+#: admin/customize-bar.php:588 welcome-bar.php:529
+msgid ""
+"Redirect the visitor to another URL - your visitor will be redirected to "
+"another URL after they click on the button (for example, a specific product "
+"or latest collection)"
+msgstr ""
+
+#: admin/customize-bar.php:589 welcome-bar.php:530
+msgid ""
+"Close the Bar - after they user clicks on the button, the Bar will be closed"
+msgstr ""
+
+#. translators: %s: Poptin URL
+#: admin/customize-bar.php:592 welcome-bar.php:533
+msgid ""
+"Launch a Poptin pop-up - when the user clicks on the button, a Poptin pop-up "
+"will be launched. You need to first create a free Poptin account (link on "
+"\"free Poptin account\" to %s) and set up your pop-ups"
+msgstr ""
+
+#: admin/customize-bar.php:595 welcome-bar.php:536
+msgid ""
+"Show a thank-you screen - show a thank you screen after the user clicks on a "
+"button with different text from your Bar text"
+msgstr ""
+
+#: admin/customize-bar.php:602 welcome-bar.php:542
 msgid "Redirect the visitor to another URL"
 msgstr ""
 
-#: admin/customize-bar.php:488 welcome-bar.php:533
+#: admin/customize-bar.php:603 welcome-bar.php:543
 msgid "Close the Bar"
 msgstr ""
 
-#: admin/customize-bar.php:489 welcome-bar.php:534
+#: admin/customize-bar.php:604 welcome-bar.php:544
 msgid "Launch a Poptin pop-up"
 msgstr ""
 
-#: admin/customize-bar.php:490 welcome-bar.php:535
+#: admin/customize-bar.php:605 welcome-bar.php:545
 msgid "Show a thank-you screen (Pro Feature)"
 msgstr ""
 
-#: admin/customize-bar.php:503 welcome-bar.php:548
+#: admin/customize-bar.php:614 welcome-bar.php:554
+msgid "Sign up at"
+msgstr ""
+
+#: admin/customize-bar.php:618 welcome-bar.php:558
 msgid "Poptin pop-up direct link"
 msgstr ""
 
-#: admin/customize-bar.php:511 welcome-bar.php:565
+#: admin/customize-bar.php:626 welcome-bar.php:575
 msgid "Redirection link"
 msgstr ""
 
-#: admin/customize-bar.php:517 welcome-bar.php:571
+#: admin/customize-bar.php:632 welcome-bar.php:581
 msgid "Open in a new tab"
 msgstr ""
 
-#: admin/customize-bar.php:527 welcome-bar.php:581
+#: admin/customize-bar.php:642 welcome-bar.php:591
 msgid "rel Attribute"
 msgstr ""
 
-#: admin/customize-bar.php:530 welcome-bar.php:584
+#: admin/customize-bar.php:645 welcome-bar.php:594
 msgid ""
 "Add a \"rel\" attribute to the button link. You can use it to add a "
 "rel=\"nofollow\", \"sponsored\", or any other \"rel\" attribute option"
 msgstr ""
 
-#: admin/customize-bar.php:539 welcome-bar.php:594
+#: admin/customize-bar.php:654 welcome-bar.php:604
 msgid "Bar Appearance After Button Click"
 msgstr ""
 
-#: admin/customize-bar.php:540 welcome-bar.php:595
+#: admin/customize-bar.php:655 welcome-bar.php:605
 msgid ""
 "Choose bar display settings after a visitor click on the button. The \"Don't "
 "show the Bar again for the user\" option is the preferable option if you "
 "don't want to annoy your visitors by showing the bar over and over"
 msgstr ""
 
-#: admin/customize-bar.php:545 welcome-bar.php:600
+#: admin/customize-bar.php:660 welcome-bar.php:610
 msgid "Don't show the Bar again for the user"
 msgstr ""
 
-#: admin/customize-bar.php:546 welcome-bar.php:601
+#: admin/customize-bar.php:661 welcome-bar.php:611
 msgid "Show the Bar again when the user visits the website next time"
 msgstr ""
 
-#: admin/customize-bar.php:547 welcome-bar.php:602
+#: admin/customize-bar.php:662 welcome-bar.php:612
 msgid "Show the Bar when the user refreshes/goes to another page"
 msgstr ""
 
-#: admin/customize-bar.php:553 welcome-bar.php:609
+#: admin/customize-bar.php:668 welcome-bar.php:619
 msgid "Close Bar Automatically After Click"
 msgstr ""
 
-#: admin/customize-bar.php:554 welcome-bar.php:610
+#: admin/customize-bar.php:669 welcome-bar.php:620
 msgid ""
 "Choose if you'd like the bar to be closed automatically after button "
 "submission"
 msgstr ""
 
-#: admin/customize-bar.php:564 welcome-bar.php:620
+#: admin/customize-bar.php:679 welcome-bar.php:630
 msgid "Close bar after "
 msgstr ""
 
-#: admin/customize-bar.php:566 welcome-bar.php:622
+#: admin/customize-bar.php:681 welcome-bar.php:632
 msgid "Sec"
 msgstr ""
 
@@ -560,35 +680,39 @@ msgstr ""
 msgid "Triggers"
 msgstr ""
 
-#: admin/display-rules.php:24 welcome-bar.php:634
+#: admin/display-rules.php:24 welcome-bar.php:644
 msgid "Entry effect"
 msgstr ""
 
-#: admin/display-rules.php:28 welcome-bar.php:638
+#: admin/display-rules.php:28 welcome-bar.php:648
 msgid "No effect"
 msgstr ""
 
-#: admin/display-rules.php:29 welcome-bar.php:639
+#: admin/display-rules.php:29 welcome-bar.php:649
 msgid "Slide in"
 msgstr ""
 
-#: admin/display-rules.php:30 mystickymenu.php:821 welcome-bar.php:640
+#: admin/display-rules.php:30 mystickymenu.php:820 welcome-bar.php:650
 msgid "Fade"
 msgstr ""
 
-#: admin/display-rules.php:35 mystickymenu.php:779 welcome-bar.php:649
+#: admin/display-rules.php:35 mystickymenu.php:778 welcome-bar.php:659
 msgid "Devices"
 msgstr ""
 
-#: admin/display-rules.php:52 welcome-bar.php:662
+#: admin/display-rules.php:52 welcome-bar.php:672
 msgid "Trigger"
 msgstr ""
 
-#: admin/display-rules.php:58 welcome-bar.php:668
+#: admin/display-rules.php:53 welcome-bar.php:673
+msgid "Choose when you'd like the bar to appear on your site"
+msgstr ""
+
+#: admin/display-rules.php:58 welcome-bar.php:678
 msgid "After a few seconds"
 msgstr ""
 
-#: admin/display-rules.php:59 welcome-bar.php:671
+#: admin/display-rules.php:59 welcome-bar.php:681
 msgid "After Scroll"
 msgstr ""
 
@@ -596,11 +720,11 @@ msgstr ""
 msgid "Targeting"
 msgstr ""
 
-#: admin/display-rules.php:78 welcome-bar.php:683
+#: admin/display-rules.php:78 welcome-bar.php:693
 msgid "Date Scheduling"
 msgstr ""
 
-#: admin/display-rules.php:79 welcome-bar.php:684
+#: admin/display-rules.php:79 welcome-bar.php:694
 msgid ""
 "Set the date and time for when you want the widget to start showing and the "
 "time you would like it to stop showing. You can add up to 12 combinations of "
@@ -608,143 +732,147 @@ msgid ""
 "upcoming limited-time offer."
 msgstr ""
 
-#: admin/display-rules.php:84 welcome-bar.php:689
+#: admin/display-rules.php:84 welcome-bar.php:699
 msgid "Timezone"
 msgstr ""
 
-#: admin/display-rules.php:94 welcome-bar.php:699
+#: admin/display-rules.php:86 welcome-bar.php:701
+msgid "Select a city or country"
+msgstr ""
+
+#: admin/display-rules.php:94 welcome-bar.php:709
 msgid "Start date "
 msgstr ""
 
-#: admin/display-rules.php:95 welcome-bar.php:700
+#: admin/display-rules.php:95 welcome-bar.php:710
 msgid ""
 "Schedule a date from which the widget will be displayed (the starting date "
 "is included)"
 msgstr ""
 
-#: admin/display-rules.php:100 welcome-bar.php:705
+#: admin/display-rules.php:100 welcome-bar.php:715
 msgid "Start time "
 msgstr ""
 
-#: admin/display-rules.php:107 welcome-bar.php:712
+#: admin/display-rules.php:107 welcome-bar.php:722
 msgid "End date "
 msgstr ""
 
-#: admin/display-rules.php:108 welcome-bar.php:713
+#: admin/display-rules.php:108 welcome-bar.php:723
 msgid ""
 "Schedule a date from which the widget will stop being displayed (the end "
 "date is included)"
 msgstr ""
 
-#: admin/display-rules.php:113 welcome-bar.php:718
+#: admin/display-rules.php:113 welcome-bar.php:728
 msgid "End time "
 msgstr ""
 
-#: admin/display-rules.php:130 admin/display-rules.php:140 mystickymenu.php:961
-#: welcome-bar.php:735 welcome-bar.php:745
+#: admin/display-rules.php:130 admin/display-rules.php:140 mystickymenu.php:960
+#: welcome-bar.php:745 welcome-bar.php:755
 msgid "Add Rule"
 msgstr ""
 
-#: admin/display-rules.php:135 mystickymenu.php:910 upgrade-to-pro.php:185
-#: welcome-bar.php:740
+#: admin/display-rules.php:135 mystickymenu.php:909 upgrade-to-pro.php:185
+#: welcome-bar.php:750
 msgid "Page targeting"
 msgstr ""
 
-#: admin/display-rules.php:137 welcome-bar.php:742
+#: admin/display-rules.php:137 welcome-bar.php:752
 msgid ""
 " Add page targeting to ensure the bar only appears or doesn't appear for the "
 "selected pages only"
 msgstr ""
 
-#: admin/display-rules.php:144 welcome-bar.php:749
+#: admin/display-rules.php:144 welcome-bar.php:759
 msgid "Link that contain"
 msgstr ""
 
-#: admin/display-rules.php:145 welcome-bar.php:750
+#: admin/display-rules.php:145 welcome-bar.php:760
 msgid "A specific link"
 msgstr ""
 
-#: admin/display-rules.php:146 welcome-bar.php:751
+#: admin/display-rules.php:146 welcome-bar.php:761
 msgid "Links starting with"
 msgstr ""
 
-#: admin/display-rules.php:147 welcome-bar.php:752
+#: admin/display-rules.php:147 welcome-bar.php:762
 msgid "Links ending with"
 msgstr ""
 
-#: admin/display-rules.php:148 welcome-bar.php:753
+#: admin/display-rules.php:148 welcome-bar.php:763
 msgid "WordPress Pages"
 msgstr ""
 
-#: admin/display-rules.php:149 welcome-bar.php:754
+#: admin/display-rules.php:149 welcome-bar.php:764
 msgid "WordPress Posts"
 msgstr ""
 
-#: admin/display-rules.php:150 welcome-bar.php:755
+#: admin/display-rules.php:150 welcome-bar.php:765
 msgid "WordPress Categories"
 msgstr ""
 
-#: admin/display-rules.php:151 welcome-bar.php:756
+#: admin/display-rules.php:151 welcome-bar.php:766
 msgid "WordPress Tags"
 msgstr ""
 
-#: admin/display-rules.php:154 welcome-bar.php:759
+#: admin/display-rules.php:154 welcome-bar.php:769
 msgid "WooCommerce products"
 msgstr ""
 
-#: admin/display-rules.php:155 welcome-bar.php:760
+#: admin/display-rules.php:155 welcome-bar.php:770
 msgid "WooCommerce products on sale"
 msgstr ""
 
-#: admin/display-rules.php:163 mystickymenu.php:931 mystickymenu.php:969
-#: welcome-bar.php:768
+#: admin/display-rules.php:163 mystickymenu.php:930 mystickymenu.php:968
+#: welcome-bar.php:778
 msgid "Show on"
 msgstr ""
 
-#: admin/display-rules.php:164 mystickymenu.php:932 mystickymenu.php:970
-#: welcome-bar.php:769
+#: admin/display-rules.php:164 mystickymenu.php:931 mystickymenu.php:969
+#: welcome-bar.php:779
 msgid "Don't show on"
 msgstr ""
 
-#: admin/display-rules.php:169 mystickymenu.php:937 mystickymenu.php:975
-#: welcome-bar.php:774
+#: admin/display-rules.php:169 mystickymenu.php:936 mystickymenu.php:974
+#: welcome-bar.php:784
 msgid "Select Rule"
 msgstr ""
 
-#: admin/display-rules.php:189 upgrade-to-pro.php:193 welcome-bar.php:794
+#: admin/display-rules.php:189 upgrade-to-pro.php:193 welcome-bar.php:804
 msgid "User targeting"
 msgstr ""
 
-#: admin/display-rules.php:190 welcome-bar.php:795
+#: admin/display-rules.php:190 welcome-bar.php:805
 msgid ""
 "Add a rule if you want to show the welcome bar for logged in or logged out "
 "users of your WordPress website selectively"
 msgstr ""
 
-#: admin/display-rules.php:195 welcome-bar.php:800
+#: admin/display-rules.php:195 welcome-bar.php:810
 msgid "Show for all users"
 msgstr ""
 
-#: admin/display-rules.php:196 welcome-bar.php:801
+#: admin/display-rules.php:196 welcome-bar.php:811
 msgid "Show just for logged-in users"
 msgstr ""
 
-#: admin/display-rules.php:197 welcome-bar.php:802
+#: admin/display-rules.php:197 welcome-bar.php:812
 msgid "Show just for logged-out users"
 msgstr ""
 
-#: admin/display-rules.php:209 upgrade-to-pro.php:189 welcome-bar.php:814
+#: admin/display-rules.php:209 upgrade-to-pro.php:189 welcome-bar.php:824
 msgid "Country targeting"
 msgstr ""
 
-#: admin/display-rules.php:211 welcome-bar.php:816
+#: admin/display-rules.php:211 welcome-bar.php:826
 msgid ""
 "Add country targeting to ensure the bar only appears for the selected "
 "countries only"
 msgstr ""
 
-#: admin/display-rules.php:216 admin/display-rules.php:220 welcome-bar.php:821
-#: welcome-bar.php:825
+#: admin/display-rules.php:216 admin/display-rules.php:220 welcome-bar.php:831
+#: welcome-bar.php:835
 msgid "All countries"
 msgstr ""
 
@@ -796,11 +924,11 @@ msgstr ""
 msgid "Premio"
 msgstr ""
 
-#: admin/help.php:25 mystickymenu.php:288
+#: admin/help.php:25 mystickymenu.php:283
 msgid "Need help?"
 msgstr ""
 
-#: admin/help.php:26 mystickymenu.php:1332
+#: admin/help.php:26 mystickymenu.php:1339
 msgid "Close"
 msgstr ""
 
@@ -808,7 +936,7 @@ msgstr ""
 msgid "Support"
 msgstr ""
 
-#: admin/help.php:52
+#: admin/help.php:52 class-help.php:75
 msgid "Contact Us"
 msgstr ""
 
@@ -818,13 +946,13 @@ msgid ""
 "be happy to help 🙏"
 msgstr ""
 
-#: admin/help.php:57 admin/stickymenu-dashboard.php:151 mystickymenu.php:202
-#: mystickymenu.php:1831 stickymenu-dashboard.php:151
+#: admin/help.php:57 admin/stickymenu-dashboard.php:151 mystickymenu.php:197
+#: mystickymenu.php:1838
 msgid "Email"
 msgstr ""
 
 #: admin/help.php:60
-msgid "How can I help you?"
+msgid "How can we help you?"
 msgstr ""
 
 #: admin/help.php:63 admin/help.php:113
@@ -942,7 +1070,7 @@ msgstr ""
 msgid "Step 3"
 msgstr ""
 
-#: admin/poptin-popup.php:15 admin/poptin-popup.php:40
+#: admin/poptin-popup.php:15 admin/poptin-popup.php:40 class-help.php:58
 msgid "Add Poptin Popups"
 msgstr ""
 
@@ -984,124 +1112,124 @@ msgstr ""
 msgid "You can skip this step by saving the widget"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:30 stickymenu-dashboard.php:30
+#: admin/stickymenu-dashboard.php:30 mystickymenu.php:448
 msgid "Dashboard"
 msgstr ""
 
 #: admin/stickymenu-dashboard.php:31 admin/stickymenu-dashboard.php:112
-#: stickymenu-dashboard.php:31 stickymenu-dashboard.php:112
 msgid "Add a New Bar"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:37 stickymenu-dashboard.php:37
+#: admin/stickymenu-dashboard.php:37
 msgid "Status"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:38 stickymenu-dashboard.php:38
+#: admin/stickymenu-dashboard.php:38
 msgid "Bars"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:39 stickymenu-dashboard.php:39
+#: admin/stickymenu-dashboard.php:39
 msgid "Quick Action"
 msgstr ""
 
 #: admin/stickymenu-dashboard.php:52 admin/stickymenu-dashboard.php:84
-#: admin/stickymenu-dashboard.php:283 recommended-plugins.php:405
-#: stickymenu-dashboard.php:52 stickymenu-dashboard.php:84
-#: stickymenu-dashboard.php:250
+#: admin/stickymenu-dashboard.php:280 recommended-plugins.php:405
 msgid "Are you sure?"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:56 stickymenu-dashboard.php:56
+#: admin/stickymenu-dashboard.php:56
 msgid "You're about to turn off the bar. Are you sure about that?"
 msgstr ""
 
 #: admin/stickymenu-dashboard.php:59 admin/stickymenu-dashboard.php:91
-#: admin/stickymenu-dashboard.php:290 stickymenu-dashboard.php:59
-#: stickymenu-dashboard.php:91 stickymenu-dashboard.php:257
+#: admin/stickymenu-dashboard.php:287
 msgid "Nevermind"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:60 admin/stickymenu-dashboard.php:291
-#: stickymenu-dashboard.php:60 stickymenu-dashboard.php:258
+#: admin/stickymenu-dashboard.php:60 admin/stickymenu-dashboard.php:288
 msgid "Turn off"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:65 stickymenu-dashboard.php:65
+#: admin/stickymenu-dashboard.php:65
 msgid "Bar #0"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:68 stickymenu-dashboard.php:68
+#: admin/stickymenu-dashboard.php:68
 msgid "Edit"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:72 stickymenu-dashboard.php:72
+#: admin/stickymenu-dashboard.php:72
 msgid "Duplicate"
 msgstr ""
 
 #: admin/stickymenu-dashboard.php:77 admin/stickymenu-dashboard.php:92
-#: mystickymenu.php:1835 mystickymenu.php:1875 stickymenu-dashboard.php:77
-#: stickymenu-dashboard.php:92
+#: mystickymenu.php:1816 mystickymenu.php:1842 mystickymenu.php:1882
 msgid "Delete"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:88 stickymenu-dashboard.php:88
+#: admin/stickymenu-dashboard.php:88
 msgid ""
 "Are you sure want to delete the bar? You will lose the bar permanently and "
 "will not be able to retrieve it"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:109 stickymenu-dashboard.php:109
+#: admin/stickymenu-dashboard.php:109
 msgid "Welcome 🎉"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:110 stickymenu-dashboard.php:110
+#: admin/stickymenu-dashboard.php:110
 msgid "You're one step away from creating a bar."
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:111 stickymenu-dashboard.php:111
+#: admin/stickymenu-dashboard.php:111
 msgid ""
 "Add top and bottoms bars for various purposes like showing updates, offers, "
 "countdown, flash sales, and more. You can also make any WordPress menu "
 "sticky easily."
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:117 stickymenu-dashboard.php:117
+#: admin/stickymenu-dashboard.php:117
 msgid "Features"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:120 stickymenu-dashboard.php:120
+#: admin/stickymenu-dashboard.php:120
 msgid "Create new bars with unique customization"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:121 stickymenu-dashboard.php:121
+#: admin/stickymenu-dashboard.php:121
 msgid "Make your WordPress navigation menu sticky"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:122 stickymenu-dashboard.php:122
+#: admin/stickymenu-dashboard.php:122
 msgid "Explore more triggers & targeting options"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:140 stickymenu-dashboard.php:140
+#: admin/stickymenu-dashboard.php:140
 msgid "Recent Leads"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:142 stickymenu-dashboard.php:142
+#: admin/stickymenu-dashboard.php:142
 msgid "View All"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:150 mystickymenu.php:1830
-#: stickymenu-dashboard.php:150
+#: admin/stickymenu-dashboard.php:150 mystickymenu.php:1837
 msgid "Name"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:152 mystickymenu.php:1832
-#: stickymenu-dashboard.php:152
+#: admin/stickymenu-dashboard.php:152 mystickymenu.php:1839
 msgid "Phone"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:169 stickymenu-dashboard.php:169
+#: admin/stickymenu-dashboard.php:169
 msgid "Once you get a new lead, it’ll appear here"
+msgstr ""
+
+#: admin/stickymenu-dashboard.php:179
+msgid "Create Popups That Convert"
+msgstr ""
+
+#: admin/stickymenu-dashboard.php:184
+msgid "Engaging popups and forms for your website. Build in minutes."
 msgstr ""
 
 #: admin/stickymenu-dashboard.php:197
@@ -1112,61 +1240,67 @@ msgstr ""
 msgid "Create Your First Popup"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:215 mystickymenu.php:704
-#: stickymenu-dashboard.php:205
+#: admin/stickymenu-dashboard.php:215 mystickymenu.php:703
 #, fuzzy
 msgid "Sticky menu"
 msgstr "myStickymenu Opcije"
 
-#: admin/stickymenu-dashboard.php:229 mystickymenu.php:802
-#: stickymenu-dashboard.php:219
+#: admin/stickymenu-dashboard.php:220
+msgid "Sticky menu is currently turned on."
+msgstr ""
+
+#: admin/stickymenu-dashboard.php:222
+msgid "Sticky menu is not currently configured. Configure to enable."
+msgstr ""
+
+#: admin/stickymenu-dashboard.php:229 mystickymenu.php:281 mystickymenu.php:801
 msgid "Settings"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:230 stickymenu-dashboard.php:220
+#: admin/stickymenu-dashboard.php:230
 #, fuzzy
 msgid "Disable"
 msgstr "Onemogući CSS "
 
-#: admin/stickymenu-dashboard.php:232 stickymenu-dashboard.php:222
+#: admin/stickymenu-dashboard.php:232
 msgid "Configure"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:242 stickymenu-dashboard.php:232
+#: admin/stickymenu-dashboard.php:239
+msgid "Documentation"
+msgstr ""
+
+#: admin/stickymenu-dashboard.php:242
 msgid "How to use My Sticky Bar?"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:243 stickymenu-dashboard.php:233
+#: admin/stickymenu-dashboard.php:243
 msgid "How to add your sticky menu on specific pages only"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:244 stickymenu-dashboard.php:234
+#: admin/stickymenu-dashboard.php:244
 msgid "How to create a Bar"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:248 stickymenu-dashboard.php:238
-msgid "Need more help? Visit our "
+#: admin/stickymenu-dashboard.php:248
+msgid "Need more help? Visit our %1$sHelp Center%2$s"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:249 stickymenu-dashboard.php:238
-msgid "Help Center"
-msgstr ""
-
-#: admin/stickymenu-dashboard.php:262
+#: admin/stickymenu-dashboard.php:259
 msgid ""
 "Explore amazing products from the premio team and supercharge your wordpress "
 "website!"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:263
+#: admin/stickymenu-dashboard.php:260
 msgid "Visit website"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:267
+#: admin/stickymenu-dashboard.php:264
 msgid "Follow Us"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:287 stickymenu-dashboard.php:254
+#: admin/stickymenu-dashboard.php:284
 msgid ""
 "You’re about to turn off the sticky menu feature. Are you sure about that?"
 msgstr ""
@@ -1190,6 +1324,19 @@ msgstr ""
 
 #: class-email-signup.php:64
 msgid "Based on 1,000+ Reviews"
+msgstr ""
+
+#: class-help.php:43 class-help.php:70
+msgid "Get Support"
+msgstr ""
+
+#: class-help.php:48 class-help.php:65 mystickymenu.php:1338
+#: mystickymenu.php:2471 mystickymeny-new-welcomebar.php:62
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: class-help.php:53 mystickymenu.php:516
+msgid "Recommended Plugins"
 msgstr ""
 
 #: class-review-box.php:457
@@ -1251,9 +1398,34 @@ msgstr ""
 msgid "Don't remind me about this "
 msgstr ""
 
+#: class-review-box.php:521
+msgid "What's your feedback?"
+msgstr ""
+
 #: class-review-box.php:522 mystickymenu-review-popup.php:45
 #: mystickymenu-review-popup.php:59
 msgid "Submit"
+msgstr ""
+
+#: class-upgrade-box.php:252
+msgid ""
+"%1$sUpgrade to My Sticky Bar Pro to%2$s experience more awesome features"
+msgstr ""
+
+#: class-upgrade-box.php:254
+msgid "Upgrade now"
+msgstr ""
+
+#: class-upgrade-box.php:266
+msgid "Remind me in 7 days"
+msgstr ""
+
+#: class-upgrade-box.php:267
+msgid "Remind me in 30 days"
+msgstr ""
+
+#: class-upgrade-box.php:268
+msgid "Don't remind me about this"
 msgstr ""
 
 #: mystickymenu-admin-widgetanalytics.php:19
@@ -1265,17 +1437,17 @@ msgid "What can you use it for?"
 msgstr ""
 
 #: mystickymenu-admin-widgetanalytics.php:30
-msgid "<strong>Discover</strong> the most frequently used channels"
+msgid "%1$sDiscover%2$s the most frequently used channels"
 msgstr ""
 
 #: mystickymenu-admin-widgetanalytics.php:34
-msgid "Keep <strong>track</strong> of how each widget performs"
+msgid "Keep %1$strack%2$s of how each widget performs"
 msgstr ""
 
 #: mystickymenu-admin-widgetanalytics.php:38
 msgid ""
-"<strong>Analyze</strong> the number of unique clicks and the <strong>click-"
-"through rate</strong>"
+"%1$sAnalyze%2$s the number of unique clicks and the %3$sclick-through "
+"rate%4$s"
 msgstr ""
 
 #: mystickymenu-admin-widgetanalytics.php:44
@@ -1304,9 +1476,38 @@ msgstr ""
 msgid "Anonymous feedback"
 msgstr ""
 
+#: mystickymenu-deactivate-form.php:137
+msgid "Skip & Deactivate"
+msgstr ""
+
+#: mystickymenu-deactivate-form.php:140
+msgid "Submit & Deactivate"
+msgstr ""
+
 #: mystickymenu-deactivate-form.php:141
 msgid "Cancel"
 msgstr ""
+
+#: mystickymenu-deactivate-form.php:194
+msgid "Please provide your feedback"
+msgstr ""
+
+#: mystickymenu-popup.php:4
+#, fuzzy
+msgid "Welcome to myStickymenu 🎉"
+msgstr "myStickymenu Opcije"
+
+#: mystickymenu-popup.php:9
+msgid ""
+"With myStickymenu you can make your website's menu sticky. You can also use "
+"it to create a welcome notification bar. Need help? Visit our %1$sHelp "
+"Center%2$s"
+msgstr ""
+
+#: mystickymenu-popup.php:13
+#, fuzzy
+msgid "Go to myStickymenu"
+msgstr "myStickymenu Opcije"
 
 #: mystickymenu-review-popup.php:26
 msgid "Seems like My Sticky Bar is bringing you value  🥳"
@@ -1354,35 +1555,63 @@ msgstr ""
 msgid "Don't remind me"
 msgstr ""
 
-#: mystickymenu.php:190
+#: mystickymenu.php:185
 msgid "%1$s is required"
 msgstr ""
 
-#: mystickymenu.php:195
+#: mystickymenu.php:190
 msgid "Please enter your message"
 msgstr ""
 
-#: mystickymenu.php:290
+#: mystickymenu.php:285
 msgid "Upgrade"
 msgstr ""
 
-#: mystickymenu.php:648 mystickymenu.php:1255
+#: mystickymenu.php:438 mystickymenu.php:447 mystickymenu.php:456
+#: mystickymenu.php:467 mystickymenu.php:476 mystickymenu.php:486
+#: mystickymenu.php:495 mystickymenu.php:504
+msgid "Settings Admin"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#, fuzzy
+msgid "My Sticky Bar"
+msgstr "Sticky klasa"
+
+#: mystickymenu.php:457
+msgid "+ Create New Bar"
+msgstr ""
+
+#: mystickymenu.php:468 mystickymenu.php:477
+msgid "Poptin Popups"
+msgstr ""
+
+#: mystickymenu.php:487
+msgid "Widget Analytics"
+msgstr ""
+
+#: mystickymenu.php:505
+#, fuzzy
+msgid "Sticky Menu Settings"
+msgstr "myStickymenu Opcije"
+
+#: mystickymenu.php:524 mystickymenu.php:525
+msgid "Upgrade to Pro ⭐️"
+msgstr ""
+
+#: mystickymenu.php:647 mystickymenu.php:1262
 msgid "Settings saved."
 msgstr ""
 
-#: mystickymenu.php:651 mystickymenu.php:1258 mystickymenu.php:1272
+#: mystickymenu.php:650 mystickymenu.php:1265 mystickymenu.php:1279
 msgid "Unable to complete your request"
 msgstr ""
 
-#: mystickymenu.php:710
-msgid "Back to Dashboard"
-msgstr ""
-
-#: mystickymenu.php:714
+#: mystickymenu.php:713
 msgid "How To Make a Sticky Header"
 msgstr ""
 
-#: mystickymenu.php:716
+#: mystickymenu.php:715
 #, fuzzy
 msgid ""
 "Add sticky menu / header to any theme. <br />Simply change 'Sticky Class' to "
@@ -1393,317 +1622,369 @@ msgstr ""
 "klasu' u div klasu za koju želite da bude sticky. Takođe, možete koristiti i "
 "div ID."
 
-#: mystickymenu.php:722
+#: mystickymenu.php:721
 msgid "Sticky Class"
 msgstr "Sticky klasa"
 
-#: mystickymenu.php:729
+#: mystickymenu.php:728
 #, fuzzy
 msgid "Select Sticky Menu"
 msgstr "myStickymenu Opcije"
 
-#: mystickymenu.php:765
+#: mystickymenu.php:764
 msgid "Other Class Or ID"
 msgstr ""
 
-#: mystickymenu.php:773
+#: mystickymenu.php:772
 msgid ""
-"Need help finding your ID/Class? Install <a href=\"%1$s\" "
-"target=\"_blank\">CSS Peeper</a> to quickly get your navigation menu ID/"
-"Class. Here's a quick <a href=\"%2$s\" target=\"_blank\">video <span "
-"class=\"dashicons dashicons-controls-play\"></span></a> of how you can do it."
+"Need help finding your ID/Class? Install %1$sCSS Peeper%2$s to quickly get "
+"your navigation menu ID/Class. Here's a quick %3$svideo%4$s of how you can "
+"do it."
 msgstr ""
 
-#: mystickymenu.php:806
+#: mystickymenu.php:805
 msgid "Sticky z-index"
 msgstr "Sticky z-index"
 
-#: mystickymenu.php:812
+#: mystickymenu.php:811
 msgid "Fade or slide effect"
 msgstr "Fade ili Slide efekt"
 
-#: mystickymenu.php:817
+#: mystickymenu.php:816
 msgid "Slide"
 msgstr ""
 
-#: mystickymenu.php:827
+#: mystickymenu.php:826
 msgid "Disable at Small Screen Sizes"
 msgstr "Onemogući na malim ekranima"
 
-#: mystickymenu.php:828
+#: mystickymenu.php:827
 msgid "Less than chosen screen width, set 0 to disable"
 msgstr ""
 
-#: mystickymenu.php:837
+#: mystickymenu.php:836
 msgid "Make visible on Scroll"
 msgstr "Učini vidljivim kad se skroluje"
 
-#: mystickymenu.php:838
+#: mystickymenu.php:837
 msgid "If set to 0 auto calculate will be used."
 msgstr ""
 
-#: mystickymenu.php:849
+#: mystickymenu.php:848
 msgid "Make visible on Scroll at homepage"
 msgstr "Učini vidljivim kad se skroluje na Homepage-u"
 
-#: mystickymenu.php:850
+#: mystickymenu.php:849
 msgid "If set to 0 it will use initial Make visible on Scroll value."
 msgstr ""
 
-#: mystickymenu.php:859
+#: mystickymenu.php:858
 msgid "Sticky Background Color"
 msgstr "Sticky pozadinska boja"
 
-#: mystickymenu.php:868
+#: mystickymenu.php:867
 msgid "Sticky Transition Time"
 msgstr "Sticky vrijeme tranzicije"
 
-#: mystickymenu.php:874
+#: mystickymenu.php:873
 #, fuzzy
 msgid "Sticky Text Color"
 msgstr "Sticky pozadinska boja"
 
-#: mystickymenu.php:883
+#: mystickymenu.php:882
 msgid "Sticky Opacity"
 msgstr "Sticky prozirnost"
 
-#: mystickymenu.php:884
+#: mystickymenu.php:883
 msgid "numbers 1-100."
 msgstr "brojevi 1-100."
 
-#: mystickymenu.php:900
+#: mystickymenu.php:899
 #, fuzzy
 msgid "Hide on Scroll Down"
 msgstr "Učini vidljivim kad se skroluje"
 
-#: mystickymenu.php:905
+#: mystickymenu.php:904
 msgid "Disable sticky menu at scroll down"
 msgstr ""
 
-#: mystickymenu.php:995 upgrade-to-pro.php:197
+#: mystickymenu.php:994 upgrade-to-pro.php:197
 #, fuzzy
 msgid "CSS style"
 msgstr "Onemogući CSS "
 
-#: mystickymenu.php:996
+#: mystickymenu.php:995
 #, fuzzy
 msgid "Add/edit CSS style. Leave it blank for default style."
 msgstr ""
 "Dodajte/Uredite .myfixed css klasu da biste promenili izgled sticky menija. "
 "Za podrazumevani izgled, ostavite nepopunjeno. "
 
-#: mystickymenu.php:1000
+#: mystickymenu.php:999
 msgid "CSS ID's and Classes to use:"
 msgstr ""
 
-#: mystickymenu.php:1012
+#: mystickymenu.php:1011
 msgid "Disable CSS style"
 msgstr "Onemogući CSS "
 
-#: mystickymenu.php:1016
+#: mystickymenu.php:1015
 msgid "Use this option if you plan to include CSS Style manually"
 msgstr "Koristite ukoliko želite dodati CSS ručno"
 
-#: mystickymenu.php:1023
+#: mystickymenu.php:1022
 #, fuzzy
 msgid "Disable at"
 msgstr "Onemogući CSS "
 
-#: mystickymenu.php:1030
+#: mystickymenu.php:1029
 msgid "front page"
 msgstr ""
 
-#: mystickymenu.php:1036
+#: mystickymenu.php:1035
 msgid "blog page"
 msgstr ""
 
-#: mystickymenu.php:1042
+#: mystickymenu.php:1041
 msgid "pages"
 msgstr ""
 
-#: mystickymenu.php:1048
+#: mystickymenu.php:1047
 msgid "tags"
 msgstr ""
 
-#: mystickymenu.php:1054
+#: mystickymenu.php:1053
 msgid "categories"
 msgstr ""
 
-#: mystickymenu.php:1060
+#: mystickymenu.php:1059
 msgid "posts"
 msgstr ""
 
-#: mystickymenu.php:1066
+#: mystickymenu.php:1065
 msgid "archives"
 msgstr ""
 
-#: mystickymenu.php:1072
+#: mystickymenu.php:1071
 msgid "search"
 msgstr ""
 
 #: mystickymenu.php:1086
-msgid ""
-"<span class=\"description\"><strong>Except for this pages:</strong> </span>"
+msgid "Except for this pages:"
 msgstr ""
 
-#: mystickymenu.php:1093
+#: mystickymenu.php:1094
 msgid ""
-"<span class=\"description\">Comma separated list of pages to enable. It "
-"should be page name, id or slug. Example: about-us, 1134, Contact Us. Leave "
-"blank if you realy want to disable sticky menu for all pages.</span>"
+"Comma separated list of pages to enable. It should be page name, id or slug. "
+"Example: about-us, 1134, Contact Us. Leave blank if you realy want to "
+"disable sticky menu for all pages."
 msgstr ""
 
-#: mystickymenu.php:1100
-msgid ""
-"<span class=\"description\"><strong>Except for this posts:</strong> </span>"
+#: mystickymenu.php:1103
+msgid "Except for this posts:"
 msgstr ""
 
-#: mystickymenu.php:1107
+#: mystickymenu.php:1112
 msgid ""
-"<span class=\"description\">Comma separated list of posts to enable. It "
-"should be post name, id or slug. Example: about-us, 1134, Contact Us. Leave "
-"blank if you realy want to disable sticky menu for all posts.</span>"
+"Comma separated list of posts to enable. It should be post name, id or slug. "
+"Example: about-us, 1134, Contact Us. Leave blank if you realy want to "
+"disable sticky menu for all posts."
 msgstr ""
 
-#: mystickymenu.php:1121
+#: mystickymenu.php:1127
 msgid "Turn on Sticky Menu"
 msgstr ""
 
-#: mystickymenu.php:1125
+#: mystickymenu.php:1131
 msgid ""
 "Sticky Menu is not turned on. Turn on Sticky Menu to activate sticky menu on "
 "your website."
 msgstr ""
 
-#: mystickymenu.php:1128
+#: mystickymenu.php:1134
 msgid "Just save & keep it off"
 msgstr ""
 
-#: mystickymenu.php:1129
+#: mystickymenu.php:1135
 msgid "Save & Turn on Sticky Menu"
 msgstr ""
 
-#: mystickymenu.php:1137 welcome-bar.php:902
+#: mystickymenu.php:1143 welcome-bar.php:912
 msgid "Save"
 msgstr ""
 
-#: mystickymenu.php:1139 welcome-bar.php:903
+#: mystickymenu.php:1145 welcome-bar.php:913
 msgid "SAVE & VIEW DASHBOARD"
 msgstr ""
 
-#: mystickymenu.php:1145 welcome-bar.php:913
+#: mystickymenu.php:1151 welcome-bar.php:923
 msgid "Reset"
 msgstr ""
 
-#: mystickymenu.php:1150
+#: mystickymenu.php:1156
 msgid "Leave a review"
 msgstr ""
 
-#: mystickymenu.php:1269
+#: mystickymenu.php:1276
 msgid "Reset Settings saved."
 msgstr ""
 
-#: mystickymenu.php:1325
+#: mystickymenu.php:1330
+msgid "Your first widget is now up and running on your website!"
+msgstr ""
+
+#: mystickymenu.php:1332
 msgid "Upgrade to pro today"
 msgstr ""
 
-#: mystickymenu.php:1326
+#: mystickymenu.php:1333
 msgid "🎨 Display coupon codes and add sliding text to the widget."
 msgstr ""
 
-#: mystickymenu.php:1327
+#: mystickymenu.php:1334
 msgid "📱 Create multiple widgets for different devices, pages and languages."
 msgstr ""
 
-#: mystickymenu.php:1328
+#: mystickymenu.php:1335
 msgid "🎯 Targeting by country, page, and device"
 msgstr ""
 
-#: mystickymenu.php:1329
+#: mystickymenu.php:1336
 msgid "⏱️ Add a countdown timer to increase the conversion rate"
 msgstr ""
 
-#: mystickymenu.php:1331 mystickymenu.php:2495
-msgid "Upgrade to Pro"
-msgstr ""
-
-#: mystickymenu.php:1671
+#: mystickymenu.php:1678
 msgid "Your request is not valid"
 msgstr ""
 
-#: mystickymenu.php:1781
+#: mystickymenu.php:1788
 msgid ""
 "Contact's data is saved locally do make backup or export before uninstalling "
 "plugin"
 msgstr ""
 
-#: mystickymenu.php:1786
+#: mystickymenu.php:1793
 msgid "Download & Export All Subscriber to CSV file:"
 msgstr ""
 
-#: mystickymenu.php:1787
+#: mystickymenu.php:1794
 msgid "Download & Export to CSV"
 msgstr ""
 
-#: mystickymenu.php:1790
+#: mystickymenu.php:1797
 msgid "Delete All Subscibers from Database:"
 msgstr ""
 
-#: mystickymenu.php:1792
+#: mystickymenu.php:1799
 msgid "Delete All Data"
 msgstr ""
 
-#: mystickymenu.php:1818 mystickymenu.php:1820
+#: mystickymenu.php:1815
+msgid "Bulk Actions"
+msgstr ""
+
+#: mystickymenu.php:1818
+msgid "Apply"
+msgstr ""
+
+#: mystickymenu.php:1825 mystickymenu.php:1827
 msgid "Search"
 msgstr ""
 
-#: mystickymenu.php:1827
-msgid "Bulk"
-msgstr ""
-
-#: mystickymenu.php:1828
-msgid "ID"
-msgstr ""
-
-#: mystickymenu.php:1829
-msgid "Widget Name"
-msgstr ""
-
-#: mystickymenu.php:1833
-msgid "Date"
+#: mystickymenu.php:1826
+msgid "Search by name, email, phone, widget name"
 msgstr ""
 
 #: mystickymenu.php:1834
+msgid "Bulk"
+msgstr ""
+
+#: mystickymenu.php:1835
+msgid "ID"
+msgstr ""
+
+#: mystickymenu.php:1836
+msgid "Widget Name"
+msgstr ""
+
+#: mystickymenu.php:1840
+msgid "Date"
+msgstr ""
+
+#: mystickymenu.php:1841
 msgid "URL"
 msgstr ""
 
-#: mystickymenu.php:1882
+#: mystickymenu.php:1889
 msgid "No Contact Form Leads Found!"
 msgstr ""
 
-#: mystickymenu.php:2143
+#: mystickymenu.php:2150
 msgid "Days"
 msgstr ""
 
-#: mystickymenu.php:2144
+#: mystickymenu.php:2151
 msgid "Hours"
 msgstr ""
 
-#: mystickymenu.php:2145
+#: mystickymenu.php:2152
 msgid "Minutes"
 msgstr ""
 
-#: mystickymenu.php:2146
+#: mystickymenu.php:2153
 #, fuzzy
 msgid "Seconds"
 msgstr "u sekundama."
 
-#: mystickymenu.php:2370
+#: mystickymenu.php:2346
 msgid "This field is required"
 msgstr ""
 
 #: mystickymeny-new-welcomebar.php:2
 msgid "Create a new My Sticky Bar for your website. What can you use it for?"
+msgstr ""
+
+#: mystickymeny-new-welcomebar.php:11
+msgid "Create separate designs for desktop and mobile"
+msgstr ""
+
+#: mystickymeny-new-welcomebar.php:12
+msgid ""
+"E.g. the mobile version can have a different color and a different position"
+msgstr ""
+
+#: mystickymeny-new-welcomebar.php:20
+msgid "Do you have a multi-language website or WPML plugin installed?"
+msgstr ""
+
+#: mystickymeny-new-welcomebar.php:29
+msgid "Show separate bars for different products on your website"
+msgstr ""
+
+#: mystickymeny-new-welcomebar.php:37
+msgid "Display different channels for your landing pages"
+msgstr ""
+
+#: mystickymeny-new-welcomebar.php:38
+msgid ""
+"This way you can track the results better and have the right bars for your "
+"landing pages."
+msgstr ""
+
+#: mystickymeny-new-welcomebar.php:46
+msgid "Show one bar on your support and contact pages"
+msgstr ""
+
+#: mystickymeny-new-welcomebar.php:47
+msgid "and a different bar on your sales pages."
+msgstr ""
+
+#: mystickymeny-new-welcomebar.php:55
+msgid "Display different call-to-action buttons"
+msgstr ""
+
+#: mystickymeny-new-welcomebar.php:56
+msgid "for different pages on your website or buttons for mobile and desktop"
 msgstr ""
 
 #: recommended-plugins.php:92
@@ -1983,6 +2264,14 @@ msgid ""
 "height, expiry date, open link in a new tab"
 msgstr ""
 
+#: upgrade-to-pro.php:218
+msgid "Unlock all features"
+msgstr ""
+
+#: upgrade-to-pro.php:219
+msgid "Enjoy 30-day money back guarantee on all plans"
+msgstr ""
+
 #: upgrade-to-pro.php:270 upgrade-to-pro.php:353
 msgid "Buy now"
 msgstr ""
@@ -2004,22 +2293,78 @@ msgstr ""
 msgid "Frequently Asked Questions"
 msgstr ""
 
-#: welcome-bar.php:83
+#: upgrade-to-pro.php:500
+msgid "How long is my paid My Sticky Bar plugin license valid for?"
+msgstr ""
+
+#: upgrade-to-pro.php:501
+msgid ""
+"Once you purchase any paid plan of My Sticky Bar, you can use it forever. "
+"Support and updates are available for 1 year. You can renew your license "
+"each year to get another year of support and updates."
+msgstr ""
+
+#: upgrade-to-pro.php:504
+msgid "Can I use My Sticky Bar plugin on more than 1 domain?"
+msgstr ""
+
+#: upgrade-to-pro.php:505
+msgid "There are 2 ways to do it:"
+msgstr ""
+
+#: upgrade-to-pro.php:507
+msgid "You can install the free My Sticky Bar plugin on any website you want"
+msgstr ""
+
+#: upgrade-to-pro.php:508
+msgid ""
+"You can buy the Pro plan that includes licenses for 5 domains, or the Agency "
+"plan that includes licenses for 50 domains (bigger plans are also available)."
+msgstr ""
+
+#: upgrade-to-pro.php:512
+msgid "Is there a time limit for the free plan?"
+msgstr ""
+
+#: upgrade-to-pro.php:513
+msgid "No. you can use the free plan as long as you want."
+msgstr ""
+
+#: upgrade-to-pro.php:516
+msgid "Will My Sticky Bar stop working if I don’t renew my license?"
+msgstr ""
+
+#: upgrade-to-pro.php:517
+msgid ""
+"Of course NOT!%1$sMy Sticky Bar plugin and all your settings will continue "
+"to work as before; however, you will no longer receive plugin updates "
+"including feature additions, improvements, and support."
+msgstr ""
+
+#: welcome-bar.php:82
 msgid "Bar Visibility"
 msgstr ""
 
-#: welcome-bar.php:630
+#: welcome-bar.php:640
 msgid "Display Rules"
 msgstr ""
 
-#: welcome-bar.php:646
+#: welcome-bar.php:641
+msgid ""
+"Choose if you want to show the bar on desktop or mobile only, or on both"
+msgstr ""
+
+#: welcome-bar.php:656
 msgid " Upgrade Now"
 msgstr ""
 
-#. Plugin Name of the plugin/theme
-#, fuzzy
-msgid "My Sticky Bar"
-msgstr "Sticky klasa"
+#: welcome-bar.php:946
+msgid "check the guide"
+msgstr ""
+
+#: welcome-bar.php:1112
+msgid "Get 30% off your first purchase"
+msgstr ""
 
 #. Plugin URI of the plugin/theme
 msgid "https://premio.io/"
@@ -2093,22 +2438,6 @@ msgstr[1] ""
 msgctxt "Active plugin installations"
 msgid "Less Than 10"
 msgstr "manje od"
-
-#, fuzzy
-#~ msgid "Select Color"
-#~ msgstr "Sticky pozadinska boja"
-
-#, fuzzy
-#~ msgid "Welcome to myStickymenu 🎉"
-#~ msgstr "myStickymenu Opcije"
-
-#, fuzzy
-#~ msgid "Go to myStickymenu"
-#~ msgstr "myStickymenu Opcije"
-
-#, fuzzy
-#~ msgid "Sticky Menu Settings"
-#~ msgstr "myStickymenu Opcije"
 
 #, fuzzy
 #~ msgid "menu or header element class or id."
