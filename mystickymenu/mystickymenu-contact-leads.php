@@ -3,12 +3,7 @@ $path1 = preg_replace('/wp-content(?!.*wp-content).*/','',__DIR__);
 include($path1.'wp-load.php');
 	
 if ( isset($_GET['mystickymenu_nonce']) && wp_verify_nonce($_GET['mystickymenu_nonce'], 'MSB_file_download')) {
-	
-	
-
-
 	if (current_user_can('activate_plugins')) {
-		
 		$file = "mystickybar_contact_leads.csv";
 		$fp = fopen($file, "a")or die("Error Couldn't open $file for writing!");
 		
@@ -29,18 +24,11 @@ if ( isset($_GET['mystickymenu_nonce']) && wp_verify_nonce($_GET['mystickymenu_n
 			$all_data = $all_data." ".$current_row . "\r\n";
 			$fields = array($res_ID, $widget_element_name, $res_name, $res_phone, $res_email,$page_link ,$res_message_date);
 		
-			fputcsv($fp, $fields);
+			fputcsv($fp, $fields, ',', '"', '\\');
 		}
-		
-		
-		
-		
-		
 		
 		//fwrite($fp, $all_data)or die("Error Couldn't write values to file!"); 
 		fclose($fp); 
-		
-		
 		
 		if (file_exists($file)) {
 			header('Content-Type: application/csv');

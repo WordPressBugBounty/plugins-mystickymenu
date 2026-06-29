@@ -36,7 +36,7 @@ if ( $button_postion_relative_text == 1 ) {
 						</div>
 					</div>
 
-					<div class="mysticky-welcomebar-lead-content" <?php if((isset($welcomebar['mysticky_welcomebar_enable_lead']) && $welcomebar['mysticky_welcomebar_enable_lead'] != 1)) :?> style="display:none;" <?php endif; ?>>
+					<div class="mysticky-welcomebar-lead-content gap-2" <?php if((isset($welcomebar['mysticky_welcomebar_enable_lead']) && $welcomebar['mysticky_welcomebar_enable_lead'] != 1)) :?> style="display:none;" <?php endif; ?>>
 						<input type="text" class="preview-lead-name" placeholder="<?php echo esc_attr($welcomebar['lead_name_placeholder']);?>"/>
 						<input type="text" class="preview-lead-email" placeholder="<?php echo esc_attr($welcomebar['lead_email_placeholder']);?>" style="display:<?php echo (isset($welcomebar['mysticky_welcomebar_lead_input']) && $welcomebar['mysticky_welcomebar_lead_input'] == 'email_address') ? 'flex' : 'none';?>"/>
 						<input type="text" class="preview-lead-phone" placeholder="<?php echo esc_attr($welcomebar['lead_phone_placeholder']);?>" style="display:<?php echo (isset($welcomebar['mysticky_welcomebar_lead_input']) && $welcomebar['mysticky_welcomebar_lead_input'] == 'phone') ? 'flex' : 'none';?>"/>
@@ -69,12 +69,13 @@ if ( $button_postion_relative_text == 1 ) {
                     $x_color = (isset($welcomebar['mysticky_welcomebar_x_color'])) ? esc_attr($welcomebar['mysticky_welcomebar_x_color']) : '#000000';
                     ?>
                     <span class="mysticky-welcomebar-close" style="color:<?php echo esc_attr($x_color);?>" tabindex="0" role="button" aria-label="close">X</span>
+                </div>
 			</div>
 		</div>
 		<div class="timer-message" <?php if(isset($welcomebar['mysticky_welcomebar_enable_lead']) && $welcomebar['mysticky_welcomebar_enable_lead'] != 1):?> style="display:none;"<?php endif;?>>
 			<p><span class="dashicons dashicons-info"></span> The elements will be displayed in 1-line on your actual website. <a class="save_change" href="#"><?php esc_html_e('Save changes', 'mystickymenu'); ?></a> and <a href="<?php echo esc_url(site_url());?>" target="_blank" class="visit_site_link"><span class="dashicons dashicons-migrate" style="color: #2271b1 !important;"></span> visit your website</a> to check how it’d look like</p>
 		</div>
-		<div class="mysticky-welcomebar-full-screen">
+		<div class="mysticky-welcomebar-full-screen flex justify-center items-center">
 			<button type="button" class="welcomebar-full-screen-btn">
 				<?php esc_html_e( 'Show Fullscreen Preview', 'mystickymenu' );?>
 				<span class="dashicons dashicons-fullscreen-alt"></span>
@@ -86,43 +87,6 @@ if ( $button_postion_relative_text == 1 ) {
 			</button>
 		</div>
 	</div>
-	<style id="button-hover-color">
-		<?php if ( $welcomebar['mysticky_welcomebar_hover_effect'] != 'none' ) {?>  
-		.mysticky-welcomebar-fixed .mysticky-welcomebar-btn a:hover {
-			/*opacity: 0.7;*/
-			<?php if ( $welcomebar['mysticky_welcomebar_hover_effect'] != 'none' ) : ?> color: <?php echo esc_attr($welcomebar['mysticky_welcomebar_btnhovertxtcolor']); ?>; <?php endif;?>
-			<?php if ( $welcomebar['mysticky_welcomebar_hover_effect'] == 'border_effect_button' ) : ?> background: <?php echo esc_attr($welcomebar['mysticky_welcomebar_btnhovercolor']); ?>; <?php endif;?>
-			
-			-moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
-			-webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
-			box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
-		}
-		<?php } ?>
-		<?php if ( $welcomebar['mysticky_welcomebar_hover_effect'] == 'border_effect_button' ) : ?>  
-		.mysticky-welcomebar-btn:before,
-		.mysticky-welcomebar-btn:after {
-			background: <?php echo esc_attr($welcomebar['mysticky_welcomebar_btnhoverbordercolor']); ?>;
-			z-index: 0;
-		}
-		.mysticky-welcomebar-btn a:before,
-		.mysticky-welcomebar-btn a:after {
-			background: <?php echo esc_attr($welcomebar['mysticky_welcomebar_btnhoverbordercolor']); ?>;
-			z-index: 0;
-		}
-		<?php endif;?>
-		<?php if ( $welcomebar['mysticky_welcomebar_hover_effect'] == 'fill_effect_button' ) : ?>  
-		.mysticky-welcomebar-btn a:after {
-			background: <?php echo esc_attr($welcomebar['mysticky_welcomebar_btnhovercolor']); ?>;
-			z-index: -1;
-			border-radius: 4px;
-		}
-		.mysticky-welcomebar-btn a:before,
-		.mysticky-welcomebar-btn a:after {
-			background: <?php echo esc_attr($welcomebar['mysticky_welcomebar_btnhovercolor']); ?>;
-			z-index: -1;
-		}
-		<?php endif;?>
-	</style>
 	<style>
 		.morphext > .morphext__animated {
 		  display: inline-block;

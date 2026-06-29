@@ -9,7 +9,7 @@
 if (defined('ABSPATH') === false) {
     exit;
 }
-
+$is_pro_active = 0;
 ?>
 
 <div id="mystickybar-tab-display-rules" class="mystickybar-tab-content">
@@ -79,112 +79,144 @@ if (defined('ABSPATH') === false) {
 						<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e('Set the date and time for when you want the widget to start showing and the time you would like it to stop showing. You can add up to 12 combinations of "on and off" triggers. This feature may be useful when you have an upcoming limited-time offer.',"mystickymenu");?></p></span>
 					</label>
 					<div class="mysticky-welcomebar-setting-content-right">
-						<div class="mysticky-welcomebar-date-schedule-options" id="mysticky-welcomebar-date-schedule-options" style="display:none;" >
-							<div class="welcomebar-date-schedule-time-zone">
-								<label><?php esc_html_e( 'Timezone', 'mystickymenu');?></label>
-								<select class=" gmt-data welcomebar-gmt-timezone gmt-timezone" name="mysticky_option_welcomebar[date_schedule_timezone]" >
-									<option selected="selected" value=""><?php esc_html_e('Select a city or country', 'mystickymenu'); ?></option>
-								</select>
-							</div>
-							<div class="welcomebar-date-schedule-box-html" >
-								<div class="welcomebar-date-schedule-box setting-content-relative">
-									<div class="date-time-box">
-										<div class="date-select-option">
-											<label>
-												<?php esc_html_e( 'Start date ', 'mystickymenu');?>
-												<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e('Schedule a date from which the widget will be displayed (the starting date is included)',"mystickymenu");?></p></span>
-											</label>
-											<input autocomplete="off" type="text" class="welcomebar-datepicker" id="date_schedule___count___start_date">
-										</div>
-										<div class="time-select-option">
-											<label><?php esc_html_e( 'Start time ', 'mystickymenu');?></label>
-											<input autocomplete="off" type="text" class="welcomebar-timepicker" id="date_schedule___count___start_time">
-										</div>
-									</div>
-									<div class="date-time-box">
-										<div class="date-select-option">
-											<label>
-												<?php esc_html_e( 'End date ', 'mystickymenu');?>
-												<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e('Schedule a date from which the widget will stop being displayed (the end date is included)',"mystickymenu");?></p></span>
-											</label>
-											<input autocomplete="off" type="text" class="welcomebar-datepicker" id="date_schedule___count___end_date">
-										</div>
-										<div class="time-select-option">
-											<label><?php esc_html_e( 'End time ', 'mystickymenu');?></label>
-											<input autocomplete="off" type="text"  id="date_schedule___count___end_time">
-										</div>
-										<div class="mysticky-welcomebar-url-buttons">
-											<a class="mysticky-welcomebar-remove-date-schedule" href="#">x</a>
-										</div>
-									</div>
-
-									<span class="upgrade-mystickymenu myStickymenu-upgrade">
-										<a href="<?php echo esc_url($upgarde_url); ?>" target="_blank">
-											<i class="fas fa-lock"></i><?php _e('UPGRADE NOW', 'mystickymenu'); ?>
-										</a>
-									</span>
-								</div>
-							</div>
-						</div>
-						<span style="width: 100%;display: block;">
+                        <span style="width: 100%;display: block;">
 							<a href="#" class="create-rule" id="add-date-schedule-option"><?php esc_html_e( "Add Rule", "mystickymenu" );?></a>
 						</span>
 					</div>
 				</div>
-				<div class="mysticky-welcomebar-setting-content show-on-apper flex-column gap-x-px">
+                <div class="mysticky-welcomebar-date-schedule-options flex flex-col gap-3 w-full pb-4 relative group" id="mysticky-welcomebar-date-schedule-options" style="display:none;">
+                    <div class="welcomebar-date-schedule-time-zone">
+                        <label for="date_schedule_timezone" class="text-sm! mt-0!"><?php esc_html_e( 'Timezone', 'mystickymenu');?></label>
+                        <select class="gmt-data welcomebar-gmt-timezone gmt-timezone" id="date_schedule_timezone">
+                            <option value=""><?php esc_html_e( 'Select a city or country', 'mystickymenu');?></option>
+                        </select>
+                    </div>
+
+                    <div class="welcomebar-date-schedule-boxes welcomebar-date-schedules flex flex-col gap-3">
+                        <?php $k = 0; ?>
+                        <div class="welcomebar-date-schedule-box setting-content-relative bg-white rounded-lg p-4 border-1 border-[#DCE2E2] flex flex-col items-center sm:flex-row gap-4">
+                            <div class="date-time-box flex flex-col w-full sm:w-auto sm:items-center sm:flex-row gap-4">
+                                <div class="date-select-option">
+                                    <label>
+                                        <?php esc_html_e( 'Start date ', 'mystickymenu');?>
+                                        <span class="mysticky-custom-fields-tooltip">
+                                                    <a href="#" class="mysticky-tooltip mysticky-new-custom-btn" aria-label="<?php esc_html_e('Need help', 'mystickymenu'); ?>">
+                                                        <i class="dashicons dashicons-editor-help"></i>
+                                                    </a>
+                                                    <p style="z-index: 99999;"><?php esc_html_e('Schedule a date from which the widget will be displayed (the starting date is included)',"mystickymenu");?></p></span>
+                                    </label>
+                                    <input autocomplete="off" type="text" name="mysticky_option_welcomebar[date_schedule][0][start_date]" class="welcomebar-datepicker welcomebar-start-datepicker" id="date_schedule_0_start_date" data-end-date-id="date_schedule_0_end_date">
+                                </div>
+                                <div class="time-select-option">
+                                    <label><?php esc_html_e( 'Start time ', 'mystickymenu');?></label>
+                                    <input autocomplete="off" type="text" name="mysticky_option_welcomebar[date_schedule][0][start_time]" class="welcomebar-timepicker" id="date_schedule_0_start_time">
+                                </div>
+                            </div>
+                            <div class="date-time-box flex flex-col w-full sm:w-auto sm:items-center sm:flex-row gap-4">
+                                <div class="date-select-option">
+                                    <label>
+                                        <?php esc_html_e( 'End date ', 'mystickymenu');?>
+                                        <span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn" aria-label="<?php esc_html_e('Need help', 'mystickymenu'); ?>"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e('Schedule a date from which the widget will stop being displayed (the end date is included)',"mystickymenu");?></p></span>
+                                    </label>
+                                    <input autocomplete="off" type="text" name="mysticky_option_welcomebar[date_schedule][0][end_date]" class="welcomebar-datepicker welcomebar-end-datepicker" id="date_schedule_0_end_date" data-start-date-id="date_schedule_0_start_date">
+                                </div>
+                                <div class="time-select-option">
+                                    <label><?php esc_html_e( 'End time ', 'mystickymenu');?></label>
+                                    <input autocomplete="off" type="text" name="mysticky_option_welcomebar[date_schedule][0][end_time]" class="welcomebar-timepicker" id="date_schedule_0_end_time">
+                                </div>
+                                <div class="mysticky-welcomebar-url-buttons">
+                                    <a class="mysticky-welcomebar-remove-date-schedule mt-0 sm:mt-5" href="#">x</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden! group-hover:flex! w-full h-full absolute left-0 top-0 items-center backdrop-blur-[1px] justify-center">
+                        <a class="sticky-header-activate-key upgrade-to-pro" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php _e( 'Upgrade Now', 'mystickymenu' );?></a>
+                    </div>
+
+                    <div class="welcomebar-date-schedule-box-html" style="display: none">
+                        <div class="welcomebar-date-schedule-box setting-content-relative bg-white rounded-lg p-4 border-1 border-[#DCE2E2] flex flex-col items-center sm:flex-row gap-4">
+                            <div class="date-time-box flex flex-col w-full sm:w-auto sm:items-center sm:flex-row gap-4">
+                                <div class="date-select-option">
+                                    <label>
+                                        <?php esc_html_e( 'Start date ', 'mystickymenu');?>
+                                        <span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn" aria-label="<?php esc_html_e('Need help', 'mystickymenu'); ?>"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e('Schedule a date from which the widget will be displayed (the starting date is included)',"mystickymenu");?></p></span>
+                                    </label>
+                                    <input autocomplete="off" type="text" name="mysticky_option_welcomebar[date_schedule][__count__][start_date]"  value="" class="welcomebar-datepicker welcomebar-start-datepicker" id="date_schedule___count___start_date" data-end-date-id="date_schedule___count___end_date" <?php echo !$is_pro_active?"disabled":"" ?>>
+                                </div>
+                                <div class="time-select-option">
+                                    <label><?php esc_html_e( 'Start time ', 'mystickymenu');?></label>
+                                    <input autocomplete="off" type="text" name="mysticky_option_welcomebar[date_schedule][__count__][start_time]"  value="" class="welcomebar-timepicker" id="date_schedule___count___start_time" <?php echo !$is_pro_active?"disabled":"" ?>>
+                                </div>
+                            </div>
+                            <div class="date-time-box flex flex-col w-full sm:w-auto sm:items-center sm:flex-row gap-4">
+                                <div class="date-select-option">
+                                    <label>
+                                        <?php esc_html_e( 'End date ', 'mystickymenu');?>
+                                        <span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn" aria-label="<?php esc_html_e('Need help', 'mystickymenu'); ?>"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e('Schedule a date from which the widget will stop being displayed (the end date is included)',"mystickymenu");?></p></span>
+                                    </label>
+                                    <input autocomplete="off" type="text" name="mysticky_option_welcomebar[date_schedule][__count__][end_date]"  value="" class="welcomebar-datepicker welcomebar-end-datepicker" id="date_schedule___count___end_date" data-start-date-id="date_schedule___count___start_date" <?php echo !$is_pro_active?"disabled":"" ?>>
+                                </div>
+                                <div class="time-select-option">
+                                    <label><?php esc_html_e( 'End time ', 'mystickymenu');?></label>
+                                    <input autocomplete="off" type="text" name="mysticky_option_welcomebar[date_schedule][__count__][end_time]"  value="" class="welcomebar-timepicker" id="date_schedule___count___end_time" <?php echo !$is_pro_active?"disabled":"" ?>>
+                                </div>
+                                <div class="mysticky-welcomebar-url-buttons">
+                                    <a class="mysticky-welcomebar-remove-date-schedule mt-0 sm:mt-5" href="#">x</a>
+                                </div>
+                            </div>
+                                <span class="myStickymenu-upgrade">
+                                    <a class="sticky-header-activate-key" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php _e( 'Upgrade Now', 'mystickymenu' );?></a>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+				<div class="mysticky-welcomebar-setting-content show-on-apper">
 					<label><?php esc_html_e('Page targeting', 'mystickymenu'); ?>
 						<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;">
 							<?php esc_html_e(" Add page targeting to ensure the bar only appears or doesn't appear for the selected pages only","mystickymenu");?></p></span>
 					</label>
-					<div class="mysticky-welcomebar-setting-content-right absolute">
+					<div class="mysticky-welcomebar-setting-content-right">
 						<a href="#" class="create-rule" id="create-rule"><?php esc_html_e( "Add Rule", "mystickymenu" );?></a>
 					</div>
-					<?php
-					$url_options = array(
-							'page_contains'   => esc_html__('Link that contain', "mystickymenu"),
-							'page_has_url'    => esc_html__('A specific link', "mystickymenu"),
-							'page_start_with' => esc_html__('Links starting with', "mystickymenu"),
-							'page_end_with'   => esc_html__('Links ending with', "mystickymenu"),
-							'wp_pages'        => esc_html__('WordPress Pages', "mystickymenu"),
-							'wp_posts'        => esc_html__('WordPress Posts', "mystickymenu"),
-							'wp_categories'   => esc_html__('WordPress Categories', "mystickymenu"),
-							'wp_tags'         => esc_html__('WordPress Tags',  "mystickymenu")
-						);
-						if ( class_exists( 'WooCommerce' ) ) {
-							$url_options['wc_products'] = esc_html__('WooCommerce products', "mystickymenu");
-							$url_options['wc_products_on_sale'] = esc_html__('WooCommerce products on sale', "mystickymenu");
-						}
-					?>
 					<div class="mysticky-welcomebar-page-options-html" style="display: none">
-						<div class="mysticky-welcomebar-page-option mx-w-100">
-							<div class="url-content">
-								<div class="mysticky-welcomebar-url-select">
-									<select name="" id="url_shown_on___count___option">
-										<option value="show_on"><?php esc_html_e("Show on", "mystickymenu" );?></option>
-										<option value="not_show_on"><?php esc_html_e("Don't show on", "mystickymenu" );?></option>
-									</select>
-								</div>
-								<div class="mysticky-welcomebar-url-option">
-									<select class="mysticky-welcomebar-url-options" name="" id="url_rules___count___option">
-										<option selected="selected" value=""><?php esc_html_e("Select Rule", "mystickymenu" );?></option>
-										<?php foreach($url_options as $key=>$value) {
-											echo '<option value="'. esc_attr($key).'">'. esc_html($value).'</option>';
-										} ?>
-									</select>
-								</div>
-								<div class="mysticky-welcomebar-url-box">
-									<span class='mysticky-welcomebar-url'><?php echo esc_url(site_url("/")); ?></span>
-								</div>
-								<div class="mysticky-welcomebar-url-values">
-									<input type="text" value="" name="mysticky_option_welcomebar[page_settings][__count__][value]" id="url_rules___count___value" disabled />
-								</div>
-								<div class="clear"></div>
-							</div>
-							<span class="myStickymenu-upgrade"><a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php esc_html_e( 'Upgrade Now', 'mystickymenu' );?></a></span>
-						</div>
+                        <div class="mysticky-welcomebar-page-option w-full flex rounded-lg p-4 border-1 mb-4! border-[#DCE2E2] bg-white">
+                            <div class="url-content w-full flex flex-col sm:flex-row gap-3">
+                                <div class="flex flex-col w-full sm:w-auto sm:flex-1 sm:items-center sm:flex-row gap-3">
+                                    <div class="w-full sm:w-auto sm:flex-1 mysticky-welcomebar-url-select">
+                                        <select id="url_shown_on___count___option" <?php echo !$is_pro_active?"disabled":"" ?>>
+                                            <option value="show_on"><?php esc_html_e("Show on", "mystickymenu" );?></option>
+                                            <option value="not_show_on"><?php esc_html_e("Don't show on", "mystickymenu" );?></option>
+                                        </select>
+                                    </div>
+                                    <div class="w-full sm:w-auto sm:flex-1 mysticky-welcomebar-url-option">
+                                        <select class="mysticky-welcomebar-url-options" id="url_rules___count___option" <?php echo !$is_pro_active?"disabled":"" ?>>
+                                            <option selected="selected" disabled value=""><?php esc_html_e("Select Rule", "mystickymenu" );?></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mysticky-welcomebar-url-boxes flex w-full sm:w-auto sm:flex-1 flex-col items-center sm:flex-row gap-1">
+                                    <div class="mysticky-welcomebar-url-box url-box w-full sm:w-auto sm:flex-1">
+                                        <span class='mysticky-welcomebar-url url-title active'><?php echo esc_url(site_url( '/')); ?></span>
+                                    </div>
+                                    <div class="mysticky-welcomebar-url-values url-values w-full sm:w-auto sm:flex-1">
+                                        <div class="url-setting-option url-default active">
+                                            <input type="text" value="" class="url-inputs" name="mysticky_option_welcomebar[page_settings][__count__][value]" id="url_rules___count___value" disabled />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mysticky-welcomebar-url-buttons">
+                                    <a class="mysticky-welcomebar-remove-rule" href="#">x</a>
+                                </div>
+                            </div>
+                            <div class="myStickymenu-upgrade">
+                                <a class="sticky-header-activate-key" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php esc_html_e( 'Upgrade Now', 'mystickymenu' );?></a>
+                            </div>
+                        </div>
 					</div>
-					<div class="mysticky-welcomebar-page-options mysticky-welcomebar-setting-content-right mx-w-100" id="mysticky-welcomebar-page-options" style="display:none"></div>
 				</div>
+                <div class="mysticky-welcomebar-page-options mysticky-welcomebar-setting-content-right mx-w-100" id="mysticky-welcomebar-page-options" style="display:none"></div>
 				<div class="mysticky-welcomebar-setting-content show-on-apper">
 					<label><?php _e('User targeting', 'mystickymenu'); ?>
 						<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e("Add a rule if you want to show the welcome bar for logged in or logged out users of your WordPress website selectively","mystickymenu");?></p></span>

@@ -40,9 +40,17 @@ if (defined('ABSPATH') === false) {
 			</div>
 			<div class="mysticky-welcomebar-setting-block">
 				<div class="mysticky-welcomebar-setting-content mysticky-welcomebar-setting-position">
-					<label><?php esc_html_e('Position', 'mystickymenu'); ?><span class="mysticky-custom-fields-tooltip">
-								<a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e('Choose if you want to show the bar on top or at the bottom of your site', 'mystickymenu'); ?></p></span></label>
-					<div class="mysticky-welcomebar-setting-content-right setting-content-relative">
+					<label><?php esc_html_e('Position', 'mystickymenu'); ?>
+                        <span class="mysticky-custom-fields-tooltip">
+                            <a href="#" class="mysticky-tooltip mysticky-new-custom-btn">
+                                <i class="dashicons dashicons-editor-help"></i>
+                            </a>
+                            <p style="z-index: 99999;">
+                                <?php esc_html_e('Choose if you want to show the bar on top or at the bottom of your site', 'mystickymenu'); ?>
+                            </p>
+                        </span>
+                    </label>
+					<div class="mysticky-welcomebar-setting-content-right setting-content-relative msb-radio-buttons">
 						<label>
 							<input name="mysticky_option_welcomebar[mysticky_welcomebar_position]" value= "top" type="radio" <?php checked( @$welcomebar['mysticky_welcomebar_position'], 'top' );?> />
 							<?php esc_html_e("Top", 'mystickymenu'); ?>
@@ -170,11 +178,18 @@ if (defined('ABSPATH') === false) {
 				</div>
 				<div id="mysticky_welcomebar_sliding_text_setting" class="mysticky-welcomebar-setting-content" style="display:<?php echo (isset($welcomebar['mysticky_welcomebar_text_type']) && $welcomebar['mysticky_welcomebar_text_type'] == 'sliding_text') ? 'flex' : 'none'; ?>">
 					<label></label>
-					<div class="mysticky-welcomebar-setting-content-right">
-						<div class="welcomebar-slider-text-option">								
+					<div class="mysticky-welcomebar-setting-content-right flex! flex-col gap-4 items-start! bg-white p-4 rounded-lg border-1 border-[#dce2e2] mb-4">
+
+						<div class="welcomebar-slider-text-option w-full flex-1 flex flex-col">
+                            <label class="w-full! max-w-full! pb-1! text-sm!">
+                                <?php esc_html_e('Sliding text', 'mystickymenu');?>
+                            </label>
 							<div class="welcomebar-slider-text">
 								<input type="text" value="Add any sliding texts here" />
-								<span class="add-more-slider-text"><span class="dashicons dashicons-insert"></span><?php esc_html_e('Add', 'mystickymenu');?></span>
+								<a href="#" role="button" class="add-more-slider-text">
+                                    <span class="dashicons dashicons-insert"></span>
+                                    <span class="sr-only"><?php esc_html_e('Add', 'mystickymenu');?></span>
+                                </a>
 							</div>
 							<span class="upgrade-mystickymenu myStickymenu-upgrade">
 								<a href="<?php echo esc_url($upgarde_url); ?>" target="_blank">
@@ -182,43 +197,48 @@ if (defined('ABSPATH') === false) {
 								</a>
 							</span>
 						</div>
+                        <div class="mysticky-welcomebar-setting-content w-full flex-col items-start! pb-0!">
+                            <label class="w-full! max-w-full! pb-1!">
+                                <?php esc_html_e('Transition styles', 'mystickymenu'); ?>
+                            </label>
+                            <div class="mysticky-welcomebar-setting-content-right w-full">
+                                <div class="welcomebar-slider-text-option w-full">
+                                    <select>
+                                        <option value="slideInRight" <?php selected( $welcomebar['mysticky_welcomebar_slider_transition'],'slideInRight')?>><?php esc_html_e('Right transition', 'mystickymenu');?></option>
+                                        <option value="slideInLeft" <?php selected( $welcomebar['mysticky_welcomebar_slider_transition'],'slideInLeft')?>><?php esc_html_e('Left transition', 'mystickymenu');?></option>
+                                        <option value="slideInUp" <?php selected( $welcomebar['mysticky_welcomebar_slider_transition'],'slideInUp')?>><?php esc_html_e('Up transition', 'mystickymenu');?></option>
+                                        <option value="slideInDown" <?php selected( $welcomebar['mysticky_welcomebar_slider_transition'],'slideInDown')?>><?php esc_html_e('Down transition', 'mystickymenu');?></option>
+                                    </select>
+                                    <span class="upgrade-mystickymenu myStickymenu-upgrade">
+                                        <a href="<?php echo esc_url($upgarde_url); ?>" target="_blank">
+                                            <i class="fas fa-lock"></i><?php esc_html_e('UPGRADE NOW', 'mystickymenu'); ?>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mysticky-welcomebar-setting-content w-full flex-col items-start! pb-0!">
+                            <label class="w-full! max-w-full! pb-1!">
+                                <?php esc_html_e('Transition speed', 'mystickymenu'); ?>
+                            </label>
+                            <div class="mysticky-welcomebar-setting-content-right w-full">
+                                <div class="welcomebar-slider-text-option w-full">
+                                    <select>
+                                        <option value="6000" data-speed="6000"><?php esc_html_e('Slow', 'mystickymenu');?></option>
+                                        <option value="4500" data-speed="4500"><?php esc_html_e('Medium', 'mystickymenu');?></option>
+                                        <option value="3000" data-speed="3000"><?php esc_html_e('Fast', 'mystickymenu');?></option>
+                                    </select>
+                                    <span class="upgrade-mystickymenu myStickymenu-upgrade">
+                                        <a href="<?php echo esc_url($upgarde_url); ?>" target="_blank">
+                                            <i class="fas fa-lock"></i><?php esc_html_e('UPGRADE NOW', 'mystickymenu'); ?>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
 					</div>
 				</div>
-				<div id="mysticky_welcomebar_sliding_text_transition_style" class="mysticky-welcomebar-setting-content" style="display:<?php echo (isset($welcomebar['mysticky_welcomebar_text_type']) && $welcomebar['mysticky_welcomebar_text_type'] == 'sliding_text') ? 'flex' : 'none'; ?>">
-					<label><?php esc_html_e('Transition styles', 'mystickymenu'); ?></label>
-					<div class="mysticky-welcomebar-setting-content-right">
-						<div class="welcomebar-slider-text-option">								
-							<select>
-								<option value="slideInRight" <?php selected( $welcomebar['mysticky_welcomebar_slider_transition'],'slideInRight')?>><?php esc_html_e('Right transition', 'mystickymenu');?></option>
-								<option value="slideInLeft" <?php selected( $welcomebar['mysticky_welcomebar_slider_transition'],'slideInLeft')?>><?php esc_html_e('Left transition', 'mystickymenu');?></option>
-								<option value="slideInUp" <?php selected( $welcomebar['mysticky_welcomebar_slider_transition'],'slideInUp')?>><?php esc_html_e('Up transition', 'mystickymenu');?></option>
-								<option value="slideInDown" <?php selected( $welcomebar['mysticky_welcomebar_slider_transition'],'slideInDown')?>><?php esc_html_e('Down transition', 'mystickymenu');?></option>
-							</select>
-							<span class="upgrade-mystickymenu myStickymenu-upgrade">
-								<a href="<?php echo esc_url($upgarde_url); ?>" target="_blank">
-									<i class="fas fa-lock"></i><?php esc_html_e('UPGRADE NOW', 'mystickymenu'); ?>
-								</a>
-							</span>
-						</div>
-					</div>
-				</div>
-				<div id="mysticky_welcomebar_sliding_text_transition_speed" class="mysticky-welcomebar-setting-content" style="display:<?php echo (isset($welcomebar['mysticky_welcomebar_text_type']) && $welcomebar['mysticky_welcomebar_text_type'] == 'sliding_text') ? 'flex' : 'none'; ?>">
-					<label><?php esc_html_e('Transition speed', 'mystickymenu'); ?></label>
-					<div class="mysticky-welcomebar-setting-content-right">
-						<div class="welcomebar-slider-text-option">								
-							<select>
-								<option value="6000" data-speed="6000"><?php esc_html_e('Slow', 'mystickymenu');?></option>
-								<option value="4500" data-speed="4500"><?php esc_html_e('Medium', 'mystickymenu');?></option>
-								<option value="3000" data-speed="3000"><?php esc_html_e('Fast', 'mystickymenu');?></option>
-							</select>
-							<span class="upgrade-mystickymenu myStickymenu-upgrade">
-								<a href="<?php echo esc_url($upgarde_url); ?>" target="_blank">
-									<i class="fas fa-lock"></i><?php esc_html_e('UPGRADE NOW', 'mystickymenu'); ?>
-								</a>
-							</span>
-						</div>
-					</div>
-				</div>
+
 				<div class="mysticky-welcomebar-setting-content">
 					<label><?php esc_html_e('Show an X Button', 'mystickymenu'); ?>
 						<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e('Choose if you want to show an X button to close the bar or not or desktop and mobile devices', 'mystickymenu');?></p></span>	
@@ -252,9 +272,18 @@ if (defined('ABSPATH') === false) {
 				</div>
 				<!-- Collect lead Section  -->
 				<div class="mysticky-welcomebar-setting-content">
-					<label style="position:relative;"><?php esc_html_e('Collect leads', 'mystickymenu'); ?>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16" style="fill: #a8aeaf;position: absolute;top: 3px"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path></svg> 
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php echo sprintf(esc_html__("Collect the visitor's details such as Name, email address or phone number from the bar. Collected visitor details can be viewed on the %1\$s page","mystickymenu"), '<a href="' . esc_url(admin_url("admin.php?page=my-sticky-menu-leads")). '" target="_blank">' . esc_html__( 'Contact Form Leads', 'mystickymenu') .'</a>');?></p></span>
+					<label class="relative inline-flex gap-1">
+                        <?php esc_html_e('Collect leads', 'mystickymenu'); ?>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope fill-[#a8aeaf]" viewBox="0 0 16 16" >
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path>
+                        </svg>
+					    <span class="mysticky-custom-fields-tooltip m-0!">
+                            <a href="#" class="mysticky-tooltip mysticky-new-custom-btn">
+                                <i class="dashicons dashicons-editor-help"></i></a>
+                            <p style="z-index: 99999;">
+                                <?php echo sprintf(esc_html__("Collect the visitor's details such as Name, email address or phone number from the bar. Collected visitor details can be viewed on the %1\$s page","mystickymenu"), '<a href="' . esc_url(admin_url("admin.php?page=my-sticky-menu-leads")). '" target="_blank">' . esc_html__( 'Contact Form Leads', 'mystickymenu') .'</a>');?>
+                            </p>
+                        </span>
 					</label>
 					<div class="mysticky-welcomebar-setting-content-right">
 						<label for="mysticky-welcomebar-collectlead-enabled" class="mysticky-welcomebar-switch collect-lead-switch">
@@ -263,7 +292,7 @@ if (defined('ABSPATH') === false) {
 						</label>
 					</div>
 				</div>
-				<div class="mysticky-welcomebar-collect-lead mysticky-collect-lead" <?php if( isset($welcomebar['mysticky_welcomebar_enable_lead']) && $welcomebar['mysticky_welcomebar_enable_lead'] != 1 ):?> style="display:none;" <?php endif;?>>
+				<div class="mysticky-welcomebar-collect-lead msb-inner-settings mysticky-collect-lead bg-white p-4 rounded-lg border-1 border-[#dce2e2] mb-4" <?php if( isset($welcomebar['mysticky_welcomebar_enable_lead']) && $welcomebar['mysticky_welcomebar_enable_lead'] != 1 ):?> style="display:none;" <?php endif;?>>
 					<div class="mysticky-welcomebar-setting-content">
 						<label><?php esc_html_e('Select inputs', 'mystickymenu'); ?></label>
 						<div class="mysticky-welcomebar-setting-content-right lead_inputs">
@@ -303,16 +332,16 @@ if (defined('ABSPATH') === false) {
 						<label for="mysticky_welcomebar_show_success_message">
 							<?php esc_html_e( 'Show success message', 'mystickymenu');?>
 						</label>
-						<div class="mysticky-welcomebar-setting-content-right" style="margin-top: 8px;">
+						<div class="mysticky-welcomebar-setting-content-right" >
 							<label for="mysticky_welcomebar_show_success_message" class="mysticky-welcomebar-switch">
+								<input name="mysticky_option_welcomebar[mysticky_welcomebar_show_success_message]" value= "0" type="hidden"  />
 								<input name="mysticky_option_welcomebar[mysticky_welcomebar_show_success_message]" id="mysticky_welcomebar_show_success_message" value= "1" type="checkbox" <?php checked( @$welcomebar['mysticky_welcomebar_show_success_message'], '1' );?> />
 								<span class="slider"></span>
 							</label>
 						</div>
 					</div>
-					<div id="mysticky-welcomebar-thankyou-wrap" class="mysticky-welcomebar-setting-content flex-top" <?php if ( !isset($welcomebar['mysticky_welcomebar_show_success_message']) ) : ?> style="display:none;" <?php endif;?>>
+					<div id="mysticky-welcomebar-thankyou-wrap" class="mysticky-welcomebar-setting-content flex-top" <?php if ( !isset($welcomebar['mysticky_welcomebar_show_success_message']) || $welcomebar['mysticky_welcomebar_show_success_message'] != 1) : ?> style="display:none;" <?php endif;?>>
 						<label><?php esc_html_e('Thank You Text', 'mystickymenu'); ?></label>
-						
 						<?php $mysticky_welcomebar_thankyou_screen_text = (isset($welcomebar['mysticky_welcomebar_thankyou_screen_text'])) ? stripslashes($welcomebar['mysticky_welcomebar_thankyou_screen_text']) : 'Thank you for submitting the form' ; ?>
 						<div class="mysticky-welcomebar-setting-content-right">
 							<?php 
@@ -329,19 +358,27 @@ if (defined('ABSPATH') === false) {
 						</div>
 					</div>
 
-					<div class="mysticky-welcomebar-setting-content">
-						<label  style="width:351px;">
-							<input name="mysticky_option_welcomebar[mysticky_welcomebar_send_email_lead]" id="send_lead_email_enable" data-url="<?php echo esc_url($upgarde_url); ?>" value= "1" type="checkbox" /><?php esc_html_e( 'Send leads to email', 'mystickymenu');?>
-							<span class="myStickymenu-upgrade"><a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php esc_html_e( 'Upgrade Now', 'mystickymenu' );?></a></span>
-						</label>	
-					</div>	
+                    <div class="mysticky-welcomebar-setting-content pb-0!">
+                        <label for="mysticky_welcomebar_show_success_message">
+                            <?php esc_html_e( 'Send leads to email', 'mystickymenu');?>
+                        </label>
+                        <div class="mysticky-welcomebar-setting-content-right">
+                            <a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank">
+                                <span for="mysticky_welcomebar_send_email_lead" class="mysticky-welcomebar-switch w-10! h-6!">
+                                    <input class="sr-only" name="mysticky_option_welcomebar[mysticky_welcomebar_send_email_lead]" id="mysticky_welcomebar_send_email_lead" disabled value= "1" type="checkbox" />
+                                    <span class="slider"></span>
+                                </span>
+                            </a>
+                            <span class="myStickymenu-upgrade"><a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php esc_html_e( 'Upgrade Now', 'mystickymenu' );?></a></span>
+                        </div>
+                    </div>
 				</div>	
 				<!-- Coupon Section Start  -->
 				<div class="mysticky-welcomebar-setting-content">
 					<label class="bagicon"><?php esc_html_e('Show Coupons', 'mystickymenu'); ?> &nbsp;<img src="<?php echo esc_url(MYSTICKYMENU_URL); ?>/images/shopyicon.svg" />
 					<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e("Add a coupon to your bar. Users can click on the coupon, copy it and use it on your website","mystickymenu");?><br><img src="<?php echo esc_url(esc_url(MYSTICKYMENU_URL)) ?>/images/show-coupon-ss.png" style="width:100%;"/></p></span>
 					</label>
-					<div class="mysticky-welcomebar-setting-content-right" style="margin-top: 8px;">
+					<div class="mysticky-welcomebar-setting-content-right" >
 						<label for="mysticky-welcomebar-showcoupon-enabled" class="mysticky-welcomebar-switch showcoupon-switch">
 							<input type="checkbox" id="mysticky-welcomebar-showcoupon-enabled" name="mysticky_option_welcomebar[mysticky_welcomebar_enable_coupon]" data-url="<?php echo esc_url($upgarde_url); ?>"  value="1"/>
 							<span class="slider"></span>
@@ -566,7 +603,7 @@ if (defined('ABSPATH') === false) {
 				<div class="mysticky-welcomebar-setting-content">
 					<label><?php esc_html_e('Attention Effect', 'mystickymenu'); ?></label>
 					<div class="mysticky-welcomebar-setting-content-right">
-						<div class="mysticky-welcomebar-setting-attention">
+						<div class="mysticky-welcomebar-setting-attention w-full">
 							<select name="mysticky_option_welcomebar[mysticky_welcomebar_attentionselect]" class="mysticky-welcomebar-attention mysticky_welcomebar_disable">
 								<option value="default" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], '	' ); ?>><?php esc_html_e( 'None', 'mystickymenu' );?></option>
 								<option value="flash" <?php selected( @$welcomebar['mysticky_welcomebar_attentionselect'], 'flash' ); ?>><?php esc_html_e( 'Flash', 'mystickymenu' );?></option>
@@ -597,7 +634,7 @@ if (defined('ABSPATH') === false) {
 						</span>
 					</label>
 					<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-setting-redirect-wrap">
-						<div class="mysticky-welcomebar-setting-action">
+						<div class="mysticky-welcomebar-setting-action w-full">
 							<select name="mysticky_option_welcomebar[mysticky_welcomebar_actionselect]" class="mysticky-welcomebar-action mysticky_welcomebar_disable">
 								<option value="redirect_to_url" <?php selected( @$welcomebar['mysticky_welcomebar_actionselect'], 'redirect_to_url' ); ?>><?php esc_html_e( 'Redirect the visitor to another URL', 'mystickymenu' );?></option>
 								<option value="close_bar" <?php selected( @$welcomebar['mysticky_welcomebar_actionselect'], 'close_bar' ); ?>><?php esc_html_e( 'Close the Bar', 'mystickymenu' );?></option>
@@ -622,40 +659,42 @@ if (defined('ABSPATH') === false) {
 						</div>
 					</div>
 				</div>
-				<div class="mysticky-welcomebar-setting-content mysticky-welcomebar-redirect-container" <?php if ( $welcomebar['mysticky_welcomebar_actionselect'] != 'redirect_to_url' ) : ?> style="display:none;" <?php endif;?>>
-					<label><?php esc_html_e('Redirection link', 'mystickymenu'); ?></label>
-					<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-setting-action mysticky-welcomebar-redirect" <?php if ( $welcomebar['mysticky_welcomebar_actionselect'] == 'close_bar' ) : ?> style="display:none;" <?php endif;?> >
-						<input type="text" id="mysticky_welcomebar_redirect" class="mystickyinput mysticky_welcomebar_disable" name="mysticky_option_welcomebar[mysticky_welcomebar_redirect]" value="<?php echo ( isset($welcomebar['mysticky_welcomebar_redirect'])) ? esc_url($welcomebar['mysticky_welcomebar_redirect']) : esc_url($welcomebar['mysticky_welcomebar_redirect']);?>" placeholder="<?php echo esc_url("https://www.yourdomain.com"); ?>"  />
-					</div>
-				</div>
-				<div class="mysticky-welcomebar-setting-content mysticky-welcomebar-redirect-container" <?php if ( $welcomebar['mysticky_welcomebar_actionselect'] != 'redirect_to_url' ) : ?> style="display:none;" <?php endif;?>>
-					<label><?php esc_html_e( 'Open in a new tab', 'mystickymenu' );?></label>
-					<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-setting-newtab mysticky-welcomebar-redirect"  >
-						<label class="mysticky-welcomebar-switch">
-							<input name="mysticky_option_welcomebar[mysticky_welcomebar_redirect_newtab]" value= "1" type="checkbox" disabled />
-							<span class="slider"></span>
-						</label>
-						<span class="myStickymenu-upgrade"><a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php esc_html_e( 'Upgrade Now', 'mystickymenu' );?></a></span>
-					</div>
-				</div>
-				<div class="mysticky-welcomebar-setting-content mysticky-welcomebar-redirect-container" <?php if ( $welcomebar['mysticky_welcomebar_actionselect'] != 'redirect_to_url' ) : ?> style="display:none;" <?php endif;?>>
-					<label><?php esc_html_e('rel Attribute', 'mystickymenu'); ?>
-						<span class="mysticky-custom-fields-tooltip">
-							<a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a>
-							<p><?php esc_html_e("Add a \"rel\" attribute to the button link. You can use it to add a rel=\"nofollow\", \"sponsored\", or any other \"rel\" attribute option","mystickymenu");?></p>
-						</span>
-					</label>
-					<div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-setting-newtab mysticky-welcomebar-redirect"  >
-						<input type="text" id="mysticky_welcomebar_redirect_rel" class="mystickyinput mysticky_welcomebar_disable unactive_rel_input" name="mysticky_option_welcomebar[mysticky_welcomebar_redirect_rel]" value="" placeholder="" disabled />
-						<span class="myStickymenu-upgrade"><a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php esc_html_e( 'Upgrade Now', 'mystickymenu' );?></a></span>
-					</div>
-				</div>
+                <div class="mysticky-welcomebar-redirect-container msb-inner-settings bg-white p-4 rounded-lg border-1 border-[#dce2e2] mb-4" <?php if ( $welcomebar['mysticky_welcomebar_actionselect'] != 'redirect_to_url' ) : ?> style="display:none;" <?php endif;?>>
+                    <div class="mysticky-welcomebar-setting-content">
+                        <label><?php esc_html_e('Redirection link', 'mystickymenu'); ?></label>
+                        <div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-setting-action mysticky-welcomebar-redirect" <?php if ( $welcomebar['mysticky_welcomebar_actionselect'] == 'close_bar' ) : ?> style="display:none;" <?php endif;?> >
+                            <input type="text" id="mysticky_welcomebar_redirect" class="mystickyinput mysticky_welcomebar_disable" name="mysticky_option_welcomebar[mysticky_welcomebar_redirect]" value="<?php echo ( isset($welcomebar['mysticky_welcomebar_redirect'])) ? esc_url($welcomebar['mysticky_welcomebar_redirect']) : esc_url($welcomebar['mysticky_welcomebar_redirect']);?>" placeholder="<?php echo esc_url("https://www.yourdomain.com"); ?>"  />
+                        </div>
+                    </div>
+                    <div class="mysticky-welcomebar-setting-content mysticky-welcomebar-redirect-container">
+                        <label><?php esc_html_e( 'Open in a new tab', 'mystickymenu' );?></label>
+                        <div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-setting-newtab mysticky-welcomebar-redirect"  >
+                            <label class="mysticky-welcomebar-switch">
+                                <input name="mysticky_option_welcomebar[mysticky_welcomebar_redirect_newtab]" value= "1" type="checkbox" disabled />
+                                <span class="slider"></span>
+                            </label>
+                            <span class="myStickymenu-upgrade"><a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php esc_html_e( 'Upgrade Now', 'mystickymenu' );?></a></span>
+                        </div>
+                    </div>
+                    <div class="mysticky-welcomebar-setting-content mysticky-welcomebar-redirect-container" >
+                        <label><?php esc_html_e('rel Attribute', 'mystickymenu'); ?>
+                            <span class="mysticky-custom-fields-tooltip">
+                                <a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a>
+                                <p><?php esc_html_e("Add a \"rel\" attribute to the button link. You can use it to add a rel=\"nofollow\", \"sponsored\", or any other \"rel\" attribute option","mystickymenu");?></p>
+                            </span>
+                        </label>
+                        <div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-setting-newtab mysticky-welcomebar-redirect"  >
+                            <input type="text" id="mysticky_welcomebar_redirect_rel" class="mystickyinput mysticky_welcomebar_disable unactive_rel_input" name="mysticky_option_welcomebar[mysticky_welcomebar_redirect_rel]" value="" placeholder="" disabled />
+                            <span class="myStickymenu-upgrade"><a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php esc_html_e( 'Upgrade Now', 'mystickymenu' );?></a></span>
+                        </div>
+                    </div>
+                </div>
 				<div class="mysticky-welcomebar-setting-content">
 					<label><?php esc_html_e('Bar Appearance After Button Click', 'mystickymenu'); ?>
 						<span class="mysticky-custom-fields-tooltip"><a href="#" class="mysticky-tooltip mysticky-new-custom-btn"><i class="dashicons dashicons-editor-help"></i></a><p style="z-index: 99999;"><?php esc_html_e("Choose bar display settings after a visitor click on the button. The \"Don't show the Bar again for the user\" option is the preferable option if you don't want to annoy your visitors by showing the bar over and over","mystickymenu");?></p></span>
 					</label>
 					<div class="mysticky-welcomebar-setting-content-right">
-						<div class="mysticky-welcomebar-setting-action">
+						<div class="mysticky-welcomebar-setting-action w-full">
 							<select name="mysticky_option_welcomebar[mysticky_welcomebar_aftersubmission]" class="mysticky-welcomebar-aftersubmission mysticky_welcomebar_disable">
 								<option value="dont_show_welcomebar" <?php selected( @$welcomebar['mysticky_welcomebar_aftersubmission'], 'dont_show_welcomebar' ); ?>><?php esc_html_e( "Don't show the Bar again for the user", 'mystickymenu' );?></option>
 								<option value="show_welcomebar_next_visit" <?php selected( @$welcomebar['mysticky_welcomebar_aftersubmission'], 'show_welcomebar_next_visit' ); ?>><?php esc_html_e( 'Show the Bar again when the user visits the website next time', 'mystickymenu' );?></option>
@@ -674,7 +713,7 @@ if (defined('ABSPATH') === false) {
 							<span class="slider"></span>
 						</label>
 						<span class="myStickymenu-upgrade"><a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php esc_html_e( 'Upgrade Now', 'mystickymenu' );?></a></span>
-						<div class="mysticky-welcomebar-setting-action" style="display:none;">
+						<div class="mysticky-welcomebar-setting-action w-full" style="display:none;">
 							<div class="px-wrap">
 								<span><?php esc_html_e('Close bar after ', 'mystickymenu'); ?></span>
 								<input type="number" class="" min="0" step="1" id="mysticky_welcomebar_triggersec_automatically" name="mysticky_option_welcomebar[mysticky_welcomebar_triggersec_automatically]" value="0">
