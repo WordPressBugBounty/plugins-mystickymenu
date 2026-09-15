@@ -2,8 +2,8 @@
 Contributors: tomeraharon, galdub, premio
 Tags:notification bar, floating bar, sticky menu, sticky header, sticky bar
 Requires at least: 4.7
-Tested up to: 7.0
-Stable tag: 2.9.1
+Tested up to: 7.1
+Stable tag: 2.9.2
 License: GPLv3
 
 Create a welcome notification bar for your website. Also, My Sticky Bar plugin can make your menu or header sticky to the top when scrolled 📌
@@ -14,7 +14,7 @@ Create a welcome notification bar for your website. Also, My Sticky Bar plugin c
 
 <strong>Use My Sticky Bar (formerly myStickymenu) to create a beautiful notification bar for your website. You can also use this notification bar & sticky menu plugin to make your menu or header sticky on top of page, after desired number of pixels when scrolled. You can use it also to create a Welcome bar for announcements, promotion and more. This lightweight plugin will help your visitors navigate easily and reach to the navigation menu without wasting time. Install My Sticky Bar and improve your website’s user experience! If you want to change the CSS style, disable on scroll down or disable on specific pages. check out the <a href="https://premio.io/downloads/mystickymenu/" target="_blank" title="My Sticky Bar pro plans">Pro version</a>.</strong>
 
-By default, My Sticky Bar (formerly myStickymenu) should make your menu sticky right away if you turn the sticky menu feature on - which means your menu should become sticky right out of the box. Sticky menu is designed to use element class ".navbar" as "Sticky Class". That value should be modified in plugin settings for different themes to make it work. Sticky Class is actually nothing more than an element class (or id) of the element that should become sticky.
+My Sticky Bar (formerly myStickymenu) will make your menu sticky if you turn on the sticky menu feature - which means your menu should become sticky right out of the box. Sticky menu is designed to use element class ".navbar" as "Sticky Class". That value should be modified in plugin settings for different themes to make it work. Sticky Class is actually nothing more than an element class (or id) of the element that should become sticky.
 
 [youtube  https://www.youtube.com/watch?v=l9aRnPVuCVY]
 
@@ -33,7 +33,7 @@ My Sticky Bar plugin will work on any WordPress theme, like OceanWP, Nirvana Tem
 
 My Sticky Bar is compatible with Elementor website builder, Divi, WPBakery, Gutenberg, Visual composer, Beaver, and other WordPress website builders.
 
-= 🚀 With the Welcome Bar You Can: =
+= 🚀 With the Welcome Bar You Can =
 * Display your floating bar at the top position
 * When the user clicks on the welcome bar button you can close the bar, redirect to another URL, or launch a <a href="https://www.poptin.com/?utm_source=msm" target="_blank" title="Poptin pop up">Poptin pop up</a>
 * New! Contact Form 📝 - Include a contact form in your notification bar to collect either name and email or name and phone number. This feature can improve lead generation on your website. You’ll be able to gather your users' details using a contact form and reach them directly.
@@ -47,7 +47,7 @@ My Sticky Bar is compatible with Elementor website builder, Divi, WPBakery, Gute
 * Show the call-to-action button in your top notification bar on desktop/mobile
 * Redirect your visitors to another URL on-click
 
-= 📌 Free Sticky Bar Features: =
+= 📌 Free Sticky Bar Features =
 * Show sticky header when scrolling the page
 * Fade or slide effect
 * Disable at a small screen
@@ -93,7 +93,7 @@ But wait, there's more 😉
 A live demo for My Sticky Bar plugin and notification bar is available at <a href="https://demo.premio.io/mystickymenu/?utm_source=wordpressorg" target="_blank" title="Premio.io demo site">Premio's demo site</a>.
 
 = 🗓️ Countdown timer =
-Do you have a limited-period offer? Want to create a sense of urgency to boost leads in your notification bar? Add a countdown to your notification bar. A highly customizable feature that can be paired with your website’s theme and colors.
+Want to create a sense of urgency to boost leads and sales in your notification bar? Add a countdown to your notification bar. A highly customizable feature that can be paired with your website’s theme and colors.
 
 Apart from setting a global date and time-based countdown, you can also start an individual countdown for every unique visitor from when they arrive on your website.
 
@@ -341,6 +341,14 @@ After installing the plugin, you’ll have the option to turn on the welcome bar
 
 
 == Changelog ==
+
+= 2.9.2 =
+More control over when welcome messages disappear: Welcome messages can now disappear based on visitor scrolling, including after a certain percentage of the page has been scrolled, giving you more control beyond the existing time-based setting.
+Disable Google Fonts for better privacy compliance: You can now completely disable Google Fonts. When disabled, Google Fonts will no longer appear in the font selection, making it easier to meet your GDPR and privacy requirements.
+Improved compatibility with WordPress themes: Fixed a theme compatibility issue that could prevent the sticky bar from appearing on some websites.
+More reliable sticky menus and links: Fixed issues that could cause menu links to disappear or become unclickable after closing the sticky bar or notification.
+Improved multiple email support: Multiple email addresses are now handled more reliably, preventing commas and @ symbols from being removed after saving or refreshing.
+Better mobile form experience: Fixed several mobile form validation issues, including error messages overlapping buttons, appearing in the wrong position, and displaying the wrong message when a name is missing.
 
 = 2.9.1 =
 UI enhancements across the app to improve consistency, usability, and overall user experience.

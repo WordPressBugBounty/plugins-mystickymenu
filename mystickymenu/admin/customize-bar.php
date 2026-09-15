@@ -96,19 +96,41 @@ if (defined('ABSPATH') === false) {
 						<input type="text" id="mysticky_welcomebar_bgtxtcolor" name="mysticky_option_welcomebar[mysticky_welcomebar_bgtxtcolor]" class="my-color-field" data-alpha="true" value="<?php echo esc_attr($welcomebar['mysticky_welcomebar_bgtxtcolor']);?>" />
 					</div>
 				</div>
+                <div id="mysticky-close-after-click" class="mysticky-welcomebar-setting-content">
+                    <label><?php esc_html_e('Google fonts', 'mystickymenu'); ?>
+                        <span class="mysticky-custom-fields-tooltip">
+                            <a href="#" class="mysticky-tooltip mysticky-new-custom-btn" aria-label="<?php esc_html_e('Need help', 'mystickymenu'); ?>">
+                                <i class="dashicons dashicons-editor-help"></i></a>
+                            <p style="z-index: 99999;">
+                                <?php esc_html_e("Enable Google Fonts to use additional fonts in the font family dropdown.", "mystickymenu"); ?>
+                            </p>
+                        </span>
+                    </label>
+                    <div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-close-automatically-sec flex items-center gap-2">
+                        <label for="load_google_fonts" class="mysticky-welcomebar-switch close-bar-switch" aria-label="<?php esc_html_e('Google fonts', 'mystickymenu'); ?>">
+                            <?php $load_google_fonts = isset($welcomebar['load_google_fonts']) ? $welcomebar['load_google_fonts'] : 1 ?>
+                            <input type="hidden" name="mysticky_option_welcomebar[load_google_fonts]" value="0" />
+                            <input type="checkbox" id="load_google_fonts" name="mysticky_option_welcomebar[load_google_fonts]" value="1" <?php checked( $load_google_fonts, '1' );?> />
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
 				<div class="mysticky-welcomebar-setting-content">
-					<label><?php esc_html_e('Font Family', 'mystickymenu'); ?></label>
+					<label for="mysticky_welcomebar_font"><?php esc_html_e('Font Family', 'mystickymenu'); ?></label>
 					<div class="mysticky-welcomebar-setting-content-right">
-						<select name="mysticky_option_welcomebar[mysticky_welcomebar_font]" class="form-fonts">
+						<select id="mysticky_welcomebar_font" name="mysticky_option_welcomebar[mysticky_welcomebar_font]" class="form-fonts">
 							<option value=""><?php esc_html_e( 'Select font family', 'mystickymenu' );?></option>
-							<?php $group= ''; foreach( myStickymenu_fonts() as $key=>$value):
-										if ($value != $group){
-											echo '<optgroup label="' . esc_attr($value) . '">';
-											$group = $value;
-										}
-									?>
-								<option value="<?php echo esc_attr($key);?>" <?php selected( @$welcomebar['mysticky_welcomebar_font'], $key ); ?>><?php echo esc_html($key);?></option>
-							<?php endforeach;?>
+                            <?php $group= '';
+                            foreach( myStickymenu_fonts() as $key=>$value):
+                                $group_slug = sanitize_title($group);
+                                if ($value != $group){
+                                    $group = $value;
+                                    $group_slug = sanitize_title($group);
+                                    echo '<optgroup class="' . esc_attr($group_slug) . '-option" label="' . esc_attr($value) . '">';
+                                }
+                                ?>
+                                <option class="<?php echo esc_attr($group_slug); ?>-option" value="<?php echo esc_attr($key);?>" <?php selected( @$welcomebar['mysticky_welcomebar_font'], $key ); ?>><?php echo esc_html($key);?></option>
+                            <?php endforeach;?>
 						</select>
 					</div>
 				</div>
@@ -153,27 +175,55 @@ if (defined('ABSPATH') === false) {
 				<div id="mysticky_welcomebar_static_text_setting" class="mysticky-welcomebar-setting-content" style="display:<?php echo (isset($welcomebar['mysticky_welcomebar_text_type']) && $welcomebar['mysticky_welcomebar_text_type'] == 'static_text') ? 'flex' : 'none'; ?>">
 					<label></label>
 					<div class="mysticky-welcomebar-setting-content-right">
-					<?php 
-						$settings = array(
-							'media_buttons' => true,
-							'textarea_name' => 'mysticky_option_welcomebar[mysticky_welcomebar_bar_text]',
-							'tinymce'       => array(
+					<?php
+                    $settings = array(
+                        'media_buttons' => false,
+                        'textarea_name' => 'mysticky_option_welcomebar[mysticky_welcomebar_bar_text]',
+                        'tinymce'       => array(
                             'toolbar1'      => 'bold,italic,underline,separator,alignleft,aligncenter,alignright,separator,link,unlink',
-                            'init_instance_callback' => 'function(editor){
-                                editor.on("input ExecCommand", function(){                                    
-                                        var content = tinymce.activeEditor.getContent();
-                                        var mysticky_bar_text_val = content.replace(/(?:\r\n|\r|\n)/g, "<br />");
-                                        mysticky_bar_text_val = mysticky_bar_text_val.replace(/(?:onchange|onclick|onmouseover|onmouseout|onkeydown|onload\onerror|alert)/g, "");
-                                        jQuery( ".mysticky-welcomebar-content .mysticky-welcomebar-static_text" ).html( mysticky_bar_text_val );                                    
-                                        jQuery( ".mysticky-welcomebar-fixed p" ).css( "font-size", jQuery("#mysticky_welcomebar_fontsize").val() + "px" );
-                                        jQuery( ".mysticky-welcomebar-fixed p" ).css("color", jQuery("#mysticky_welcomebar_bgtxtcolor").val()  );
-                                    });
-                                }'
-                            ),
-							'quicktags' => false,
-						);
-						wp_editor( stripslashes($welcomebar['mysticky_welcomebar_bar_text']), 'mysticky_bar_text', $settings ); 
-						?>						
+                            'setup' => 'function(editor){
+                                /* Option+Space (Alt+Space) inserts a non-breaking space, matching native macOS text field behavior.
+                                   TinyMCE converts a &nbsp; back into a normal space the instant you type next to it, so it is
+                                   temporarily protected with a marker span while editing and always unwrapped back into a plain,
+                                   continuous &nbsp; whenever the content is read out (live preview, autosave, save).
+                                   IMPORTANT: this must run from "setup" (fires before the editor loads its initial content),
+                                   not "init_instance_callback" (fires after). Registering it late meant the saved &nbsp;
+                                   characters were never wrapped/protected on load, so deleting one caused the browser to
+                                   collapse every other &nbsp; in the same paragraph back into a plain, collapsible space. */
+                                var mysticky_nbsp_wrap = function(html){
+                                        return html.replace(/&nbsp;|\u00a0/g, "<span class=\"mysticky-nbsp\" contenteditable=\"false\">&nbsp;</span>");
+                                };
+                                var mysticky_nbsp_unwrap = function(html){
+                                    return html.replace(/<span[^>]*class="mysticky-nbsp"[^>]*>[\s\S]*?<\/span>/g, "&nbsp;");
+                                };
+                                editor.on("keydown", function(e){
+                                    if ( (e.altKey && ( e.keyCode === 32 || e.key === " " )) || e.keyCode === 160 || e.key === "\u00a0" ) {
+                                        e.preventDefault();
+                                        editor.execCommand("mceInsertContent", false, "<span class=\"mysticky-nbsp\" contenteditable=\"false\">&nbsp;</span>");
+                                    }
+                                });
+                                editor.on("BeforeSetContent", function(e){
+                                    e.content = mysticky_nbsp_wrap( mysticky_nbsp_unwrap( e.content ) );
+                                });
+                                editor.on("GetContent", function(e){
+                                    e.content = mysticky_nbsp_unwrap( e.content );
+                                });
+                                editor.on("input ExecCommand keyup", function(){
+                                    var content = tinymce.activeEditor.getContent();
+                                    var mysticky_bar_text_val = content.replace(/(?:\r\n|\r|\n)/g, "<br />");
+                                    mysticky_bar_text_val = mysticky_bar_text_val.replace(/(?:onchange|onclick|onmouseover|onmouseout|onkeydown|onload\|onerror|alert)/g, "");
+                                    jQuery( ".mysticky-welcomebar-content div.mysticky-welcomebar-static_text" ).html( mysticky_bar_text_val );
+                                    
+                                    jQuery( ".mysticky-welcomebar-fixed p" ).css( "font-size", jQuery("#mysticky_welcomebar_fontsize").val() + "px" );
+                                    jQuery( ".mysticky-welcomebar-fixed p" ).css("color", jQuery("#mysticky_welcomebar_bgtxtcolor").val()  );
+
+                                });
+                            }'
+                        ),
+                        'quicktags' => true,
+                    );
+                    wp_editor( stripslashes($welcomebar['mysticky_welcomebar_bar_text']), 'mysticky_bar_text', $settings );
+                    ?>
 					</div>
 				</div>
 				<div id="mysticky_welcomebar_sliding_text_setting" class="mysticky-welcomebar-setting-content" style="display:<?php echo (isset($welcomebar['mysticky_welcomebar_text_type']) && $welcomebar['mysticky_welcomebar_text_type'] == 'sliding_text') ? 'flex' : 'none'; ?>">
@@ -526,16 +576,42 @@ if (defined('ABSPATH') === false) {
                     <div class="mysticky-welcomebar-setting-content-right button-text-wrap">
                         <?php
                         $settings = array(
-                            'media_buttons' => true,
+                            'media_buttons' => false,
                             'textarea_name' => 'mysticky_option_welcomebar[mysticky_welcomebar_btn_text]',
                             'tinymce'       => array(
-                                    'toolbar1'      	=> 'bold, italic, underline',
-                                    'init_instance_callback' => 'function(editor){
-                                    editor.on("input ExecCommand", function(){
+                                'toolbar1'      	=> 'bold, italic, underline',
+                                'setup' => 'function(editor){
+                                /* Option+Space (Alt+Space) inserts a non-breaking space, matching native macOS text field behavior.
+                                   TinyMCE converts a &nbsp; back into a normal space the instant you type next to it, so it is
+                                   temporarily protected with a marker span while editing and always unwrapped back into a plain,
+                                   continuous &nbsp; whenever the content is read out (live preview, autosave, save).
+                                   IMPORTANT: this must run from "setup" (fires before the editor loads its initial content),
+                                   not "init_instance_callback" (fires after). Registering it late meant the saved &nbsp;
+                                   characters were never wrapped/protected on load, so deleting one caused the browser to
+                                   collapse every other &nbsp; in the same paragraph back into a plain, collapsible space. */
+                                var mysticky_nbsp_wrap = function(html){
+                                    return html.replace(/&nbsp;|\u00a0/g, "<span class=\"mysticky-nbsp\" contenteditable=\"false\">&nbsp;</span>");
+                                };
+                                var mysticky_nbsp_unwrap = function(html){
+                                    return html.replace(/<span[^>]*class="mysticky-nbsp"[^>]*>[\s\S]*?<\/span>/g, "&nbsp;");
+                                };
+                                editor.on("keydown", function(e){
+                                    if ( (e.altKey && ( e.keyCode === 32 || e.key === " " )) || e.keyCode === 160 || e.key === "\u00a0" ) {
+                                        e.preventDefault();
+                                        editor.execCommand("mceInsertContent", false, "<span class=\"mysticky-nbsp\" contenteditable=\"false\">&nbsp;</span>");
+                                    }
+                                });
+                                editor.on("BeforeSetContent", function(e){
+                                    e.content = mysticky_nbsp_wrap( mysticky_nbsp_unwrap( e.content ) );
+                                });
+                                editor.on("GetContent", function(e){
+                                    e.content = mysticky_nbsp_unwrap( e.content );
+                                });
+                                editor.on("input ExecCommand", function(){
                                         var content = tinymce.activeEditor.getContent();
                                         var mysticky_bar_text_val = content.replace(/(?:\r\n|\r|\n)/g, "<br />");
                                         mysticky_bar_text_val = mysticky_bar_text_val.replace(/(?:onchange|onclick|onmouseover|onmouseout|onkeydown|onload\onerror|alert)/g, "");
-                                        jQuery( ".mysticky-welcomebar-btn a" ).html( mysticky_bar_text_val );                                        
+                                        jQuery( ".mysticky-welcomebar-btn a" ).html("<span class=\"button-text\">" + mysticky_bar_text_val +"</span>" );                                        
                                         jQuery( ".mysticky-welcomebar-btn a" ).css( "font-size", jQuery("#mysticky_welcomebar_fontsize").val() + "px" );
                                         jQuery( ".mysticky-welcomebar-btn a p" ).css( "font-size", jQuery("#mysticky_welcomebar_fontsize").val() + "px" );
                                         jQuery( ".mysticky-welcomebar-btn a" ).css("color", jQuery("#mysticky_welcomebar_btntxtcolor").val()  );
@@ -640,6 +716,7 @@ if (defined('ABSPATH') === false) {
 								<option value="close_bar" <?php selected( @$welcomebar['mysticky_welcomebar_actionselect'], 'close_bar' ); ?>><?php esc_html_e( 'Close the Bar', 'mystickymenu' );?></option>
 								<option value="poptin_popup" <?php selected( @$welcomebar['mysticky_welcomebar_actionselect'], 'poptin_popup' ); ?> ><?php esc_html_e( 'Launch a Poptin pop-up', 'mystickymenu' );?></option>
 								<option value="thankyou_screen" data-href="<?php echo esc_url($upgarde_url); ?>"><?php esc_html_e( 'Show a thank-you screen (Pro Feature)', 'mystickymenu' );?></option>
+								<option value="custom_popup" data-href="<?php echo esc_url($upgarde_url); ?>"><?php esc_html_e( 'Show a custom Pop up (Pro Feature)', 'mystickymenu' );?></option>
 							</select>
 						</div>
 						

@@ -19,19 +19,23 @@ if ( !empty($elements_widgets)) {
     }
 }
 if ( isset($_REQUEST['search-contact']) && $_REQUEST['search-contact'] != '' ) {
-    $where_search = "WHERE contact_name like '%" . $_REQUEST['search-contact'] . "%' OR contact_email like '%".$_REQUEST['search-contact']."%' OR contact_phone like '%".$_REQUEST['search-contact']."%' OR widget_name like '%".$_REQUEST['search-contact']."%' ";
+    $search = '%' . $wpdb->esc_like( sanitize_text_field( $_REQUEST['search-contact'] ) ) . '%';
+    $where_search = $wpdb->prepare(
+            "WHERE contact_name LIKE %s OR contact_email LIKE %s OR contact_phone LIKE %s OR widget_name LIKE %s ",
+    $search, $search, $search, $search);
 }
-$customPagHTML     	= "";
-$total_query     	= "SELECT count(*) FROM ".$table_name ." {$where_search} ORDER BY ID DESC";
-$total             	= $wpdb->get_var( $total_query );
-$items_per_page 	= 20;
-$page             	= ( isset( $_GET['cpage'] ) ) ? abs( (int) $_GET['cpage'] ) : 1;
-$offset         	= ( $page * $items_per_page ) - $items_per_page;
-$query 				= "SELECT * FROM " . $table_name  ." {$where_search} ORDER BY ID DESC LIMIT {$offset}, {$items_per_page}";
-$result         	= $wpdb->get_results( $query );
-$total_page         = ceil($total / $items_per_page);
-$start_from         = $offset + 1;
-$to                 = $offset + min($items_per_page, count($result));
+
+$customPagHTML = "";
+$total_query = "SELECT count(*) FROM " . $table_name . " {$where_search} ORDER BY ID DESC";
+$total = $wpdb->get_var($total_query);
+$items_per_page = 20;
+$page = (isset($_GET['cpage'])) ? abs((int)$_GET['cpage']) : 1;
+$offset = ($page * $items_per_page) - $items_per_page;
+$query = "SELECT * FROM " . $table_name . " {$where_search} ORDER BY ID DESC LIMIT {$offset}, {$items_per_page}";
+$result = $wpdb->get_results($query);
+$total_page = ceil($total / $items_per_page);
+$start_from = $offset + 1;
+$to = $offset + min($items_per_page, count($result));
 
 $download_file_url = plugins_url('mystickymenu-contact-leads.php?download_file=mystickybar_contact_leads.csv',__FILE__);
 ?>

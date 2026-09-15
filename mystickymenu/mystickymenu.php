@@ -3,7 +3,7 @@
 Plugin Name: My Sticky Bar
 Plugin URI: https://premio.io/
 Description: Create a notification bar for your website with My Sticky Bar. You can customize the design, collect leads, and enjoy other advanced features. You can also make your menu sticky using My Sticky Bar.
-Version: 2.9.1
+Version: 2.9.2
 Author: Premio
 Author URI: https://premio.io/downloads/mystickymenu/
 Text Domain: mystickymenu
@@ -12,7 +12,7 @@ License: GPLv3
 */
 
 defined('ABSPATH') or die("Cannot access pages directly.");
-define('MYSTICKY_VERSION', '2.9.1');
+define('MYSTICKY_VERSION', '2.9.2');
 define('MYSTICKYMENU_URL', plugins_url('/', __FILE__));  // Define Plugin URL
 define('MYSTICKYMENU_PATH', plugin_dir_path(__FILE__));  // Define Plugin Directory Path
 define('MYSTICKYMENU_BASE', plugin_basename(__FILE__));
@@ -1433,12 +1433,15 @@ class MyStickyMenuFrontend
 		$font_args        = array();
 		$base_url         =  "https://fonts.googleapis.com/css";		
 		$fonts['family']['Lato'] = 'Lato:400,500,600,700';
-		if ( isset($welcomebar['mysticky_welcomebar_font']) && $welcomebar['mysticky_welcomebar_font'] !='' && !in_array( $welcomebar['mysticky_welcomebar_font'], $default_fonts) ) {
-			$fonts['family'][$welcomebar['mysticky_welcomebar_font']] = $welcomebar['mysticky_welcomebar_font'] . ':400,500,600,700';
-		}
-		if ( isset($welcomebar['mysticky_welcomebar_btnfont']) && $welcomebar['mysticky_welcomebar_btnfont'] !='' && !in_array( $welcomebar['mysticky_welcomebar_btnfont'], $default_fonts) ) {
-			$fonts['family'][$welcomebar['mysticky_welcomebar_btnfont']] = $welcomebar['mysticky_welcomebar_btnfont'] . ':400,500,600,700';
-		}
+        $load_fonts = isset($welcomebar['load_google_fonts']) ? $welcomebar['load_google_fonts'] : 1;
+        if($load_fonts) {
+            if (isset($welcomebar['mysticky_welcomebar_font']) && $welcomebar['mysticky_welcomebar_font'] != '' && !in_array($welcomebar['mysticky_welcomebar_font'], $default_fonts)) {
+                $fonts['family'][$welcomebar['mysticky_welcomebar_font']] = $welcomebar['mysticky_welcomebar_font'] . ':400,500,600,700';
+            }
+            if (isset($welcomebar['mysticky_welcomebar_btnfont']) && $welcomebar['mysticky_welcomebar_btnfont'] != '' && !in_array($welcomebar['mysticky_welcomebar_btnfont'], $default_fonts)) {
+                $fonts['family'][$welcomebar['mysticky_welcomebar_btnfont']] = $welcomebar['mysticky_welcomebar_btnfont'] . ':400,500,600,700';
+            }
+        }
 		
 		/* Prepapre URL if font family defined. */
 		if( !empty( $fonts['family'] ) ) {

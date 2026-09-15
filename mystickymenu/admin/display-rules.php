@@ -68,6 +68,19 @@ $is_pro_active = 0;
 						<span class="myStickymenu-upgrade"><a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php esc_html_e( 'Upgrade Now', 'mystickymenu' );?></a></span>
 					</div>
 				</div>
+
+                <div class="mysticky-welcomebar-setting-content">
+                    <label>
+                        <?php esc_html_e('Auto hide bar', 'mystickymenu'); ?>
+                    </label>
+                    <div class="mysticky-welcomebar-setting-content-right mysticky-welcomebar-close-automatically-sec">
+                        <label for="mysticky-welcomebar-auto-hide-bar" class="mysticky-welcomebar-switch">
+                            <input type="checkbox" id="mysticky-welcomebar-auto-hide-bar" name="mysticky_option_welcomebar[auto_hide_bar]" value="1" data-url="<?php echo esc_url($upgarde_url); ?>"/>
+                            <span class="slider"></span>
+                        </label>
+                        <span class="myStickymenu-upgrade"><a class="sticky-header-upgrade-now" href="<?php echo esc_url($upgarde_url); ?>" target="_blank"><?php esc_html_e( 'Upgrade Now', 'mystickymenu' );?></a></span>
+                    </div>
+                </div>
 			</div>
 
 			<div class="mysticky-welcomebar-subheader-title">

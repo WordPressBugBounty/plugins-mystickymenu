@@ -887,7 +887,15 @@ function mysticky_welcome_bar_backend() {
                                 <?php
                                     $x_color = (isset($welcomebar['mysticky_welcomebar_x_color'])) ? esc_attr($welcomebar['mysticky_welcomebar_x_color']) : '#000000';
                                 ?>
-                                <span class="mysticky-welcomebar-close" style="color:<?php echo esc_attr($x_color);?>" tabindex="0" role="button" aria-label="close">X</span>
+                                <a href="#" class="mysticky-welcomebar-close close-btn-widget-<?php echo esc_attr($key);?>" data-welcomebar-widget="<?php echo esc_attr($key); ?>" tabindex="0" aria-label="close" data-widget-nonce="<?php echo esc_attr(wp_create_nonce("chaty_widget_nonce"));?>" style="color:<?php echo esc_attr($x_color); ?>;">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 5L5 15" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M5 5L15 15" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="msb-sr-only">
+                                        <?php esc_html_e( 'Close Welcome Bar', 'mystickymenu' ); ?>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1226,91 +1234,101 @@ function mysticky_welcome_bar_frontend(){
 					echo wpautop( isset($welcomebar['mysticky_welcomebar_bar_text'])? stripslashes($welcomebar['mysticky_welcomebar_bar_text']) :"Get 30% off your first purchase" );
 				?>
 			</div>
+            <?php
+            $is_lead_enabled = isset( $welcomebar['mysticky_welcomebar_enable_lead'] ) && $welcomebar['mysticky_welcomebar_enable_lead'] == 1;
+            $email_class = $welcomebar['mysticky_welcomebar_lead_input'] == 'email_address' ? 'msb-lead-email' : '';
+            $phone_class = $welcomebar['mysticky_welcomebar_lead_input'] == 'phone' ? 'msb-lead-phone' : '';
+            $key = 0;
+                ?>
+                <div class="msb-front-flex">
+                <?php if($is_lead_enabled): ?>
+                    <div class="mystickymenu-front mysticky-welcomebar-lead-content">
+                        <div>
+                            <input type="text" class="contact-lead-name" id="contact-lead-name-<?php echo esc_attr($key); ?>"  name="contact_lead_name" placeholder="<?php echo esc_attr($welcomebar['lead_name_placeholder']);?>" style="display: flex;"/>
+                        </div>
+                        <div style="<?php echo (isset($welcomebar['mysticky_welcomebar_lead_input']) && $welcomebar['mysticky_welcomebar_lead_input'] == 'email_address') ? '' : 'display: none';?>">
+                            <input type="email" class="contact-lead-email <?php echo esc_attr($email_class) ?>" id="contact-lead-email-<?php echo esc_attr($key); ?>" name="contact_lead_email" placeholder="<?php echo esc_attr($welcomebar['lead_email_placeholder']);?>" style="display: flex" />
+                        </div>
+                        <div style="<?php echo (isset($welcomebar['mysticky_welcomebar_lead_input']) && $welcomebar['mysticky_welcomebar_lead_input'] == 'phone') ? '' : 'display: none';?>">
+                            <input type="text" class="contact-lead-phone <?php echo esc_attr($phone_class) ?>" id="contact-lead-phone-<?php echo esc_attr($key); ?>" name="contact_lead_phone" placeholder="<?php echo esc_attr($welcomebar['lead_phone_placeholder']);?>"/>
+                        </div>
+                        <input type="hidden" id="contact-lead-pagelink-<?php echo esc_attr($key);?>" name="contact-page-link" value=" <?php echo esc_url(home_url( $wp->request ));?>">
+                        <input type="hidden" id="send-lead-email-<?php echo esc_attr($key); ?>" value="<?php echo (isset($welcomebar['mysticky_welcomebar_send_email_lead']) && $welcomebar['mysticky_welcomebar_send_email_lead'] == 1) ? 1 : 0;?>">
+                    </div>
 
-			<?php if( isset( $welcomebar['mysticky_welcomebar_enable_lead'] ) && $welcomebar['mysticky_welcomebar_enable_lead'] == 1 ): ?>
-				<div class="mystickymenu-front mysticky-welcomebar-lead-content">
-					<div>
-						<input type="text" class="contact-lead-name" id="contact-lead-name-0"  name="contact_lead_name" placeholder="<?php echo esc_attr($welcomebar['lead_name_placeholder']);?>" style="display: flex;"/>	
-					</div>
-					
-					<div>
-						<input type="text" class="contact-lead-email" id="contact-lead-email-0" name="contact_lead_email" placeholder="<?php echo esc_attr($welcomebar['lead_email_placeholder']);?>" style="display:<?php echo (isset($welcomebar['mysticky_welcomebar_lead_input']) && $welcomebar['mysticky_welcomebar_lead_input'] == 'email_address') ? 'flex' : 'none';?>"/>	
-					</div>
-					<div>
-						<input type="text" class="contact-lead-phone" id="contact-lead-phone-0" name="contact_lead_phone" placeholder="<?php echo esc_attr($welcomebar['lead_phone_placeholder']);?>" style="display:<?php echo (isset($welcomebar['mysticky_welcomebar_lead_input']) && $welcomebar['mysticky_welcomebar_lead_input'] == 'phone') ? 'flex' : 'none';?>"/>
-					</div>
+                    <div class="mysticky-welcomebar-thankyou-content mysticky-welcomebar-content" style="display: none;">
+                        <?php echo wpautop( isset( $welcomebar['mysticky_welcomebar_thankyou_screen_text'] )? stripslashes( $welcomebar['mysticky_welcomebar_thankyou_screen_text'] ):"Thank you for submitting the form" );?>
+                    </div>
+                <?php endif; ?>
 
-					
-
-					<input type="hidden" id="contact-lead-pagelink-0" name="contact-page-link" value=" <?php echo esc_url(home_url( $wp->request ));?>">
-
-					<input type="hidden" id="send-lead-email-0" value="<?php echo (isset($welcomebar['mysticky_welcomebar_send_email_lead']) && $welcomebar['mysticky_welcomebar_send_email_lead'] == 1) ? 1 : 0;?>">
-				</div>
-				
-				<div class="mysticky-welcomebar-thankyou-content mysticky-welcomebar-content" style="display: none;">
-					<?php echo wpautop( isset( $welcomebar['mysticky_welcomebar_thankyou_screen_text'] )? stripslashes( $welcomebar['mysticky_welcomebar_thankyou_screen_text'] ):"Thank you for submitting the form" );?>
-				</div>
-			<?php endif; ?>
-
-			<div class="mysticky-welcomebar-btn <?php if( isset( $welcomebar['mysticky_welcomebar_enable_lead'] ) && $welcomebar['mysticky_welcomebar_enable_lead'] == 1 ): ?> contact-lead-button<?php endif; ?>" >
-				<?php
-                $mysticky_welcomebar_btn_text =  isset($welcomebar['mysticky_welcomebar_btn_text']) ? stripslashes($welcomebar['mysticky_welcomebar_btn_text']) : stripslashes("Got it!");
-                if( is_email($mysticky_welcomebar_actionselect_url) ){
-                    if( strpos($mysticky_welcomebar_actionselect_url, 'mailto:') === false ){
-                        $mysticky_welcomebar_actionselect_url = "mailto:".$mysticky_welcomebar_actionselect_url;
+                <div class="mysticky-welcomebar-btn <?php if( isset( $welcomebar['mysticky_welcomebar_enable_lead'] ) && $welcomebar['mysticky_welcomebar_enable_lead'] == 1 ): ?> contact-lead-button<?php endif; ?>" >
+                    <?php
+                    $mysticky_welcomebar_btn_text =  isset($welcomebar['mysticky_welcomebar_btn_text']) ? stripslashes($welcomebar['mysticky_welcomebar_btn_text']) : stripslashes("Got it!");
+                    if( is_email($mysticky_welcomebar_actionselect_url) ){
+                        if( strpos($mysticky_welcomebar_actionselect_url, 'mailto:') === false ){
+                            $mysticky_welcomebar_actionselect_url = "mailto:".$mysticky_welcomebar_actionselect_url;
+                        }
                     }
-                }
-                $allowedTags = [
-                    'p' => array(
-                            'style' => array(),
-                    ),
-                    'br' => array(),
-                    'em' => array(),
-                    'span' => array(
-                            'style' => array(),
-                    ),
-                    'u' => array(),
-                    'strong' => array(),
-                    'underline' => array(),
-                ];
-                $classes = [];
-                $classes[] = 'msb-welcomebar-btn';
-                if(@$welcomebar['advanced_button_customization']) {
-                    if(@$welcomebar['button_has_border']) {
-                        $classes[] = 'has-msb-border';
+                    $allowedTags = [
+                        'p' => array(
+                                'style' => array(),
+                        ),
+                        'br' => array(),
+                        'em' => array(),
+                        'span' => array(
+                                'style' => array(),
+                        ),
+                        'u' => array(),
+                        'strong' => array(),
+                        'underline' => array(),
+                    ];
+                    $classes = [];
+                    $classes[] = 'msb-welcomebar-btn';
+                    if(@$welcomebar['advanced_button_customization']) {
+                        if(@$welcomebar['button_has_border']) {
+                            $classes[] = 'has-msb-border';
+                        }
+                        if(@$welcomebar['button_has_shadow']) {
+                            $classes[] = 'has-msb-shadow';
+                        }
+                        if(@$welcomebar['button_has_3d_effect']) {
+                            $classes[] = 'has-msb-3d-effect';
+                        }
                     }
-                    if(@$welcomebar['button_has_shadow']) {
-                        $classes[] = 'has-msb-shadow';
+                    if($welcomebar['mysticky_welcomebar_attentionselect'] != 'default') {
+                        $classes[] = 'has-msb-animation';
                     }
-                    if(@$welcomebar['button_has_3d_effect']) {
-                        $classes[] = 'has-msb-3d-effect';
+                    if($welcomebar['mysticky_welcomebar_hover_effect'] == 'border_effect_button') {
+                        $classes[] = 'has-msb-border-effect';
+                    } else if($welcomebar['mysticky_welcomebar_hover_effect'] == 'fill_effect_button') {
+                        $classes[] = 'has-msb-bg-effect';
                     }
-                }
-                if($welcomebar['mysticky_welcomebar_attentionselect'] != 'default') {
-                    $classes[] = 'has-msb-animation';
-                }
-                if($welcomebar['mysticky_welcomebar_hover_effect'] == 'border_effect_button') {
-                    $classes[] = 'has-msb-border-effect';
-                } else if($welcomebar['mysticky_welcomebar_hover_effect'] == 'fill_effect_button') {
-                    $classes[] = 'has-msb-bg-effect';
-                }
-				?>
+                    ?>
 
-				<a class="msb-welcomebar-btn mysticky-welcomebar-btn-a <?php echo esc_attr(implode(" ", $classes)) ?>"
-                   href="<?php echo esc_url($mysticky_welcomebar_actionselect_url); ?>" <?php if( isset($welcomebar['mysticky_welcomebar_redirect_newtab']) && $welcomebar['mysticky_welcomebar_actionselect'] == 'redirect_to_url' && $welcomebar['mysticky_welcomebar_redirect_newtab']== 1):?> target="_blank" <?php endif;?>
-                   data-animation="<?php echo esc_attr($welcomebar['mysticky_welcomebar_attentionselect']) ?>"
-                   data-fill-style="<?php echo esc_attr($welcomebar['mysticky_welcomebar_hover_fill_effect']) ?>"
-                   data-border-style="<?php echo esc_attr($welcomebar['mysticky_welcomebar_hover_border_effect']) ?>"
-                >
-                    <span class="button-text">
-                    <?php echo wp_kses( $mysticky_welcomebar_btn_text, $allowedTags);?>
-                    </span>
-				</a>
-			</div>
-			<?php
-				$x_color = (isset($welcomebar['mysticky_welcomebar_x_color'])) ? esc_attr($welcomebar['mysticky_welcomebar_x_color']) : '#000000';
-			?>
-			<span class="mysticky-welcomebar-close" style="color:<?php echo esc_attr($x_color); ?>">X</span>		
+                    <a class="msb-welcomebar-btn mysticky-welcomebar-btn-a <?php echo esc_attr(implode(" ", $classes)) ?>"
+                       href="<?php echo esc_url($mysticky_welcomebar_actionselect_url); ?>" <?php if( isset($welcomebar['mysticky_welcomebar_redirect_newtab']) && $welcomebar['mysticky_welcomebar_actionselect'] == 'redirect_to_url' && $welcomebar['mysticky_welcomebar_redirect_newtab']== 1):?> target="_blank" <?php endif;?>
+                       data-animation="<?php echo esc_attr($welcomebar['mysticky_welcomebar_attentionselect']) ?>"
+                       data-fill-style="<?php echo esc_attr($welcomebar['mysticky_welcomebar_hover_fill_effect']) ?>"
+                       data-border-style="<?php echo esc_attr($welcomebar['mysticky_welcomebar_hover_border_effect']) ?>"
+                    >
+                        <span class="button-text">
+                        <?php echo wp_kses( $mysticky_welcomebar_btn_text, $allowedTags);?>
+                        </span>
+                    </a>
+                </div>
+                <?php
+                    $x_color = (isset($welcomebar['mysticky_welcomebar_x_color'])) ? esc_attr($welcomebar['mysticky_welcomebar_x_color']) : '#000000';
+                ?>
+            </div>
+            <a href="#" class="mysticky-welcomebar-close close-btn-widget-<?php echo esc_attr($key);?>" data-welcomebar-widget="<?php echo esc_attr($key); ?>" tabindex="0" aria-label="close" data-widget-nonce="<?php echo esc_attr(wp_create_nonce("chaty_widget_nonce"));?>" style="color:<?php echo esc_attr($x_color); ?>;">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 5L5 15" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 5L15 15" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="msb-sr-only">
+                    <?php esc_html_e( 'Close Welcome Bar', 'mystickymenu' ); ?>
+                </span>
+            </a>
 		</div>
 	</div>
 	<?php
@@ -1476,6 +1494,8 @@ function mysticky_welcome_bar_frontend_styles() {
 		-webkit-transform-origin: 50% 50%;
 		-moz-transform-origin: 50% 50%;
 		transform-origin: 50% 50%;
+        align-items: center;
+        justify-content: center;
 	}
 	.mysticky-welcomebar-fixed .mysticky-welcomebar-close:hover {
 		opacity: 1;
@@ -1487,7 +1507,7 @@ function mysticky_welcome_bar_frontend_styles() {
 		font-size: 27px;
 	}
 	.mysticky-welcomebar-fixed.mysticky-welcomebar-showx-desktop .mysticky-welcomebar-close {
-		display: inline-block;
+		display: inline-flex;
 		cursor: pointer;
 	}	
 	/* Animated Buttons */
@@ -1900,7 +1920,6 @@ function mysticky_welcome_bar_frontend_styles() {
 			}
 			/*.welcombar-contact-lead .mysticky-welcomebar-fixed-wrap {flex-wrap: wrap; justify-content: center;}*/
 			
-			.mysticky-welcomebar-fixed .mystickymenu-front.mysticky-welcomebar-lead-content {margin: 10px 0 10px 20px !important;}
 
 			.mysticky-welcomebar-fixed .mysticky-welcomebar-btn {
 				padding-left: 10px;
@@ -1919,28 +1938,26 @@ function mysticky_welcome_bar_frontend_styles() {
 			margin: 0 0px 0 10px;
 		}
 
-		.mystickymenu-front.mysticky-welcomebar-lead-content input[type="text"] {
+		.mystickymenu-front.mysticky-welcomebar-lead-content input[type="text"], .mystickymenu-front.mysticky-welcomebar-lead-content input[type="email"] {
 			font-size: 12px;
 			padding: 7px 5px;
-			margin-right: 10px;
 			min-width: 50%;
 			border: 0;
 			width:auto;
+            display: flex;
 		}
 
-		.mystickymenu-front.mysticky-welcomebar-lead-content input[type="text"]:focus {
+		.mystickymenu-front.mysticky-welcomebar-lead-content input[type="text"]:focus, .mystickymenu-front.mysticky-welcomebar-lead-content input[type="email"]:focus {
 			outline: unset;
 			box-shadow: unset;
 		}
 
-		.input-error {
+		.mysticky-welcomebar-content .input-error {
 			color: #ff0000;
 			font-style: normal;
 			font-family: inherit;
-			font-size: 13px;
+			font-size: 12px;
 			display: block;
-			position: absolute;
-			bottom: 0px;
 		}
 
 		.mysticky-welcomebar-fixed.mysticky-site-front .mysticky-welcomebar-btn.contact-lead-button {
