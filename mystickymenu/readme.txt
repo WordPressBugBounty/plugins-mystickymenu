@@ -3,7 +3,7 @@ Contributors: tomeraharon, galdub, premio
 Tags:notification bar, floating bar, sticky menu, sticky header, sticky bar
 Requires at least: 4.7
 Tested up to: 7.1
-Stable tag: 2.9.2
+Stable tag: 2.9.3
 License: GPLv3
 
 Create a welcome notification bar for your website. Also, My Sticky Bar plugin can make your menu or header sticky to the top when scrolled 📌
@@ -341,6 +341,9 @@ After installing the plugin, you’ll have the option to turn on the welcome bar
 
 
 == Changelog ==
+
+= 2.9.3 =
+Fixed button position on notification bar
 
 = 2.9.2 =
 More control over when welcome messages disappear: Welcome messages can now disappear based on visitor scrolling, including after a certain percentage of the page has been scrolled, giving you more control beyond the existing time-based setting.
