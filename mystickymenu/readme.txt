@@ -36,11 +36,11 @@ My Sticky Bar is compatible with Elementor website builder, Divi, WPBakery, Gute
 = 🚀 With the Welcome Bar You Can =
 * Display your floating bar at the top position
 * When the user clicks on the welcome bar button you can close the bar, redirect to another URL, or launch a <a href="https://www.poptin.com/?utm_source=msm" target="_blank" title="Poptin pop up">Poptin pop up</a>
-* New! Contact Form 📝 - Include a contact form in your notification bar to collect either name and email or name and phone number. This feature can improve lead generation on your website. You’ll be able to gather your users' details using a contact form and reach them directly.
+* Contact Form 📝 - Include a contact form in your notification bar to collect either name and email or name and phone number. This feature can improve lead generation on your website. You’ll be able to gather your users' details using a contact form and reach them directly.
 * Change the background and button colors for your hello bar
 * Change display frequency after submission - show the announcement bar on every page, once a visit, or don't show the announcement bar after it's submitted
 * Add an attention effect to your button and increase conversion and CTR
-* New! Add any custom HTML to your notification bar including strong, underline, italic, and much more. Use custom HTML to create a beautiful notification bar
+* Add any custom HTML to your notification bar including strong, underline, italic, and much more. Use custom HTML to create a beautiful notification bar
 * Change font size and font family
 * Set your own text and call-to-action button text
 * Show the closing X on desktop/mobile
