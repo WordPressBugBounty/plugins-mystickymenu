@@ -2,10 +2,10 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: My Sticky Bar 2.9.3\n"
+"Project-Id-Version: My Sticky Bar 2.9.4\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/mystickymenu-free-uncompressed\n"
-"POT-Creation-Date: 2026-09-23 12:17:09+00:00\n"
+"POT-Creation-Date: 2026-11-06 10:16:31+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -75,25 +75,29 @@ msgstr ""
 msgid "Save & View Dashboard"
 msgstr ""
 
-#: admin/bar-settings.php:196 welcome-bar.php:939
+#: admin/bar-settings.php:175
+msgid "mystickymenu settings"
+msgstr ""
+
+#: admin/bar-settings.php:200 welcome-bar.php:939
 msgid "Bar is currently off"
 msgstr ""
 
-#: admin/bar-settings.php:200 welcome-bar.php:943
+#: admin/bar-settings.php:204 welcome-bar.php:943
 msgid ""
 "Your Bar is currently turned off, would you like to save and show it on "
 "your site?"
 msgstr ""
 
-#: admin/bar-settings.php:203 welcome-bar.php:946
+#: admin/bar-settings.php:207 welcome-bar.php:946
 msgid "Just save and keep it off"
 msgstr ""
 
-#: admin/bar-settings.php:204 welcome-bar.php:947
+#: admin/bar-settings.php:208 welcome-bar.php:947
 msgid "Save & Turn on Bar"
 msgstr ""
 
-#: admin/bar-settings.php:209 welcome-bar.php:952
+#: admin/bar-settings.php:213 welcome-bar.php:952
 msgid "Poptin pop-up is not configured properly"
 msgstr ""
 
@@ -938,7 +942,7 @@ msgid ""
 "we’d be happy to help 🙏"
 msgstr ""
 
-#: admin/help.php:57 admin/stickymenu-dashboard.php:160
+#: admin/help.php:57 admin/stickymenu-dashboard.php:163
 #: mystickymenu-leads.php:96 mystickymenu.php:197
 msgid "Email"
 msgstr ""
@@ -1096,7 +1100,7 @@ msgstr ""
 msgid "Drag & Drop editor, A/B test, advanced triggers & targeting options"
 msgstr ""
 
-#: admin/poptin-popup.php:35 admin/stickymenu-dashboard.php:209
+#: admin/poptin-popup.php:35 admin/stickymenu-dashboard.php:212
 msgid "Manage Poptin Popups"
 msgstr ""
 
@@ -1104,7 +1108,7 @@ msgstr ""
 msgid "You can skip this step by saving the widget"
 msgstr ""
 
-#: admin/sticky-header-settings.php:30 admin/stickymenu-dashboard.php:229
+#: admin/sticky-header-settings.php:30 admin/stickymenu-dashboard.php:232
 msgid "Sticky menu"
 msgstr ""
 
@@ -1143,7 +1147,7 @@ msgid ""
 "it."
 msgstr ""
 
-#: admin/sticky-header-settings.php:140 admin/stickymenu-dashboard.php:245
+#: admin/sticky-header-settings.php:140 admin/stickymenu-dashboard.php:248
 #: mystickymenu.php:281
 msgid "Settings"
 msgstr ""
@@ -1328,186 +1332,190 @@ msgstr ""
 msgid "Leave a review"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:29 mystickymenu.php:448
+#: admin/stickymenu-dashboard.php:24
+msgid "MyStickyMenu Dashboard"
+msgstr ""
+
+#: admin/stickymenu-dashboard.php:32 mystickymenu.php:448
 msgid "Dashboard"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:35 admin/stickymenu-dashboard.php:119
+#: admin/stickymenu-dashboard.php:38 admin/stickymenu-dashboard.php:122
 msgid "Add a New Bar"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:43
+#: admin/stickymenu-dashboard.php:46
 msgid "Status"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:44
+#: admin/stickymenu-dashboard.php:47
 msgid "Bars"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:45
+#: admin/stickymenu-dashboard.php:48
 msgid "Quick Action"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:58 admin/stickymenu-dashboard.php:90
-#: admin/stickymenu-dashboard.php:320 recommended-plugins.php:409
+#: admin/stickymenu-dashboard.php:61 admin/stickymenu-dashboard.php:93
+#: admin/stickymenu-dashboard.php:323 recommended-plugins.php:409
 msgid "Are you sure?"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:62
+#: admin/stickymenu-dashboard.php:65
 msgid "You're about to turn off the bar. Are you sure about that?"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:65 admin/stickymenu-dashboard.php:97
-#: admin/stickymenu-dashboard.php:327
+#: admin/stickymenu-dashboard.php:68 admin/stickymenu-dashboard.php:100
+#: admin/stickymenu-dashboard.php:330
 msgid "Nevermind"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:66 admin/stickymenu-dashboard.php:328
+#: admin/stickymenu-dashboard.php:69 admin/stickymenu-dashboard.php:331
 msgid "Turn off"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:71
+#: admin/stickymenu-dashboard.php:74
 msgid "Bar #0"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:74
+#: admin/stickymenu-dashboard.php:77
 msgid "Edit"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:78
+#: admin/stickymenu-dashboard.php:81
 msgid "Duplicate"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:83 admin/stickymenu-dashboard.php:98
+#: admin/stickymenu-dashboard.php:86 admin/stickymenu-dashboard.php:101
 #: mystickymenu-leads.php:68 mystickymenu-leads.php:100
 #: mystickymenu-leads.php:144
 msgid "Delete"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:94
+#: admin/stickymenu-dashboard.php:97
 msgid ""
 "Are you sure want to delete the bar? You will lose the bar permanently and "
 "will not be able to retrieve it"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:115
+#: admin/stickymenu-dashboard.php:118
 msgid "Welcome 🎉"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:116
+#: admin/stickymenu-dashboard.php:119
 msgid "You're one step away from creating a bar."
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:117
+#: admin/stickymenu-dashboard.php:120
 msgid ""
 "Add top and bottoms bars for various purposes like showing updates, offers, "
 "countdown, flash sales, and more. You can also make any WordPress menu "
 "sticky easily."
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:126
+#: admin/stickymenu-dashboard.php:129
 msgid "Features"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:129
+#: admin/stickymenu-dashboard.php:132
 msgid "Create new bars with unique customization"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:130
+#: admin/stickymenu-dashboard.php:133
 msgid "Make your WordPress navigation menu sticky"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:131
+#: admin/stickymenu-dashboard.php:134
 msgid "Explore more triggers & targeting options"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:149
+#: admin/stickymenu-dashboard.php:152
 msgid "Recent Leads"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:151
+#: admin/stickymenu-dashboard.php:154
 msgid "View All"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:159 mystickymenu-leads.php:95
+#: admin/stickymenu-dashboard.php:162 mystickymenu-leads.php:95
 msgid "Name"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:161 mystickymenu-leads.php:97
+#: admin/stickymenu-dashboard.php:164 mystickymenu-leads.php:97
 msgid "Phone"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:178
+#: admin/stickymenu-dashboard.php:181
 msgid "Once you get a new lead, it’ll appear here"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:188
+#: admin/stickymenu-dashboard.php:191
 msgid "Create Popups That Convert"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:196
+#: admin/stickymenu-dashboard.php:199
 msgid "Engaging popups and forms for your website. Build in minutes."
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:211
+#: admin/stickymenu-dashboard.php:214
 msgid "Create Your First Popup"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:234
+#: admin/stickymenu-dashboard.php:237
 msgid "Sticky menu is currently turned on."
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:236
+#: admin/stickymenu-dashboard.php:239
 msgid "Sticky menu is not currently configured. Configure to enable."
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:248
+#: admin/stickymenu-dashboard.php:251
 msgid "Disable"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:252
+#: admin/stickymenu-dashboard.php:255
 msgid "Configure"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:262
+#: admin/stickymenu-dashboard.php:265
 msgid "Documentation"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:266
+#: admin/stickymenu-dashboard.php:269
 msgid "How to use My Sticky Bar?"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:267
+#: admin/stickymenu-dashboard.php:270
 msgid "How to add your sticky menu on specific pages only"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:268
+#: admin/stickymenu-dashboard.php:271
 msgid "How to create a Bar"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:273
+#: admin/stickymenu-dashboard.php:276
 msgid "Need more help? Visit our "
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:276
+#: admin/stickymenu-dashboard.php:279
 msgid "Help Center"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:289
+#: admin/stickymenu-dashboard.php:292
 msgid ""
 "Explore amazing products from the premio team and supercharge your "
 "wordpress website!"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:291
+#: admin/stickymenu-dashboard.php:294
 msgid "Visit website"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:297
+#: admin/stickymenu-dashboard.php:300
 msgid "Follow Us"
 msgstr ""
 
-#: admin/stickymenu-dashboard.php:324
+#: admin/stickymenu-dashboard.php:327
 msgid "You’re about to turn off the sticky menu feature. Are you sure about that?"
 msgstr ""
 

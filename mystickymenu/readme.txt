@@ -3,7 +3,7 @@ Contributors: tomeraharon, galdub, premio
 Tags:notification bar, floating bar, sticky menu, sticky header, sticky bar
 Requires at least: 4.7
 Tested up to: 7.1
-Stable tag: 2.9.3
+Stable tag: 2.9.4
 License: GPLv3
 
 Create a welcome notification bar for your website. Also, My Sticky Bar plugin can make your menu or header sticky to the top when scrolled 📌
@@ -35,7 +35,7 @@ My Sticky Bar is compatible with Elementor website builder, Divi, WPBakery, Gute
 
 = 🚀 With the Welcome Bar You Can =
 * Display your floating bar at the top position
-* When the user clicks on the welcome bar button you can close the bar, redirect to another URL, or launch a <a href="https://www.poptin.com/?utm_source=msm" target="_blank" title="Poptin pop up">Poptin pop up</a>
+When the user clicks on the welcome bar button you can close the bar, redirect to another URL, or launch a <a href="https://www.poptin.com/?utm_source=msm" target="_blank" title="Poptin pop up">Poptin pop up</a>. Poptin also offers email marketing and email automation features.
 * Contact Form 📝 - Include a contact form in your notification bar to collect either name and email or name and phone number. This feature can improve lead generation on your website. You’ll be able to gather your users' details using a contact form and reach them directly.
 * Change the background and button colors for your hello bar
 * Change display frequency after submission - show the announcement bar on every page, once a visit, or don't show the announcement bar after it's submitted
@@ -341,6 +341,9 @@ After installing the plugin, you’ll have the option to turn on the welcome bar
 
 
 == Changelog ==
+
+= 2.9.4 =
+Fixed a display issue with internal modals.
 
 = 2.9.3 =
 Fixed button position on notification bar

@@ -20,6 +20,9 @@
 ?>
 <!-- Updated design -->
 <div class="wrap mystickymenu-wrap">
+    <div class="text-left">
+        <h2 class="sr-only"><?php esc_html_e("MyStickyMenu Dashboard", "mystickymenu") ?></h2>
+    </div>
 	<div class="mystickymenu-dashboard flex flex-col gap-7">
 		<?php if(isset($stickymenus_widgets) && !empty($stickymenus_widgets)) :  ?>
 		<div class="welcomebars-list-table">

@@ -170,6 +170,10 @@ $welcomebar['button_border_radius'] = (isset($welcomebar['button_border_radius']
 				<span>
 			</div>
 		</div>
+
+        <div class="wrap">
+            <h2 class="sr-only"><?php esc_html_e("mystickymenu settings", "mystickymenu") ?></h2>
+        </div>
 		
 		<section class="mystickybar-widget-tabs-content" id="mystickybar-widget-body-tab" >
 			<div class="mystickybar-column">
